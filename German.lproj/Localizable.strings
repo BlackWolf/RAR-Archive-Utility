@@ -1,0 +1,35 @@
+/* Main UI */
+"Preparing…" = "Vorbereiten…";
+"Extracting \"%@.%@\"" = "Entpacke \"%1$@.%2$@\"";
+"Archiving %d files" = "Archiviere %1$d files";
+"Part %d of %d" = "Teil %1$d von %2$d";
+"File %d of %d" = "Datei %1$d von %2$d";
+"Cancelling…" = "Abbrechen…";
+"Finishing…" = "Abschließen…";
+"Calculating…" = "Berechnen…";
+"A few seconds" = "Wenige Sekunden";
+"Less than a minute" = "Weniger als eine Minute";
+"About a minute" = "Ungefähr eine Minute";
+"About %d minutes" = "Ungefähr %1$d Minuten";
+"About an hour" = "Ungefähr eine Stunde";
+"About %d hours" = "Ungefähr %1$d Stunden";
+"About a day" = "Ungefähr ein Tag";
+"About %d days" = "Ungefähr %1$d Tage";
+
+/* Passwort sheet */
+"\"%@.%@\" needs a password" = "\"%1$@.%2$@\" benötigt ein Passwort";
+
+/* Archive wizard */
+"Select a mode" = "Wähle einen Modus";
+"Select where to create the new RAR-File" = "Wähle wo das neue Archiv erstellt werden soll";
+"Select which RAR-File to change" = "Wähle welches Archiv verändert werden soll";
+"Select additional options" = "Wähle weitere Optionen";
+"Select the files you want to archive" = "Wähle die zu archivierenden Dateien";
+"Continue" = "Fortfahren";
+"Finish" = "Abschliessen";
+
+"Your files will not be compressed" = "Die Dateien werden nicht komprimiert";
+"This might take a very long time" = "Dies könnte sehr lange dauern";
+"Please enter a password" = "Bitte ein Passwort eingeben";
+"Passwords not identical" = "Passwörter nicht identisch";
+"Drag the files to be archived in here" = "Dateien, die archiviert werden sollen, hierhin ziehen.";

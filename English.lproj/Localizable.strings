@@ -1,0 +1,35 @@
+/* Main UI */
+"Preparing…" = "Preparing…";
+"Extracting \"%@.%@\"" = "Extracting \"%1$@.%2$@\"";
+"Archiving %d files" = "Archiving %1$d files";
+"Part %d of %d" = "Part %1$d of %2$d";
+"File %d of %d" = "File %1$d of %2$d";
+"Cancelling…" = "Cancelling…";
+"Finishing…" = "Finishing…";
+"Calculating…" = "Calculating…";
+"A few seconds" = "A few seconds";
+"Less than a minute" = "Less than a minute";
+"About a minute" = "About a minute";
+"About %d minutes" = "About %1$d minutes";
+"About an hour" = "About an hour";
+"About %d hours" = "About %1$d hours";
+"About a day" = "About a day";
+"About %d days" = "About %1$d days";
+
+/* Passwort sheet */
+"\"%@.%@\" needs a password" = "\"%1$@.%2$@\" needs a password";
+
+/* Archive wizard */
+"Select a mode" = "Select a mode";
+"Select where to create the new RAR-File" = "Select where to create the new RAR-File";
+"Select which RAR-File to change" = "Select which RAR-File to change";
+"Select additional options" = "Select additional options";
+"Select the files you want to archive" = "Select the files you want to archive";
+"Continue" = "Continue";
+"Finish" = "Finish";
+
+"Your files will not be compressed" = "Your files will not be compressed";
+"This might take a very long time" = "This might take a very long time";
+"Please enter a password" = "Please enter a password";
+"Passwords not identical" = "Passwords not identical";
+"Drag the files to be archived in here" = "Drag the files to be archived in here.";
