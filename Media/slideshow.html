@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>slideshow</title>
+
+<script type="text/javascript">
+// <![CDATA[
+if(navigator.userAgent.match(/iPhone/))
+{
+    location = 'phoneshow.html' + location.search;
+}
+// ]]>
+</script>
+
+<link href="iWPopUpSlideshow.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../Scripts/iWebSite.js"></script> 
+<script type="text/javascript" src="../Scripts/iWebImage.js"></script> 
+<script type="text/javascript" src="../Scripts/iWPopUpSlideshow.js"></script> 
+<script type="text/javascript" src="../Scripts/iWebMediaGrid.js"></script> 
+
+<script type="text/javascript">
+// <![CDATA[
+
+function onLoad()
+{
+    var args = getArgs();
+
+    if(args.backgroundColor)
+    {
+        document.getElementsByTagName("body")[0].style.backgroundColor = args.backgroundColor;
+    }
+    setTransparentGifURL('transparent.gif');
+    document.title = opener.document.title; 
+    initSlideshow(opener.latestImageStream, opener.latestIndex, args);
+}
+
+// ]]>
+</script>
+
+    </head>
+    <body onload="onLoad()">
+    </body>
+</html>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=320" />
+<style type="text/css"><!--
+html, body {
+padding: 0;
+margin: 0;
+overflow: hidden;
+background-color: black;
+}
+
+#slideshow {
+position: relative;
+width: 320px;
+height: 360px;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+}
+
+.caption {
+color: white;
+text-align: center;
+font-family: helvetica neue;
+}
+--></style>
+<title>Slideshow</title>
+</head>
+<body>
+
+<div id="slideshow">
+</div>
+
+<script src="../Scripts/iWebSite.js" type="text/javascript"></script>
+<script src="../Scripts/iWebImage.js" type="text/javascript"></script>
+<script src="../Scripts/iWebMediaGrid.js" type="text/javascript"></script>
+<script type="text/javascript">
+// <![CDATA[
+function iPhoneSlideshow()
+{
+    var args = getArgs();
+    if(args.backgroundColor)
+    {
+        document.getElementsByTagName("body")[0].style.backgroundColor = args.backgroundColor;
+    }
+    document.title = opener.document.title; 
+
+    var imageStream = opener.latestImageStream;
+    var photos = [];
+    for(var i = 0; i < imageStream.length; ++i)
+    {
+        photos.push(imageStream[i].slideshowValue('image'));
+    }
+
+    if(args.captionHeight)
+        args.captionHeight = 50;
+    if(args.reflectionHeight)
+        args.reflectionHeight = 50;
+    args.movieMode = kPosterFrameOnly;
+
+    slideshow = new Slideshow($('slideshow'), photos, function(){}, args);
+
+    if(args.hasOwnProperty("transitionIndex"))
+        slideshow.setTransitionIndex(args.transitionIndex, 0);
+
+    slideshow.start();
+}
+iPhoneSlideshow();
+// ]]>
+</script>
+</body>
+</html>

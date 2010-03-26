@@ -1,0 +1,29 @@
+div.com-apple-iweb-widget-footercontrols img {
+    border: none;
+}
+
+div.com-apple-iweb-widget-footercontrols div.footer_middle {
+    position: relative;
+    text-align: center;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+div.com-apple-iweb-widget-footercontrols div.positioned {
+    position: relative;
+    width: 100%;
+}
+
+div.com-apple-iweb-widget-footercontrols div.right {
+    position: absolute;
+    right: 0px;
+}
+
+div.com-apple-iweb-widget-footercontrols div.footer_middle img {
+    border: none;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    width: 19px;
+    height: 25px;
+}

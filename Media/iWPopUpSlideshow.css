@@ -1,0 +1,197 @@
+/*  (c) Copyright 2006 Apple Computer, Inc. All rights reserved.  */
+
+body {
+		background:#000000;
+		text-align: center;
+		margin: 0px;			
+}
+		
+ul { margin-top: 0px; padding-left: 18px; }
+		
+li { font-size: 11px; padding: 2px}
+	
+h4 { font-size: 12px; margin-bottom: 5px;}
+
+img { 
+	border:0px; 	
+	opacity: .999;
+}
+
+a {text-decoration: none; color:#ffffff}
+
+.caption {
+	z-index:200;
+	padding: 0px;
+	text-align: center;
+	color: #ffffff;
+	font-family: Lucida Grande, Arial, Helvetica;
+	font-size: 14px; 
+	font-weight: bold;
+}
+
+#controls {
+	position: absolute;
+	top: 0px;
+	z-index: 250;
+	width: 176px;
+	height: 77px;
+	background: url(http://www.me.com/1/slideshow/images/controls.png) center center no-repeat;
+	opacity: .80;
+}
+
+#controlZone {
+	position: absolute;	
+	z-index: 250;
+	width: 100%;
+	height: 177px;
+	text-align:left; 
+	left: 0px;
+	background: url(http://www.me.com/i/ma/1/spacer.gif) repeat;
+}
+
+#playbutton {
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	width: 55px;
+	height: 77px;
+}
+
+
+#pausebutton {
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	width: 55px;
+	height: 77px;
+}
+
+#forwardbutton {
+	position: absolute;
+	left: 115px;
+	top: 0px;
+	width: 47px;
+	height: 77px;
+	text-align:left; 
+}
+
+#backbutton {
+	position: absolute;
+	left: 12px;
+	top: 0px;
+	width: 47px;
+	height: 77px;
+	text-align:left; 
+}
+
+
+#matte {
+	position: relative; 
+	z-index:0;
+	margin: 0px 100px 0px 100px;
+	overflow: hidden; 
+	text-align: left;
+}
+
+#frame {
+	position: relative;
+	margin: 0px auto 0px auto;	
+}
+
+
+#slide {
+	position:absolute;
+	z-index:10;
+	opacity: .999;
+	}
+
+#slide_reflect {
+	position:absolute;
+	z-index:10;
+	opacity: .999;
+	}
+	
+#topslide {
+	position:absolute;
+	z-index:100;
+	opacity: .999;
+	}
+
+#topslide_reflect {
+	position:absolute;
+	z-index:100;
+	opacity: .999;
+	}
+
+
+#filter {
+	position:absolute;
+	z-index:95;
+	visibility:hidden;
+	}
+	
+#cache {
+	position: absolute; 
+	visibility: hidden;
+}
+
+#thumbnailPicker {
+	position: absolute;	
+	top:0px;
+	left: 30px;
+	background-color: #1a1a1a;
+	overflow: hidden;
+	opacity: .80;
+}
+
+#thumbStrip {
+	position: absolute;
+	left: 0px;
+	top: 5px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#thumbnailZone {
+	position: absolute;	
+	top:0px;
+	left: 0px;
+	z-index: 250;
+	background: url(http://www.me.com/i/ma/1/spacer.gif) repeat;
+}
+
+.thumb {
+  border: 2px solid #1a1a1a;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.selectedthumb {
+  border: 2px solid #4385dd;
+  padding: 1px;
+  cursor: pointer;
+}
+
+#scrollbar {
+	position: absolute; 
+	z-index: 258; 
+}
+
+#dragtool {
+	position: absolute; 
+	z-index: 258; 
+	line-height: 0px;
+	font-size: 0px;
+}
+
+#bar {
+	border: 1px solid gray;
+	line-height: 2px;
+	font-size: 0px;
+}
+
+#ruler {
+	position: absolute; 
+	height: 13px; 
+	z-index: 256; 
+}

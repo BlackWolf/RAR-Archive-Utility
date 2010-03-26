@@ -1,0 +1,54 @@
+div.com-apple-iweb-widget-headercontrols img {
+    border: none;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    width: 19px;
+    height: 25px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.middle {
+    position: relative;
+    text-align: center;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.header_controls {
+    margin-top: 2px;
+    top: 2px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.positioned {
+    position: relative;
+    width: 100%;
+}
+
+div.com-apple-iweb-widget-headercontrols div.header_controls span.add_photo{
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.header_controls span.subscribe{
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.header_controls span.play_slideshow{
+    position: relative;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.left {
+    position: absolute;
+    left: 0px;
+}
+
+div.com-apple-iweb-widget-headercontrols div.right {
+    position: absolute;
+    right: 0px;
+}
+

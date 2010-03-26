@@ -1,0 +1,114 @@
+div.com-apple-iweb-widget-detailview img.canvas {
+    border: none;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    width: 19px;
+    height: 25px;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnail_view {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnails_wrapper {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    overflow: hidden;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnails {
+    position: absolute;
+    left: 0px;
+    width: 999999px;
+    height: inherit;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnail {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-right: 3px;
+    overflow: hidden;
+}
+
+div.com-apple-iweb-widget-detailview div.selected {
+    float: left;
+    width: 52px;
+    height: 52px;
+    margin-right: 3px;
+    border: solid rgb(30,124,253) 2px;
+    overflow: hidden;
+}
+
+div.com-apple-iweb-widget-detailview div.selected img {
+    margin-left: -2px;
+    margin-top: -2px;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnail_arrows {
+    position: absolute;
+    top: 27px;
+    width: 19px;
+    height: 56px;
+    z-index: 10;
+    visibility: hidden;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnail_arrows img {
+	position: relative;
+	top: 13px;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnails_back {
+    left: 0px;
+}
+
+div.com-apple-iweb-widget-detailview div.thumbnails_forward {
+    right: 0px;
+}
+
+div.com-apple-iweb-widget-detailview div.middle {
+    position: relative;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+div.com-apple-iweb-widget-detailview div.header_controls {
+    margin-top: 2px;
+    top: 2px;
+    height: 25px;
+}
+
+div.com-apple-iweb-widget-detailview div.positioned {
+    position: relative;
+    width: 100%;
+}
+
+div.com-apple-iweb-widget-detailview div.left {
+    position: absolute;
+    left: 0px;
+}
+
+div.com-apple-iweb-widget-detailview div.right {
+    position: absolute;
+    right: 0px;
+}
+
+div.com-apple-iweb-widget-detailview div.footer_controls {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+div.com-apple-iweb-widget-detailview a.slideshow_anchor {
+    outline: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+}
