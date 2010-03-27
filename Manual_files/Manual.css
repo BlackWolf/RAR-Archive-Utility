@@ -22,19 +22,7 @@
     text-indent: 0px;
     text-transform: uppercase;
 }
-.style_1 {
-    font-size: 16px;
-    line-height: 21px;
-}
-.style_2 {
-    font-size: 13px;
-    line-height: 17px;
-}
-.style_SkipStroke_1 {
-    background: transparent;
-    opacity: 1.00;
-}
-.style_3.vertical-align-middle-innerbox {
+.style_1.vertical-align-middle-innerbox {
     padding: 4px;
 }
 .paragraph_style_1 {
@@ -66,12 +54,85 @@
     background: transparent;
     opacity: 1.00;
 }
+.style_SkipStroke_1 {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_2 {
+    color: #c8c8c8;
+    font-variant: normal;
+    opacity: 1.00;
+    text-transform: uppercase;
+}
 .style_SkipStroke_3 {
     background: transparent;
+    float: right;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 0px;
+    margin-top: 12px;
+    opacity: 1.00;
+}
+.style_SkipStroke_4 {
+    background: transparent;
+    float: none;
+    margin: 0px;
+    opacity: 1.00;
+}
+.style_SkipStroke_5 {
+    background: transparent;
+    float: right;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 0px;
+    margin-top: 12px;
     opacity: 1.00;
 }
 .style_External_640_50 {
     position: relative;
+}
+.style_SkipStroke_6 {
+    background: transparent;
+    float: none;
+    margin: 0px;
+    opacity: 1.00;
+}
+.style_SkipStroke_7 {
+    background: transparent;
+    float: none;
+    margin: 0px;
+    opacity: 1.00;
+}
+.paragraph_style_2 {
+    color: #ffffff;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.style_SkipStroke_8 {
+    background: transparent;
+    float: none;
+    margin: 0px;
+    opacity: 1.00;
+}
+.style_SkipStroke_9 {
+    background: transparent;
+    opacity: 1.00;
 }
 .style_External_640_33.vertical-align-middle-middlebox {
     height: 33px;
@@ -162,10 +223,14 @@
     background: transparent;
     opacity: 1.00;
 }
+.graphic_image_style_default_2_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
 .graphic_textbox_layout_style_default {
     padding: 4px;
 }
-.graphic_textbox_layout_style_default_External_393_103 {
+.graphic_textbox_layout_style_default_External_543_3428 {
     position: relative;
 }
 .graphic_textbox_style_default_SkipStroke {

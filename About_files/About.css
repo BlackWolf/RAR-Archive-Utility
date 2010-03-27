@@ -23,25 +23,14 @@
     text-transform: uppercase;
 }
 .style_1 {
-    font-size: 16px;
-    line-height: 21px;
-}
-.style_2 {
-    font-size: 13px;
-    line-height: 17px;
-}
-.style_3 {
     color: #c8c8c8;
     font-variant: normal;
     opacity: 1.00;
     text-transform: uppercase;
 }
-.style_4 {
+.style_2 {
     font-size: 17px;
     line-height: 25px;
-}
-.style_External_640_50 {
-    position: relative;
 }
 .paragraph_style_1 {
     color: #bfbfbf;
@@ -64,15 +53,18 @@
     text-indent: 0px;
     text-transform: uppercase;
 }
-.style_SkipStroke_1 {
-    background: transparent;
-    opacity: 1.00;
+.style_External_640_50 {
+    position: relative;
 }
 .style_SkipStroke_2 {
     background: transparent;
     opacity: 1.00;
 }
 .style_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke_1 {
     background: transparent;
     opacity: 1.00;
 }
@@ -88,7 +80,7 @@
     background: transparent;
     opacity: 1.00;
 }
-.style_External_393_760 {
+.style_External_393_739 {
     position: relative;
 }
 .Body {
@@ -181,7 +173,7 @@
 .Normal_External_640_50 {
     position: relative;
 }
-.Normal_External_393_760 {
+.Normal_External_393_739 {
     position: relative;
 }
 .Sidebar_Body {
@@ -269,13 +261,13 @@
 .graphic_shape_layout_style_default_External_393_33 {
     position: relative;
 }
-.graphic_textbox_layout_style_default {
-    padding: 4px;
-}
 .graphic_textbox_layout_style_default_External_100_100 {
     position: relative;
 }
-.graphic_textbox_layout_style_default_External_225_1065 {
+.graphic_textbox_layout_style_default {
+    padding: 4px;
+}
+.graphic_textbox_layout_style_default_External_225_1058 {
     position: relative;
 }
 .graphic_textbox_style_default_SkipStroke {

@@ -22,19 +22,7 @@
     text-indent: 0px;
     text-transform: uppercase;
 }
-.style_1 {
-    font-size: 16px;
-    line-height: 21px;
-}
-.style_2 {
-    font-size: 13px;
-    line-height: 17px;
-}
-.style_SkipStroke_1 {
-    background: transparent;
-    opacity: 1.00;
-}
-.style_3.vertical-align-middle-innerbox {
+.style_1.vertical-align-middle-innerbox {
     padding: 4px;
 }
 .paragraph_style_1 {
@@ -63,6 +51,10 @@
     opacity: 1.00;
 }
 .style_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke_1 {
     background: transparent;
     opacity: 1.00;
 }
@@ -161,7 +153,7 @@
 .image_cluster_layout_style_default {
     padding: 0px;
 }
-.image_cluster_layout_style_default_External_0_0 {
+.image_cluster_layout_style_default_External_158_35 {
     position: relative;
 }
 a {
