@@ -627,9 +627,9 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>closeWindow:</string>
 							<string>nextPageButtonClicked:</string>
 							<string>previousPageButtonClicked:</string>
+							<string>quitButtonClicked:</string>
 							<string>userChoseMode:</string>
 							<string>userWantsToChoseFile:</string>
 						</object>

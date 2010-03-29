@@ -3,7 +3,7 @@
 //  RAR-Archive Utility
 //
 //  Created by BlackWolf on 07.03.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -11,11 +11,22 @@
 
 
 #define LASTPAGE 4
+
 @interface RAUArchiveWizardController : NSWindowController <NSWindowDelegate> {
+	//Global
 	int				firstPage;
 	int				currentPage;
 	BOOL			isShown;
 	BOOL			finishedSuccessfully;
+	
+	//Global UI
+	NSTextField		*pageTitleLabel;
+	NSView			*contentViewWrapper;
+	NSView			*contentView;
+	NSButton		*previousPageButton;
+	NSButton		*nextPageButton;
+	
+	//Page-specific
 	
 	ArchiveTaskMode	mode;
 	NSString		*file;
@@ -31,15 +42,7 @@
 	int				pieceSizeUnit;
 	NSMutableArray	*filesToArchive;
 	
-	//Global UI
-	NSTextField		*pageTitleLabel;
-	NSView			*contentViewWrapper;
-	NSView			*contentView;
-	NSButton		*previousPageButton;
-	NSButton		*nextPageButton;
-	
 	//Page-specific UI
-	//Page 3
 	NSImageView		*compressionLevelWarningImage;
 	NSTextField		*compressionLevelWarningLabel;
 	NSImageView		*passwordRepetitionWarningImage;
@@ -47,7 +50,6 @@
 	NSImageView		*passwordWarningImage;
 	NSTextField		*passwordWarningLabel;
 	NSButton		*splitCheckbox;
-	//Page 4
 	NSTextField		*filesToArchiveLabel;
 }
 
@@ -55,6 +57,12 @@
 @property (assign)				int				currentPage;
 @property (assign)				BOOL			isShown;
 @property (assign)				BOOL			finishedSuccessfully;
+
+@property (assign)	IBOutlet	NSTextField		*pageTitleLabel;
+@property (assign)	IBOutlet	NSView			*contentViewWrapper;
+@property (assign)	IBOutlet	NSView			*contentView;
+@property (assign)	IBOutlet	NSButton		*previousPageButton;
+@property (assign)	IBOutlet	NSButton		*nextPageButton;
 
 @property (assign)				ArchiveTaskMode	mode;
 @property (readwrite, copy)		NSString		*file;
@@ -70,12 +78,6 @@
 @property (assign)				int				pieceSizeUnit;
 @property (readwrite, assign)	NSMutableArray	*filesToArchive;
 
-@property (assign)	IBOutlet	NSTextField		*pageTitleLabel;
-@property (assign)	IBOutlet	NSView			*contentViewWrapper;
-@property (assign)	IBOutlet	NSView			*contentView;
-@property (assign)	IBOutlet	NSButton		*previousPageButton;
-@property (assign)	IBOutlet	NSButton		*nextPageButton;
-
 @property (assign)	IBOutlet	NSImageView		*compressionLevelWarningImage;
 @property (assign)	IBOutlet	NSTextField		*compressionLevelWarningLabel;
 @property (assign)	IBOutlet	NSImageView		*passwordRepetitionWarningImage;
@@ -89,14 +91,13 @@
 -(void)showCreateWizard;
 -(void)showAddWizard;
 -(void)showWindowWithPage:(int)startingPage;
+-(IBAction)previousPageButtonClicked:(id)sender;
+-(IBAction)nextPageButtonClicked:(id)sender;
+-(IBAction)quitButtonClicked:(id)sender;
+-(void)updateNavigationButtons;
 -(void)loadPage:(int)pageNumber;
 -(void)unloadCurrentPage;
 -(BOOL)currentPageReady;
--(IBAction)previousPageButtonClicked:(id)sender;
--(IBAction)nextPageButtonClicked:(id)sender;
--(IBAction)closeWindow:(id)sender;
--(void)updateNavigationButtons;
-
 -(IBAction)userChoseMode:(id)sender;
 -(IBAction)userWantsToChoseFile:(id)sender;
 -(IBAction)userChoseCompressionLevel:(id)sender;

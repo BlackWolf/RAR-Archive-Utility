@@ -11,23 +11,25 @@
 
 #define TaskControllerNeedsPasswordNotification	@"TaskControllerNeedsPasswordNotification"
 #define TaskControllerDidFinishNotification		@"TaskControllerDidFinishNotification"
+
+
 @class RAUTaskViewController, RAUTask, RAURarfile;
 @interface RAUTaskController : NSObject {
-	RAUTaskViewController	*viewController;
-	RAUTask					*task;
-	NSDate					*taskStartDate;
 	RAURarfile				*file;
 	NSString				*password;
+	RAUTask					*task;
+	NSDate					*taskStartDate;
+	RAUTaskViewController	*viewController;
 	double					ETAFirstHalfFactor;
 	double					ETALastRuntime;
 	double					ETALastTotalRuntime;
 }
 
-@property (readwrite, assign)	RAUTaskViewController	*viewController;
-@property (readwrite, assign)	RAUTask					*task;
-@property (readwrite, assign)	NSDate					*taskStartDate;
 @property (readwrite, assign)	RAURarfile				*file;
 @property (readwrite, copy)		NSString				*password;
+@property (readwrite, assign)	RAUTask					*task;
+@property (readwrite, assign)	NSDate					*taskStartDate;
+@property (readwrite, assign)	RAUTaskViewController	*viewController;
 @property (assign)				double					ETAFirstHalfFactor;
 @property (assign)				double					ETALastRuntime;
 @property (assign)				double					ETALastTotalRuntime;
@@ -39,10 +41,10 @@
 -(void)taskWillLaunch;
 -(void)launchTask;
 -(void)taskDidLaunch;
--(void)progressWasUpdated:(NSNotification *)notification;
--(void)stopButtonClicked:(NSNotification *)notification;
 -(void)terminateTask;
 -(void)taskDidFinish:(NSNotification *)notification;
+-(void)progressWasUpdated:(NSNotification *)notification;
+-(void)stopButtonClicked:(NSNotification *)notification;
 -(void)didFinish;
 -(NSString *)getETAString;
 

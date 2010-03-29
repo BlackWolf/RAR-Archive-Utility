@@ -3,7 +3,7 @@
 //  RAR-Archive Utility
 //
 //  Created by BlackWolf on 27.01.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -15,42 +15,40 @@
 	NSView								*windowView;
 	NSWindow							*passwordSheet;
 	NSTextField							*passwordSheetHeading;
-	NSTextField							*passwordInput;
-	NSTextField							*debugLabel;
+	NSTextField							*passwordSheetTextField;
 	
 	BOOL								applicationDidFinishLaunching;
 	BOOL								terminateWhenDone;
-	BOOL								passwordSheetIsShowing;
-	NSMutableArray						*taskController;
-	RAUExtractTaskController			*passwordSheetController;
-	NSMutableArray						*waitingForPasswordSheet;
-	RAUArchiveWizardController			*archiveWizard;
 	BOOL								terminating;
+	NSMutableArray						*taskController;
+	BOOL								passwordSheetIsShowing;
+	RAUExtractTaskController			*currentPasswordSheetTask;
+	NSMutableArray						*waitingPasswordSheetTasks;
+	RAUArchiveWizardController			*archiveWizard;
 }
 
 @property (assign)				IBOutlet	RAUMainWindow						*window;
 @property (assign)				IBOutlet	NSView								*windowView;
 @property (assign)				IBOutlet	NSWindow							*passwordSheet;
 @property (assign)				IBOutlet	NSTextField							*passwordSheetHeading;
-@property (assign)				IBOutlet	NSTextField							*passwordInput;
-@property (assign)				IBOutlet	NSTextField							*debugLabel;
+@property (assign)				IBOutlet	NSTextField							*passwordSheetTextField;
 
 @property (readonly)						BOOL								applicationDidFinishLaunching;
 @property (readonly)						BOOL								terminateWhenDone;
-@property (readonly)						BOOL								passwordSheetIsShowing;
-@property (readwrite, assign)				NSMutableArray						*taskController;
-@property (readwrite, assign)				RAUExtractTaskController			*passwordSheetController;
-@property (readwrite, assign)				NSMutableArray						*waitingForPasswordSheet;
-@property (readwrite, assign)				RAUArchiveWizardController			*archiveWizard;
 @property (readonly)						BOOL								terminating;
+@property (readwrite, assign)				NSMutableArray						*taskController;
+@property (readonly)						BOOL								passwordSheetIsShowing;
+@property (readwrite, assign)				RAUExtractTaskController			*currentPasswordSheetTask;
+@property (readwrite, assign)				NSMutableArray						*waitingPasswordSheetTasks;
+@property (readwrite, assign)				RAUArchiveWizardController			*archiveWizard;
 
 -(void)addTaskController:(RAUTaskController *)newController;
+-(void)taskControllerDidFinish:(NSNotification *)notification;
 -(void)passwordSheetRequested:(NSNotification *)notification;
 -(void)showPasswordSheet:(RAUExtractTaskController *)protectedFile;
 -(IBAction)passwordSheetPressedOK:(id)sender;
 -(IBAction)passwordSheetPressedCancel:(id)sender;
 -(void)dismissPasswordSheet;
--(void)taskControllerDidFinish:(NSNotification *)notification;
 -(IBAction)showArchiveWizard:(id)sender;
 -(void)archiveWizardDidClose:(BOOL)successfully;
 

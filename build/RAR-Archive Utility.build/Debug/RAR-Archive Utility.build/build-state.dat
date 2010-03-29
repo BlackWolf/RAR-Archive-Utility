@@ -1,7 +1,7 @@
 TRAR-Archive Utility
 v7
 r0
-t290918214.895528
+t291516841.492106
 cCheck dependencies
 cProcessInfoPlistFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist" RAR_Archive_Utility-Info.plist
 cCopyStringsFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
@@ -34,7 +34,6 @@ cCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/P
 cProcessPCH /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch RAR_Archive_Utility_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/Debug.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Debug.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
@@ -47,7 +46,7 @@ cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objec
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUFloatStringTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 cLd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility" normal x86_64
@@ -124,48 +123,48 @@ s531
 i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib
-c000000004B9D5F500000000000005BCE
-t1268604752
-s23502
+c000000004BAFF63C0000000000005B98
+t1269823036
+s23448
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/InfoPlist.strings
-c000000004B5F7CCC000000000000002D
-t1264549068
+c000000004BAD766E000000000000002D
+t1269659246
 s45
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Localizable.strings
-c000000004BA6C8BC00000000000005B6
-t1269221564
+c000000004BAD766E00000000000005B6
+t1269659246
 s1462
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib
-c000000004BA44332000000000002CDB4
-t1269056306
-s183732
+c000000004BAE21A1000000000002BD70
+t1269703073
+s179568
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib
-c000000004B9D384B0000000000008141
-t1268594763
-s33089
+c000000004BAFF63C0000000000008147
+t1269823036
+s33095
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib
-c000000004B9D384B0000000000003C39
-t1268594763
-s15417
+c000000004BAFF63D0000000000003C3F
+t1269823037
+s15423
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib
-c000000004BA3A4FC0000000000012E5C
-t1269015804
-s77404
+c000000004BAFF63D0000000000012E21
+t1269823037
+s77345
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib
-c000000004B9D384C0000000000003104
-t1268594764
-s12548
+c000000004BAFF63E00000000000032AC
+t1269823038
+s12972
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib
-c000000004BA6BF460000000000005EA7
-t1269219142
+c000000004BAD766E0000000000005EA7
+t1269659246
 s24231
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/ErrorTriangle_v1.png
@@ -190,43 +189,43 @@ i"Unrarer.h"
 i"RarfileViewController.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib
-c000000004BA6CAF30000000000005BE1
-t1269222131
-s23521
+c000000004BAFF63C0000000000005BAB
+t1269823036
+s23467
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Localizable.strings
-c000000004BA6C89C0000000000000622
-t1269221532
+c000000004BAD766E0000000000000622
+t1269659246
 s1570
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib
-c000000004BA43611000000000002CE7F
-t1269052945
-s183935
+c000000004BAE21A2000000000002BE10
+t1269703074
+s179728
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib
-c000000004B9D594C0000000000008564
-t1268603212
-s34148
+c000000004BAFF63C0000000000008529
+t1269823036
+s34089
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib
-c000000004B9D5978000000000000404A
-t1268603256
-s16458
+c000000004BAFF63D000000000000400F
+t1269823037
+s16399
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib
-c000000004BA43650000000000001349D
-t1269053008
-s79005
+c000000004BAFF63D0000000000013462
+t1269823037
+s78946
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib
-c000000004B9D5ACA00000000000032E5
-t1268603594
-s13029
+c000000004BAFF63E00000000000032AA
+t1269823038
+s12970
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib
-c000000004BA6BF4F0000000000005E97
-t1269219151
+c000000004BAD766E0000000000005E97
+t1269659246
 s24215
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Localizable.strings
@@ -268,15 +267,15 @@ t1268594764
 s12548
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.h
-c000000004B96DD6F0000000000000901
-t1268178287
-s2305
+c000000004BAE251200000000000008B9
+t1269703954
+s2233
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m
-c000000004BA6D78A0000000000002398
-t1269225354
-s9112
+c000000004BAEBA90000000000000273C
+t1269742224
+s10044
 i"RAR_Archive_UtilityAppDelegate.h"
 i"RAUMainWindow.h"
 i"RAUExtractTaskController.h"
@@ -284,61 +283,58 @@ i"RAUArchiveTaskController.h"
 i"RAUTaskViewController.h"
 i"RAURarfile.h"
 i"RAUArchiveWizardController.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility_Prefix.pch
-c000000004B5F7CCC00000000000000A9
-t1264549068
+c000000004BAD766E00000000000000A9
+t1269659246
 s169
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.h
-c000000004B93E4A50000000000000510
-t1267983525
+c000000004BAEC3600000000000000510
+t1269744480
 s1296
 i<Cocoa/Cocoa.h>
 i"RAUTask.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m
-c000000004BA6BD3C00000000000019DE
-t1269218620
-s6622
+c000000004BAEC35C0000000000001CAF
+t1269744476
+s7343
 i"RAUArchiveTask.h"
 i"RAURarfile.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.h
-c000000004B95A838000000000000051F
-t1268099128
+c000000004BAFF15B000000000000051F
+t1269821787
 s1311
 i<Cocoa/Cocoa.h>
 i"RAUTaskController.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m
-c000000004BA6BF0B000000000000138F
-t1269219083
-s5007
+c000000004BAFFA1F00000000000014E2
+t1269824031
+s5346
 i"RAUArchiveTaskController.h"
 i"RAURarfile.h"
 i"RAUTaskViewController.h"
 i"RAUArchiveTask.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.h
-c000000004BA3A77A0000000000000E8E
-t1269016442
-s3726
+c000000004BAFF9E00000000000000EAE
+t1269823968
+s3758
 i<Cocoa/Cocoa.h>
 i"RAUArchiveTask.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m
-c000000004BA4BFF9000000000000391C
-t1269088249
-s14620
+c000000004BAFFA1700000000000036E8
+t1269824023
+s14056
 i"RAUArchiveWizardController.h"
 i"RAUArchiveTaskController.h"
 i"RAR_Archive_UtilityAppDelegate.h"
 i"RAUDraggableView.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.h
 c000000004B9402200000000000000AF2
@@ -379,9 +375,9 @@ s248
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m
-c000000004B95A5E700000000000002F8
-t1268098535
-s760
+c000000004BAE29B000000000000002BA
+t1269705136
+s698
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUCompressionWarningValueTransformer.h
@@ -397,131 +393,134 @@ s287
 i"RAUCompressionWarningValueTransformer.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.h
-c000000004B9197EC0000000000000173
-t1267832812
-s371
+c000000004BAE3181000000000000017C
+t1269707137
+s380
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m
-c000000004B96E98100000000000007AF
-t1268181377
-s1967
+c000000004BAE318000000000000007F1
+t1269707136
+s2033
 i"RAUDraggableView.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.h
-c000000004B7B33520000000000000339
-t1266365266
+c000000004BAD766E0000000000000339
+t1269659246
 s825
 i<Cocoa/Cocoa.h>
 i"RAUTask.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m
-c000000004BA6BD7C0000000000001702
-t1269218684
-s5890
+c000000004BAEBEEE000000000000175D
+t1269743342
+s5981
 i"RAUExtractTask.h"
 i"RAURarfile.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.h
-c000000004B7DB991000000000000014D
-t1266530705
+c000000004BAD766E000000000000014D
+t1269659246
 s333
 i<Cocoa/Cocoa.h>
 i"RAUTaskController.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m
-c000000004BA6BEF500000000000009BA
-t1269219061
-s2490
+c000000004BAFEF3000000000000008CA
+t1269821232
+s2250
 i"RAUExtractTaskController.h"
 i"RAURarfile.h"
 i"RAUTaskViewController.h"
 i"RAUExtractTask.h"
 
+N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m
+c000000004BAE29480000000000000622
+t1269705032
+s1570
+i<Cocoa/Cocoa.h>
+
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m
-c000000004B95943A0000000000000592
-t1268094010
-s1426
+c000000004BAE297F0000000000000337
+t1269705087
+s823
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.h
-c000000004B7ADE7C00000000000001DB
-t1266343548
+c000000004BAD766E00000000000001DB
+t1269659246
 s475
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m
-c000000004B7ADEA40000000000000CEF
-t1266343588
-s3311
+c000000004BAE31860000000000000C44
+t1269707142
+s3140
 i"RAUMainWindow.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.h
-c000000004B7AD7D10000000000000411
-t1266341841
-s1041
+c000000004BAE24430000000000000420
+t1269703747
+s1056
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m
-c000000004B7B49130000000000000E8B
-t1266370835
-s3723
+c000000004BAF820D0000000000000F86
+t1269793293
+s3974
 i"RAURarfile.h"
 i"RAUExtractTask.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.h
-c000000004B7AD7D800000000000000DC
-t1266341848
+c000000004BAE303000000000000000DC
+t1269706800
 s220
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m
-c000000004B7AD83F0000000000000494
-t1266341951
-s1172
+c000000004BAE30520000000000000416
+t1269706834
+s1046
 i"RAUStopButton.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.h
-c000000004BA6D7C500000000000005B2
-t1269225413
-s1458
+c000000004BAEBB2B00000000000005D5
+t1269742379
+s1493
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m
-c000000004BA6D77D0000000000002B7A
-t1269225341
-s11130
+c000000004BAF801700000000000029E0
+t1269792791
+s10720
 i"RAUTask.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.h
-c000000004BA6D7C5000000000000062D
-t1269225413
-s1581
+c000000004BAFECD0000000000000065E
+t1269820624
+s1630
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m
-c000000004BA6D7AE0000000000002185
-t1269225390
-s8581
+c000000004BAFF4060000000000002A44
+t1269822470
+s10820
 i"RAUTaskController.h"
 i"RAURarfile.h"
 i"RAUTaskViewController.h"
 i"RAUTask.h"
 i"RAUExtractTask.h"
-i"Debug.h"
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.h
-c000000004B7ADFB50000000000000326
-t1266343861
-s806
+c000000004BAE2F97000000000000033E
+t1269706647
+s830
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m
-c000000004BA44872000000000000048C
-t1269057650
-s1164
+c000000004BAE30A4000000000000045D
+t1269706916
+s1117
 i"RAUTaskViewController.h"
 i"RAUStopButton.h"
 
@@ -532,9 +531,9 @@ s257
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m
-c000000004BA3C34600000000000006E6
-t1269023558
-s1766
+c000000004BAE28E40000000000000627
+t1269704932
+s1575
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyValueTransformer.h
@@ -705,24 +704,24 @@ t1265157262
 s93032
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/appicon.icns
-c000000004B68C48E0000000000016B68
-t1265157262
+c000000004BAD766E0000000000016B68
+t1269659246
 s93032
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app
-t1269225414
+t1269824041
 s102
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist
-t1269225413
+t1269824031
 s1456
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility
-t1269225414
-s194656
+t1269824041
+s192264
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/PkgInfo
-t1269225413
+t1269824031
 s8
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/Alert!.png
@@ -738,39 +737,39 @@ t1268594808
 s6352
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/ArchiveWizardWindow.nib
-t1269057515
-s6353
+t1269824036
+s6361
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1269057514
+t1269824033
 s92
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Localizable.strings
-t1269221567
+t1269824035
 s2894
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/MainMenu.nib
-t1269057514
-s41995
+t1269824035
+s41098
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page1.nib
-t1269057515
+t1269824036
 s13688
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page2.nib
-t1269057516
+t1269824036
 s4454
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page3.nib
-t1269057516
+t1269824037
 s18140
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page4.nib
-t1269057516
+t1269824037
 s3517
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/RarfileView.nib
-t1269219249
+t1269824035
 s6864
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/ErrorTriangle_v1.png
@@ -778,35 +777,35 @@ t1264817859
 s80784
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/ArchiveWizardWindow.nib
-t1269222191
-s6415
+t1269824036
+s6423
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Localizable.strings
-t1269221537
+t1269824036
 s3078
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/MainMenu.nib
-t1269057514
-s42396
+t1269824035
+s41499
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page1.nib
-t1269057515
+t1269824036
 s14692
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page2.nib
-t1269057516
+t1269824036
 s4533
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page3.nib
-t1269057516
+t1269824037
 s18915
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page4.nib
-t1269057516
+t1269824037
 s3511
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/RarfileView.nib
-t1269219249
+t1269824035
 s6837
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/Localizable.strings
@@ -850,19 +849,19 @@ t1266028545
 s93032
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/appicon.icns
-t1269057515
+t1269824035
 s93032
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/caution.png
-t1269057516
+t1269824037
 s3061
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/in.png
-t1269057515
+t1269824036
 s683
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/rar
-t1269057515
+t1269824036
 s739868
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/rar-archive utility.icns
@@ -882,11 +881,11 @@ t1264865059
 s76846
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/raricon.icns
-t1269057515
+t1269824035
 s63726
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/stop.png
-t1269057515
+t1269824036
 s334
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/stopDisabled.png
@@ -894,19 +893,19 @@ t1264770533
 s3267
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/stopHovered.png
-t1269057515
+t1269824036
 s362
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/stopPressed.png
-t1269057515
+t1269824036
 s391
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/unrar
-t1269057515
+t1269824035
 s440184
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/warning.png
-t1269057515
+t1269824035
 s80784
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/ArchiveController.o
@@ -930,25 +929,25 @@ t1266029915
 s27344
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR-Archive Utility.LinkFileList
-c000000004BA447EA0000000000000B34
-t1269057514
-s2868
+c000000004BAFFA1F0000000000000AA1
+t1269824031
+s2721
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o
-t1269225414
-s75352
+t1269824040
+s74120
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTask.o
-t1269225414
-s35468
+t1269824040
+s35748
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o
-t1269225414
-s41944
+t1269824040
+s42048
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o
-t1269225414
-s116572
+t1269824041
+s116000
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardWindowController.o
 t1267991661
@@ -959,7 +958,7 @@ t1268099130
 s86184
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o
-t1269057520
+t1269824041
 s10100
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUCompressionWarningValueTransformer.o
@@ -967,47 +966,51 @@ t2
 s0
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o
-t1269057520
-s21740
+t1269824040
+s22460
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTask.o
-t1269225414
-s27920
+t1269824040
+s28024
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTaskController.o
-t1269225414
-s25992
+t1269824040
+s25340
+
+N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUFloatStringTransformer.o
+t1269824041
+s13064
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o
-t1269057520
+t1269824041
 s9940
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUMainWindow.o
-t1269057519
+t1269824040
 s28472
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o
-t1269225414
-s29972
+t1269824040
+s29880
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o
-t1269057519
+t1269824040
 s18476
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTask.o
-t1269225414
-s43212
+t1269824040
+s42776
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskController.o
-t1269225414
-s53836
+t1269824040
+s53692
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o
-t1269057651
-s27324
+t1269824040
+s27028
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o
-t1269057520
+t1269696680
 s12708
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyValueTransformer.o
@@ -1055,7 +1058,7 @@ t1266029915
 s27608
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o
-t1269057519
+t1269824040
 s5024
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/stopButton.o
@@ -1063,24 +1066,24 @@ t2
 s0
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/caution.png
-c000000004A5ED7520000000000000BF5
-t1247729490
+c000000004BAD766E0000000000000BF5
+t1269659246
 s3061
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/in.png
-c000000004738AA8D00000000000002AB
-t1194896013
+c000000004BAD766E00000000000002AB
+t1269659246
 s683
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m
-c000000004B636D970000000000000107
-t1264807319
-s263
+c000000004BAFF1840000000000000105
+t1269821828
+s261
 i<Cocoa/Cocoa.h>
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar
-c000000004B236FB100000000000B4A1C
-t1260613553
+c000000004BAD766E00000000000B4A1C
+t1269659246
 s739868
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar-archive utility.icns
@@ -1104,13 +1107,13 @@ t1264247105
 s76846
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/raricon.icns
-c000000004B644E69000000000000F8EE
-t1264864873
+c000000004BAD766E000000000000F8EE
+t1269659246
 s63726
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stop.png
-c000000004A5ED755000000000000014E
-t1247729493
+c000000004BAD766E000000000000014E
+t1269659246
 s334
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopButton.h
@@ -1131,37 +1134,37 @@ t1264770273
 s3267
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopHovered.png
-c000000004A5ED755000000000000016A
-t1247729493
+c000000004BAD766E000000000000016A
+t1269659246
 s362
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopPressed.png
-c000000004A5ED7550000000000000187
-t1247729493
+c000000004BAD766E0000000000000187
+t1269659246
 s391
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/unrar
-c000000004B236FB1000000000006B778
-t1260613553
+c000000004BAD766E000000000006B778
+t1269659246
 s440184
 
 N/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/warning.png
-c000000004B6396730000000000013B90
-t1264817779
+c000000004BAD766E0000000000013B90
+t1269659246
 s80784
 
 N/var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch
-t1269057518
+t1269824039
 s54212368
 
 NRAR_Archive_Utility-Info.plist
-c000000004BA6D7C300000000000005D0
-t1269225411
+c000000004BAD766E00000000000005D0
+t1269659246
 s1488
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies290918213#290918213#0(0"0(0#1#0"4324412872#0"0#
+lSLF07#2@18"Check dependencies291516831#291516831#0(0"0(0#1#0"4324412872#0"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/ArchiveController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/ArchiveController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s287722715.676852
@@ -1219,8 +1222,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/MainWindow.m287722715#287722715#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/MainWindow.m4300885448#1878"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/MainWindow.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/MainWindow.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918213.967207
-e290918214.186478
+s291516839.883876
+e291516840.130312
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o
@@ -1229,11 +1232,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@93"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m290918213#290918214#0(0"0(0#0#85"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m4324412872#1918"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o"0#
+lSLF07#2@93"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m291516839#291516840#0(0"0(0#0#85"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m4324412872#1918"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_UtilityAppDelegate.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR_Archive_UtilityAppDelegate.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTask.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.146316
-e290918214.292678
+s291516840.316525
+e291516840.471839
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTask.o
@@ -1242,11 +1245,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m290918214#290918214#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m4324412872#1886"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTask.o"0#
+lSLF07#2@77"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m291516840#291516840#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m4324412872#1886"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTask.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.541611
-e290918214.707213
+s291516840.806006
+e291516840.987257
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o
@@ -1255,11 +1258,12 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m290918214#290918214#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o"0#
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m:22:2: warning: #warning we might want to think into splitting new and add taskcontroller. the RAUTask may stay the same
+lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m291516840#291516840#0(200"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m:22:2: warning: #warning we might want to think into splitting new and add taskcontroller. the RAUTask may stay the same1(22@104"#warning we might want to think into splitting new and add taskcontroller. the RAUTask may stay the same291516840#0#200#0(6@79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m291516831#22#0#22#0#10"#warning *0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveTaskController.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.576090
-e290918214.782482
+s291516840.968571
+e291516841.187715
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o
@@ -1268,7 +1272,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@89"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m290918214#290918214#0(0"0(0#0#81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m4324412872#1910"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o"0#
+lSLF07#2@89"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m291516840#291516841#0(0"0(0#0#81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m4324412872#1910"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardController.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardWindowController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 s289684461.617321
@@ -1302,8 +1306,8 @@ o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowCont
 lSLF07#2@99"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m289791930#289791930#0(775"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m: In function '-[OldRAUArchiveWizardWindowController nextPageButtonPressed:]':/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m:215: warning: no '-initExistingRarfile:withFilesToAdd:compressionLevel:' method found/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m:215: warning: (Messages without a matching method signature/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m:215: warning: will be assumed to return 'id' and accept/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m:215: warning: '...' as arguments.)2(22@71"No '-initExistingRarfile:withFilesToAdd:compressionLevel:' method found289791930#170#178#0(6@91"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m289786451#215#0#215#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)289791930#348#152#0(6@91"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m289786451#215#0#215#0#0"0(0#0#91"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m4300885448#1930"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardWindowController.old.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArchiveWizardWindowController.old.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750320.254273
-e290750320.412604
+s291516841.187809
+e291516841.294177
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o
@@ -1312,14 +1316,14 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m290750320#290750320#0(0"0(0#0#80"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m4324412872#1908"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o"0#
+lSLF07#2@88"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m291516841#291516841#0(0"0(0#0#80"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m4324412872#1908"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArrayToListTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUArrayToListTransformer.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUCompressionWarningValueTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUCompressionWarningValueTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 r0
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750319.941121
-e290750320.064835
+s291516840.829045
+e291516840.968482
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o
@@ -1328,11 +1332,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m290750319#290750320#0(0"0(0#0#71"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m4324412872#1890"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o"0#
+lSLF07#2@79"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m291516840#291516840#0(0"0(0#0#71"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m4324412872#1890"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUDraggableView.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUDraggableView.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTask.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.292762
-e290918214.438051
+s291516840.471925
+e291516840.611783
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTask.o
@@ -1341,11 +1345,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m290918214#290918214#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m4324412872#1886"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTask.o"0#
+lSLF07#2@77"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m291516840#291516840#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m4324412872#1886"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTask.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTaskController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.438133
-e290918214.575915
+s291516840.680902
+e291516840.805913
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTaskController.o
@@ -1354,11 +1358,24 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m290918214#290918214#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTaskController.o"0#
+lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m291516840#291516840#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUExtractTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUExtractTaskController.o"0#
+
+CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUFloatStringTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s291516840.987348
+e291516841.113002
+r1
+xCompileC
+xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUFloatStringTransformer.o
+x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m291516840#291516841#0(0"0(0#0#80"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m4324412872#1908"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUFloatStringTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUFloatStringTransformer.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750320.194698
-e290750320.383947
+s291516841.113198
+e291516841.224694
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o
@@ -1367,11 +1384,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m290750320#290750320#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o"0#
+lSLF07#2@87"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m291516841#291516841#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m4324412872#1906"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUIsPositiveTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUIsPositiveTransformer.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUMainWindow.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750319.363385
-e290750319.511100
+s291516840.283194
+e291516840.452609
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUMainWindow.o
@@ -1380,11 +1397,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m290750319#290750319#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m4324412872#1884"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUMainWindow.o"0#
+lSLF07#2@76"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m291516840#291516840#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m4324412872#1884"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUMainWindow.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUMainWindow.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918213.968151
-e290918214.145239
+s291516840.028770
+e291516840.166918
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o
@@ -1393,11 +1410,13 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m290918213#290918214#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m4324412872#1878"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o"0#
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m:17:2: warning: #warning We probably want to rewrite this class, so we can create rarfiles from non-existing files (giving us path information etc.)
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m:31:2: warning: #warning We should create a TaskController here. This'd also allow us to replace the TaskDidFinishNotification with a method call to RAUTaskController
+lSLF07#2@73"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m291516840#291516840#0(446"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m:17:2: warning: #warning We probably want to rewrite this class, so we can create rarfiles from non-existing files (giving us path information etc.)/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m:31:2: warning: #warning We should create a TaskController here. This'd also allow us to replace the TaskDidFinishNotification with a method call to RAUTaskController2(22@132"#warning We probably want to rewrite this class, so we can create rarfiles from non-existing files (giving us path information etc.)291516840#0#214#0(6@65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m291486093#17#0#17#0#10"#warning *0(22@150"#warning We should create a TaskController here. This'd also allow us to replace the TaskDidFinishNotification with a method call to RAUTaskController291516840#214#232#0(6@65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m291486093#31#0#31#0#10"#warning *0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m4324412872#1878"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAURarfile.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAURarfile.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750319.356300
-e290750319.477810
+s291516840.167001
+e291516840.316453
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o
@@ -1406,11 +1425,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m290750319#290750319#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m4324412872#1884"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o"0#
+lSLF07#2@76"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m291516840#291516840#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m4324412872#1884"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUStopButton.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUStopButton.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTask.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.186557
-e290918214.357361
+s291516840.452697
+e291516840.680704
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTask.o
@@ -1419,11 +1438,13 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m290918214#290918214#0(0"0(0#0#62"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m4324412872#1872"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTask.o"0#
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m:156:2: warning: #warning Sending a notification is senseless, we should directly invoke a method of RAUTaskController
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m:187:2: warning: #warning we really need to rethink the whole renaming thing. at least recomment these methods
+lSLF07#2@70"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m291516840#291516840#0(354"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m:156:2: warning: #warning Sending a notification is senseless, we should directly invoke a method of RAUTaskController/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m:187:2: warning: #warning we really need to rethink the whole renaming thing. at least recomment these methods2(22@101"#warning Sending a notification is senseless, we should directly invoke a method of RAUTaskController291516840#0#181#0(6@62"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m291485591#156#0#156#0#10"#warning *0(22@93"#warning we really need to rethink the whole renaming thing. at least recomment these methods291516840#181#173#0(6@62"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m291485591#187#0#187#0#10"#warning *0(0#0#62"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m4324412872#1872"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTask.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTask.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290918214.357449
-e290918214.541516
+s291516840.611869
+e291516840.828956
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskController.o
@@ -1432,11 +1453,15 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m290918214#290918214#0(0"0(0#0#72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m4324412872#1892"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskController.o"0#
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:20:2: warning: #warning I think this class and the subclasses need to be rewritten greatly. they seem to miss a lot of logic (what belongs where etc.)
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:40:2: warning: #warning again, it would probably make more sense to use a delegate method (not sure this time)
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:61:2: warning: #warning rewrite this to "setFile:". Also, think about if it really makes sense in the superclass
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:79:2: warning: #warning maybe a delegate method would be more suitable here?
+lSLF07#2@80"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m291516840#291516840#0(744"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:20:2: warning: #warning I think this class and the subclasses need to be rewritten greatly. they seem to miss a lot of logic (what belongs where etc.)/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:40:2: warning: #warning again, it would probably make more sense to use a delegate method (not sure this time)/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:61:2: warning: #warning rewrite this to "setFile:". Also, think about if it really makes sense in the superclass/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m:79:2: warning: #warning maybe a delegate method would be more suitable here?4(22@135"#warning I think this class and the subclasses need to be rewritten greatly. they seem to miss a lot of logic (what belongs where etc.)291516840#0#224#0(6@72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m291515270#20#0#20#0#10"#warning *0(22@95"#warning again, it would probably make more sense to use a delegate method (not sure this time)291516840#224#184#0(6@72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m291515270#40#0#40#0#10"#warning *0(22@97"#warning rewrite this to "setFile:". Also, think about if it really makes sense in the superclass291516840#408#186#0(6@72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m291515270#61#0#61#0#10"#warning *0(22@61"#warning maybe a delegate method would be more suitable here?291516840#594#150#0(6@72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m291515270#79#0#79#0#10"#warning *0(0#0#72"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m4324412872#1892"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskController.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750451.174283
-e290750451.452209
+s291516840.130406
+e291516840.283095
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o
@@ -1445,11 +1470,11 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m290750451#290750451#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m4324412872#1900"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o"0#
+lSLF07#2@84"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m291516840#291516840#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m4324412872#1900"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUTaskViewController.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUTaskViewController.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750320.064924
-e290750320.194601
+s291389480.782696
+e291389480.881071
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o
@@ -1458,7 +1483,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@88"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m290750320#290750320#0(0"0(0#0#80"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m4324412872#1908"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o"0#
+lSLF07#2@88"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m291389480#291389480#0(0"0(0#0#80"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m4324412872#1908"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyTransformer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyTransformer.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAUZeroToEmptyValueTransformer.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUZeroToEmptyValueTransformer.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -1664,8 +1689,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@70"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Unrarer.m287722715#287722715#0(0"0(0#0#62"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Unrarer.m4300885448#1872"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Unrarer.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/Unrarer.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750319.002451
-e290750319.103377
+s291516839.827920
+e291516840.028688
 r1
 xCompileC
 xbuild/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o
@@ -1674,7 +1699,7 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m290750319#290750319#0(0"0(0#0#59"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m4324412872#1866"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o"0#
+lSLF07#2@67"Compile /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m291516839#291516840#0(0"0(0#0#59"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m4324412872#1866"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -include /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/main.m" -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/main.o"0#
 
 CCompileC "build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/stopButton.o" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopButton.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -1691,127 +1716,127 @@ x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/ArchiveWizardWindow.xib
 lSLF07#2@34"CompileXIB ArchiveWizardWindow.xib290287607#290287608#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/ArchiveWizardWindow.xib28710911488229464#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/ArchiveWizardWindow.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/ArchiveWizardWindow.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib"
-s290750315.282818
-e290750315.541883
+s291516835.995816
+e291516836.260288
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib
-lSLF07#2@48"CompileXIB English.lproj/ArchiveWizardWindow.xib290750315#290750315#0(0"0(0#0#90"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/ArchiveWizardWindow.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib"0#
+lSLF07#2@48"CompileXIB English.lproj/ArchiveWizardWindow.xib291516835#291516836#0(0"0(0#0#90"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/ArchiveWizardWindow.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/ArchiveWizardWindow.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib"
-s290750314.404928
-e290750314.987811
+s291516831.916472
+e291516835.575084
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib290750314#290750314#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/MainMenu.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib"0#
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib291516831#291516835#0(0"0(0#0#79"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/MainMenu.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/MainMenu.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib"
-s290750315.541964
-e290750315.785607
+s291516836.260361
+e291516836.560085
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib
-lSLF07#2@34"CompileXIB English.lproj/Page1.xib290750315#290750315#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page1.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib"0#
+lSLF07#2@34"CompileXIB English.lproj/Page1.xib291516836#291516836#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page1.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page1.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib"
-s290750315.785684
-e290750316.115269
+s291516836.560157
+e291516836.794065
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib
-lSLF07#2@34"CompileXIB English.lproj/Page2.xib290750315#290750316#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page2.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib"0#
+lSLF07#2@34"CompileXIB English.lproj/Page2.xib291516836#291516836#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page2.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page2.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib"
-s290750316.115439
-e290750316.450488
+s291516836.794136
+e291516837.117773
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib
 o/* com.apple.ibtool.document.notices */
 o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib:23: note: This view is clipping its content.
-lSLF07#2@34"CompileXIB English.lproj/Page3.xib290750316#290750316#0(162"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib:23: note: This view is clipping its content.1(13@34"This view is clipping its content.290750316#18446744073709551615#0#0(6@76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib290708604#23#0#23#0#0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page3.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib"0#
+lSLF07#2@34"CompileXIB English.lproj/Page3.xib291516836#291516837#0(162"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib:23: note: This view is clipping its content.1(13@34"This view is clipping its content.291516837#18446744073709551615#0#0(6@76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib291515837#23#0#23#0#0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page3.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page3.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib"
-s290750316.451535
-e290750316.657832
+s291516837.118435
+e291516837.339716
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib
-lSLF07#2@34"CompileXIB English.lproj/Page4.xib290750316#290750316#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page4.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib"0#
+lSLF07#2@34"CompileXIB English.lproj/Page4.xib291516837#291516837#0(0"0(0#0#76"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Page4.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Page4.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib"
-s290912046.808002
-e290912049.570108
+s291516835.574532
+e291516835.862270
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib
 o/* com.apple.ibtool.document.notices */
 o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib:12: note: This view is clipping its content.
-lSLF07#2@40"CompileXIB English.lproj/RarfileView.xib290912046#290912049#0(168"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib:12: note: This view is clipping its content.1(13@34"This view is clipping its content.290912049#18446744073709551615#0#0(6@82"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib290911942#12#0#12#0#0"0(0#0#82"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib4324412872#393"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/RarfileView.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib"0#
+lSLF07#2@40"CompileXIB English.lproj/RarfileView.xib291516835#291516835#0(168"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib:12: note: This view is clipping its content.1(13@34"This view is clipping its content.291516835#18446744073709551615#0#0(6@82"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib291352046#12#0#12#0#0"0(0#0#82"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib4324412872#393"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/RarfileView.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/RarfileView.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib"
-s290914988.422377
-e290914991.051396
+s291516836.125825
+e291516836.375425
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib
-lSLF07#2@47"CompileXIB German.lproj/ArchiveWizardWindow.xib290914988#290914991#0(0"0(0#0#89"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib4324412872#407"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/ArchiveWizardWindow.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib"0#
+lSLF07#2@47"CompileXIB German.lproj/ArchiveWizardWindow.xib291516836#291516836#0(0"0(0#0#89"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib4324412872#407"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/ArchiveWizardWindow.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/ArchiveWizardWindow.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib"
-s290750314.470304
-e290750314.993558
+s291516833.189208
+e291516835.574336
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib
-lSLF07#2@36"CompileXIB German.lproj/MainMenu.xib290750314#290750315#0(0"0(0#0#78"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib4324412872#385"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/MainMenu.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib"0#
+lSLF07#2@36"CompileXIB German.lproj/MainMenu.xib291516833#291516835#0(0"0(0#0#78"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib4324412872#385"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/MainMenu.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/MainMenu.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib"
-s290750315.543871
-e290750315.794377
+s291516836.375513
+e291516836.631866
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib
-lSLF07#2@33"CompileXIB German.lproj/Page1.xib290750315#290750315#0(0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page1.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib"0#
+lSLF07#2@33"CompileXIB German.lproj/Page1.xib291516836#291516836#0(0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page1.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page1.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib"
-s290750315.794440
-e290750316.180860
+s291516836.631938
+e291516836.897370
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib
 o/* com.apple.ibtool.document.notices */
 o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib:11: note: This view is clipping its content.
-lSLF07#2@33"CompileXIB German.lproj/Page2.xib290750315#290750316#0(161"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib:11: note: This view is clipping its content.1(13@34"This view is clipping its content.290750316#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib290296056#11#0#11#0#0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page2.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib"0#
+lSLF07#2@33"CompileXIB German.lproj/Page2.xib291516836#291516836#0(161"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib:11: note: This view is clipping its content.1(13@34"This view is clipping its content.291516836#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib291515837#11#0#11#0#0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page2.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page2.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib"
-s290750316.180936
-e290750316.498273
+s291516836.897455
+e291516837.259143
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib
 o/* com.apple.ibtool.document.notices */
-o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:309: note: This view is clipping its content.
 o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:23: note: This view is clipping its content.
-lSLF07#2@33"CompileXIB German.lproj/Page3.xib290750316#290750316#0(283"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:309: note: This view is clipping its content./Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:23: note: This view is clipping its content.2(13@34"This view is clipping its content.290750316#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib290745808#309#0#309#0#0"0(13@34"This view is clipping its content.290750316#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib290745808#23#0#23#0#0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page3.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib"0#
+o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:309: note: This view is clipping its content.
+lSLF07#2@33"CompileXIB German.lproj/Page3.xib291516836#291516837#0(283"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:23: note: This view is clipping its content./Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib:309: note: This view is clipping its content.2(13@34"This view is clipping its content.291516837#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib291515837#23#0#23#0#0"0(13@34"This view is clipping its content.291516837#18446744073709551615#0#0(6@75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib291515837#309#0#309#0#0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page3.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page3.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib"
-s290750316.498343
-e290750316.694298
+s291516837.259212
+e291516837.455290
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib
-lSLF07#2@33"CompileXIB German.lproj/Page4.xib290750316#290750316#0(0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page4.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib"0#
+lSLF07#2@33"CompileXIB German.lproj/Page4.xib291516837#291516837#0(0"0(0#0#75"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Page4.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Page4.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib"
-s290912046.808511
-e290912049.571899
+s291516835.575130
+e291516835.866936
 r1
 xCompileXIB
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib
 o/* com.apple.ibtool.document.notices */
 o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib:12: note: This view is clipping its content.
-lSLF07#2@39"CompileXIB German.lproj/RarfileView.xib290912046#290912049#0(167"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib:12: note: This view is clipping its content.1(13@34"This view is clipping its content.290912049#18446744073709551615#0#0(6@81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib290911951#12#0#12#0#0"0(0#0#81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/RarfileView.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib"0#
+lSLF07#2@39"CompileXIB German.lproj/RarfileView.xib291516835#291516835#0(167"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib:12: note: This view is clipping its content.1(13@34"This view is clipping its content.291516835#18446744073709551615#0#0(6@81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib291352046#12#0#12#0#0"0(0#0#81"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/RarfileView.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/RarfileView.xib"0#
 
 CCompileXIB "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/Page1.xib"
 s290287607.807594
@@ -1858,31 +1883,31 @@ o/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RarfileView.xib:12: note: 
 lSLF07#2@26"CompileXIB RarfileView.xib286850380#286850381#0(154"/* com.apple.ibtool.document.notices *//Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RarfileView.xib:12: note: This view is clipping its content.1(13@34"This view is clipping its content.286850381#18446744073709551615#0#0(6@68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RarfileView.xib286517520#12#0#12#0#0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RarfileView.xib4324412872#365"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/RarfileView.nib" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RarfileView.xib"0#
 
 CCopyStringsFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
-s290750314.404398
-e290750314.470238
+s291516831.915889
+e291516833.189132
 r1
 xCopyStringsFile
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/InfoPlist.strings
 xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings290750314#290750314#0(0"0(0#0#84"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/InfoPlist.strings4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj"0#
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings291516831#291516833#0(0"0(0#0#84"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/InfoPlist.strings4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj"0#
 
 CCopyStringsFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Localizable.strings" English.lproj/Localizable.strings
-s290914367.021804
-e290914367.049934
+s291516835.865838
+e291516835.928230
 r1
 xCopyStringsFile
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj/Localizable.strings
 xEnglish.lproj/Localizable.strings
-lSLF07#2@38"Copy English.lproj/Localizable.strings290914367#290914367#0(0"0(0#0#86"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Localizable.strings4324412872#411"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/Localizable.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj"0#
+lSLF07#2@38"Copy English.lproj/Localizable.strings291516835#291516835#0(0"0(0#0#86"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/English.lproj/Localizable.strings4324412872#411"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/Localizable.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/English.lproj"0#
 
 CCopyStringsFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Localizable.strings" German.lproj/Localizable.strings
-s290914337.205710
-e290914337.410007
+s291516835.983242
+e291516836.092279
 r1
 xCopyStringsFile
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj/Localizable.strings
 xGerman.lproj/Localizable.strings
-lSLF07#2@37"Copy German.lproj/Localizable.strings290914337#290914337#0(0"0(0#0#85"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Localizable.strings4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 German.lproj/Localizable.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj"0#
+lSLF07#2@37"Copy German.lproj/Localizable.strings291516835#291516836#0(0"0(0#0#85"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/German.lproj/Localizable.strings4324412872#409"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 German.lproj/Localizable.strings --outdir "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/German.lproj"0#
 
 CCopyStringsFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources/Localizable.strings" Localizable.strings
 r0
@@ -1924,40 +1949,40 @@ xapp.icns
 lSLF07#2@13"Copy app.icns287721345#287721345#0(0"0(0#0#61"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/app.icns4300885448#384"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/app.icns" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/appicon.icns" appicon.icns
-s290750315.235859
-e290750315.252357
+s291516835.865385
+e291516835.983181
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/appicon.icns
 xappicon.icns
-lSLF07#2@17"Copy appicon.icns290750315#290750315#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/appicon.icns4324412872#388"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/appicon.icns" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@17"Copy appicon.icns291516835#291516835#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/appicon.icns4324412872#388"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/appicon.icns" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/caution.png" caution.png
-s290750316.450567
-e290750316.465743
+s291516837.117867
+e291516837.130694
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/caution.png
 xcaution.png
-lSLF07#2@16"Copy caution.png290750316#290750316#0(0"0(0#0#64"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/caution.png4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/caution.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@16"Copy caution.png291516837#291516837#0(0"0(0#0#64"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/caution.png4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/caution.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/in.png" in.png
-s290750315.282468
-e290750315.307926
+s291516835.995436
+e291516836.089680
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/in.png
 xin.png
-lSLF07#2@11"Copy in.png290750315#290750315#0(0"0(0#0#59"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/in.png4324412872#382"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/in.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@11"Copy in.png291516835#291516836#0(0"0(0#0#59"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/in.png4324412872#382"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/in.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/rar" rar
-s290750315.278285
-e290750315.294430
+s291516835.987062
+e291516836.125750
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/rar
 xrar
-lSLF07#2@8"Copy rar290750315#290750315#0(0"0(0#0#56"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@8"Copy rar291516835#291516836#0(0"0(0#0#56"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar4324412872#379"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rar" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/rar-archive utility.icns" "rar-archive utility.icns"
 r0
@@ -1990,22 +2015,22 @@ xrarfile.icns.old
 lSLF07#2@21"Copy rarfile.icns.old286557859#286557859#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rarfile.icns.old4324412872#392"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/rarfile.icns.old" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/raricon.icns" raricon.icns
-s290750315.235166
-e290750315.248642
+s291516835.864904
+e291516835.981729
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/raricon.icns
 xraricon.icns
-lSLF07#2@17"Copy raricon.icns290750315#290750315#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/raricon.icns4324412872#388"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/raricon.icns" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@17"Copy raricon.icns291516835#291516835#0(0"0(0#0#65"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/raricon.icns4324412872#388"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/raricon.icns" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/stop.png" stop.png
-s290750315.282112
-e290750315.294616
+s291516835.994931
+e291516836.091886
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/stop.png
 xstop.png
-lSLF07#2@13"Copy stop.png290750315#290750315#0(0"0(0#0#61"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stop.png4324412872#384"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stop.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@13"Copy stop.png291516835#291516836#0(0"0(0#0#61"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stop.png4324412872#384"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stop.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/stopDisabled.png" stopDisabled.png
 s286463333.600363
@@ -2017,63 +2042,63 @@ xstopDisabled.png
 lSLF07#2@21"Copy stopDisabled.png286463333#286463333#0(0"0(0#0#69"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopDisabled.png4324412872#392"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopDisabled.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/stopHovered.png" stopHovered.png
-s290750315.279817
-e290750315.306818
+s291516835.987600
+e291516836.005985
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/stopHovered.png
 xstopHovered.png
-lSLF07#2@20"Copy stopHovered.png290750315#290750315#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopHovered.png4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopHovered.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@20"Copy stopHovered.png291516835#291516836#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopHovered.png4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopHovered.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/stopPressed.png" stopPressed.png
-s290750315.281677
-e290750315.294532
+s291516835.991674
+e291516836.091742
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/stopPressed.png
 xstopPressed.png
-lSLF07#2@20"Copy stopPressed.png290750315#290750315#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopPressed.png4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopPressed.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@20"Copy stopPressed.png291516835#291516836#0(0"0(0#0#68"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopPressed.png4324412872#391"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/stopPressed.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/unrar" unrar
-s290750315.232045
-e290750315.248371
+s291516835.862925
+e291516835.986994
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/unrar
 xunrar
-lSLF07#2@10"Copy unrar290750315#290750315#0(0"0(0#0#58"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/unrar4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/unrar" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@10"Copy unrar291516835#291516835#0(0"0(0#0#58"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/unrar4324412872#381"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/unrar" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CCpResource "build/Debug/RAR-Archive Utility.app/Contents/Resources/warning.png" warning.png
-s290750315.232820
-e290750315.248554
+s291516835.863963
+e291516835.980970
 r1
 xCpResource
 xbuild/Debug/RAR-Archive Utility.app/Contents/Resources/warning.png
 xwarning.png
-lSLF07#2@16"Copy warning.png290750315#290750315#0(0"0(0#0#64"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/warning.png4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/warning.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
+lSLF07#2@16"Copy warning.png291516835#291516835#0(0"0(0#0#64"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/warning.png4324412872#387"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/warning.png" "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Resources"0#
 
 CLd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility" normal x86_64
-s290918214.782556
-e290918214.889019
+s291516841.294255
+e291516841.488655
 r1
 xLd
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility
 xnormal
 xx86_64
-lSLF07#2@128"Link /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility290918214#290918214#0(0"0(0#0#0"4324412872#682"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" -filelist "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR-Archive Utility.LinkFileList" -mmacosx-version-min=10.6 -framework Cocoa -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility"0#
+lSLF07#2@128"Link /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility291516841#291516841#0(0"0(0#0#0"4324412872#682"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" -filelist "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/Objects-normal/x86_64/RAR-Archive Utility.LinkFileList" -mmacosx-version-min=10.6 -framework Cocoa -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/MacOS/RAR-Archive Utility"0#
 
 CProcessInfoPlistFile "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist" RAR_Archive_Utility-Info.plist
-s290918213.956377
-e290918213.959659
+s291516831.888309
+e291516831.915780
 r1
 xProcessInfoPlistFile
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist
 xRAR_Archive_Utility-Info.plist
-lSLF07#2@38"Process RAR_Archive_Utility-Info.plist290918213#290918213#0(0"0(0#0#83"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility-Info.plist4324412872#394"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    builtin-infoPlistUtility RAR_Archive_Utility-Info.plist -genpkginfo "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist"0#
+lSLF07#2@38"Process RAR_Archive_Utility-Info.plist291516831#291516831#0(0"0(0#0#83"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility-Info.plist4324412872#394"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    builtin-infoPlistUtility RAR_Archive_Utility-Info.plist -genpkginfo "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app/Contents/Info.plist"0#
 
 CProcessPCH /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch RAR_Archive_Utility_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s290750316.694389
-e290750319.002327
+s291516837.455446
+e291516839.827702
 r1
 xProcessPCH
 x/var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch
@@ -2082,13 +2107,13 @@ xnormal
 xx86_64
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@41"Precompile RAR_Archive_Utility_Prefix.pch290750316#290750319#0(0"0(0#0#83"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility_Prefix.pch4324412872#1744"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility_Prefix.pch" -o /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch0#
+lSLF07#2@41"Precompile RAR_Archive_Utility_Prefix.pch291516837#291516839#0(0"0(0#0#83"/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility_Prefix.pch4324412872#1744"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-generated-files.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-own-target-headers.hmap" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-all-target-headers.hmap" -iquote "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/RAR-Archive Utility-project-headers.hmap" "-F/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/include" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources/x86_64" "-I/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/RAR-Archive Utility.build/Debug/RAR-Archive Utility.build/DerivedSources" -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAR_Archive_Utility_Prefix.pch" -o /var/folders/Ef/EfPAQz6jHRilTTybAdgiFE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/RAR_Archive_Utility_Prefix-hledpckpaznffmbmjwmwojacyfmy/RAR_Archive_Utility_Prefix.pch.gch0#
 
 CTouch "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app"
-s290918214.889092
-e290918214.895501
+s291516841.488846
+e291516841.492079
 r1
 xTouch
 x/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app
-lSLF07#2@94"Touch /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app290918214#290918214#0(0"0(0#0#0"4324412872#175"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /usr/bin/touch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app"0#
+lSLF07#2@94"Touch /Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app291516841#291516841#0(0"0(0#0#0"4324412872#175"    cd "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility"    /usr/bin/touch -c "/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/build/Debug/RAR-Archive Utility.app"0#
 

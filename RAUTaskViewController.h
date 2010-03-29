@@ -10,6 +10,8 @@
 
 
 #define TaskViewStopButtonClickedNotification	@"TaskViewStopButtonClickedNotification"
+
+
 @interface RAUTaskViewController : NSViewController {
 	NSImageView			*fileIcon;
 	NSImageView			*fileIconArchivingIndicator;

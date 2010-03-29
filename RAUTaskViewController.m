@@ -5,7 +5,8 @@
 //  Created by BlackWolf on 28.01.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
-// Controller of a view belonging to a Archiving/Extracting Task
+// This controls a view that belongs to a extraction/archiving task
+//
 
 #import "RAUTaskViewController.h"
 #import "RAUStopButton.h"
@@ -23,10 +24,12 @@
 	[self.progress		startAnimation:self];
 }
 
-/* X-Button was clicked, user wants to cancel the task belonging to this viewController - but we don't take care of that */
+/* X-Button at the right side of the view was clicked */
 -(IBAction)stopButtonClicked:(id)sender {
 	RAUStopButton *stopButton = (RAUStopButton *)sender;
 	[stopButton setEnabled:NO];
+	
+	//Just send a notification that the button was clicked - we don't take care of what to do then here
 	[[NSNotificationCenter defaultCenter] postNotificationName:TaskViewStopButtonClickedNotification object:self];
 }
 

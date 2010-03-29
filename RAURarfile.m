@@ -5,14 +5,16 @@
 //  Created by BlackWolf on 28.01.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
-// Create a rarfile with the path to an existing file
-// When the rarfile is created, it automatically launches an instance of ExtractTask to check if the provided file is valid or password
-// protected. When it gathered the results, it sends a Notification */
+// An instance of RAURarfile represents an existing rarfile on the users hard drive. When created, this class checks if the provided
+// file is a valid archive, if it is password protected and if it is multiparted. Besides that, it's an easy way to access the different
+// parts of the rarfiles path
+//
 
 #import "RAURarfile.h"
 #import "RAUExtractTask.h"
 
 
+#warning We probably want to rewrite this class, so we can create rarfiles from non-existing files (giving us path information etc.)
 @implementation RAURarfile
 @synthesize fullPath, path, name, multipartExtension, extension, checkTask, isValid, isPasswordProtected, numberOfParts;
 
@@ -26,28 +28,29 @@
 		
 		if (self.multipartExtension != nil) self.name = [self.name stringByDeletingPathExtension];
 		
+#warning We should create a TaskController here. This'd also allow us to replace the TaskDidFinishNotification with a method call to RAUTaskController
 		//Create a task to check the file for validation and pwd
 		self.checkTask = [[RAUExtractTask alloc] initWithFile:self mode:ExtractTaskModeCheck];
 		
-		[[NSNotificationCenter defaultCenter] //Listen to when the check finishes
-		 addObserver:self
-		 selector:@selector(fileCheckFinished:)
-		 name:TaskDidFinishNotification
-		 object:self.checkTask];
+		//Listen to when the check finishes
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(fileCheckFinished:)
+													 name:TaskDidFinishNotification
+												   object:self.checkTask];
 		
 		[self.checkTask launchTask];	
 	}
 	return self;
 }
 
-/* Automatically invoked when checkTask finished. Fills the instance variables of the rarfile and sends a notification */
+/* Automatically invoked when checkTask finished */
 -(void)fileCheckFinished:(NSNotification *)notification {
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:TaskDidFinishNotification object:self.checkTask];
 	
 	isValid				= !(self.checkTask.result == TaskResultArchiveInvalid);
 	isPasswordProtected = (self.checkTask.result == TaskResultPasswordInvalid);
 	
-	//If the file is valid, see if it is multiparted and how many party it has
+	//See if it is multiparted and how many parts it has
 	numberOfParts = 0;
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
@@ -76,12 +79,14 @@
 }
 
 -(void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
 	[fullPath			release];
 	[path				release];
 	[name				release];
 	[multipartExtension	release];
 	[extension			release];
-	[self.checkTask		release];
+	[checkTask			release];
 	
 	[super dealloc];
 }

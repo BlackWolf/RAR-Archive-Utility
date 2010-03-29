@@ -10,6 +10,8 @@
 
 
 #define RarfileCompletedNotification	@"RarfileCompletedNotification"
+
+
 @class RAUExtractTask;
 @interface RAURarfile : NSObject {
 	NSString		*fullPath;

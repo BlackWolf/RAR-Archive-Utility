@@ -3,7 +3,9 @@
 //  RAR-Archive Utility
 //
 //  Created by BlackWolf on 05.03.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Mario Schreiner. All rights reserved.
+//
+// A subclass of NSView that accepts files dragged into it. Also keeps an array of all the files dragged into it
 //
 
 #import "RAUDraggableView.h"
@@ -12,11 +14,10 @@
 @implementation RAUDraggableView
 @synthesize draggedFiles;
 
-/* Init */
 -(void)awakeFromNib {
 	self.draggedFiles = [[NSMutableArray alloc] initWithCapacity:0];
 	
-	//Register the view to accept incoming file drags
+	//Register the view to accept drags
 	[self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]]; 
 }
 
@@ -25,17 +26,19 @@
     NSPasteboard *pboard = [sender draggingPasteboard]; //The pastboard that contains the dragged elements
 	
     if ([[pboard types] containsObject:NSFilenamesPboardType]) { //Dragged item was a file
-		return NSDragOperationCopy; //Doesn't really matter much, Copy is just the one used in most apps
+		return NSDragOperationCopy; 
     }
     return NSDragOperationNone; //No file? Permit the drag
 }
 
-/* Automatically called when the user actually drops something on our view (=releases the mouse button over it) */
+/* Automatically called when the user releases drags over our view */
 -(BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
     NSPasteboard *pboard = [sender draggingPasteboard]; //The dragged elements
 	
     if ([[pboard types] containsObject:NSFilenamesPboardType]) { //Dragged items were files
+		//Get the files and put them in self.draggedFiles if they are not already in there
         NSArray *files = [pboard propertyListForType:NSFilenamesPboardType];
+		
 		for (NSString *file in files) {
 			BOOL fileAlreadyExists = NO;
 			for (NSString *existingFile in self.draggedFiles) {
@@ -51,6 +54,12 @@
     }
 	
     return YES;
+}
+
+-(void)dealloc {
+	[draggedFiles release];
+	
+	[super dealloc];
 }
 
 @end

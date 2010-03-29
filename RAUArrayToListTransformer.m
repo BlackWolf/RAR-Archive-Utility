@@ -3,7 +3,9 @@
 //  RAR-Archive Utility
 //
 //  Created by BlackWolf on 09.03.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Mario Schreiner. All rights reserved.
+//
+// This transforms an array into a string. The string is a list of all the entries of the array
 //
 
 #import <Cocoa/Cocoa.h>
@@ -18,17 +20,15 @@
 
 @implementation RAUArrayToListTransformer
 
-/* Returns the class returned by transformedValue: */
 +(Class)transformedValueClass { 
 	return [NSString class]; 
 }
 
-/* We allow transformation in both directions - number to string and string to number */
 +(BOOL)allowsReverseTransformation { 
 	return NO;
 }
 
-/* Transformation from number to string */
+/* From array to string */
 -(id)transformedValue:(id)value {
 	if ([value isKindOfClass:[NSArray class]] == NO) return nil;
 	

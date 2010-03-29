@@ -20,27 +20,27 @@ typedef enum {
 
 
 @interface RAUTask : NSObject {
-	NSTask			*task;
-	NSFileHandle	*fileHandle;
 	int				currentFile;
 	int				progress;
 	TaskResult		result;
+	NSTask			*task;
+	NSFileHandle	*fileHandle;
 }
 
-@property (readwrite, assign)	NSTask			*task;
-@property (readwrite, assign)	NSFileHandle	*fileHandle;
 @property (readonly)			int				currentFile;
 @property (readonly)			int				progress;
 @property (readonly)			TaskResult		result;
+@property (readwrite, assign)	NSTask			*task;
+@property (readwrite, assign)	NSFileHandle	*fileHandle;
 
 -(void)taskWillLaunch;
 -(void)launchTask;
 -(void)taskDidLaunch;
+-(void)terminateTask;
+-(void)taskDidTerminate:(NSNotification *)notification;
 -(void)receivedNewOutput:(NSNotification *)notification;
 -(void)parseNewOutput:(NSString *)output;
 -(int)parseProgressFromString:(NSString *)output;
--(void)terminateTask;
--(void)taskDidTerminate:(NSNotification *)notification;
 -(void)willFinish;
 -(void)didFinish;
 -(void)sendDidFinishNotification;
