@@ -22,12 +22,6 @@
 	return YES;
 }
 
--(void)dealloc {
-	[introLabel	release];
-	
-	[super dealloc];
-}
-
 #pragma mark -
 #pragma mark Dragging
 

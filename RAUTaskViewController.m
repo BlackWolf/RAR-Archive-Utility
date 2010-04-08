@@ -15,15 +15,6 @@
 @implementation RAUTaskViewController
 @synthesize fileIcon, fileIconArchivingIndicator, statusLabel, progress, partsLabel;
 
--(void)loadView {
-	[super loadView];
-
-	//Set the view to "Preparing" state (before the extraction begins, while checking out the file etc.)
-	[self.statusLabel	setStringValue:NSLocalizedString(@"Preparing…", nil)];
-	[self.progress		setIndeterminate:YES];
-	[self.progress		startAnimation:self];
-}
-
 /* X-Button at the right side of the view was clicked */
 -(IBAction)stopButtonClicked:(id)sender {
 	RAUStopButton *stopButton = (RAUStopButton *)sender;
@@ -31,6 +22,14 @@
 	
 	//Just send a notification that the button was clicked - we don't take care of what to do then here
 	[[NSNotificationCenter defaultCenter] postNotificationName:TaskViewStopButtonClickedNotification object:self];
+}
+
+-(void)lockView {
+	fileIcon = nil;
+	fileIconArchivingIndicator = nil;
+	statusLabel = nil;
+	progress = nil;
+	partsLabel = nil;
 }
 
 @end

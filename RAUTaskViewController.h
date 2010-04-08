@@ -27,5 +27,6 @@
 @property (assign)	IBOutlet	NSTextField			*partsLabel;
 
 -(IBAction)stopButtonClicked:(id)sender;
+-(void)lockView;
 
 @end

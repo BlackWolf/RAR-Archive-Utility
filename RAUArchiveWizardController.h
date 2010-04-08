@@ -7,16 +7,21 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "RAUArchiveTask.h"
+
+
+typedef enum {
+	WizardModeCreate		=	0,
+	WizardModeAdd			=	1
+} WizardMode;
 
 
 #define LASTPAGE 4
 
 @interface RAUArchiveWizardController : NSWindowController <NSWindowDelegate> {
 	//Global
+	BOOL			isShown;
 	int				firstPage;
 	int				currentPage;
-	BOOL			isShown;
 	BOOL			finishedSuccessfully;
 	
 	//Global UI
@@ -26,21 +31,22 @@
 	NSButton		*previousPageButton;
 	NSButton		*nextPageButton;
 	
-	//Page-specific
-	
-	ArchiveTaskMode	mode;
+	//Binded to UI
+	WizardMode		mode;
 	NSString		*file;
 	int				compressionLevel;
 	BOOL			shouldBeProtected;
-	BOOL			passwordNeverEntered;
-	BOOL			passwordRepetitionNeverEntered;
 	NSString		*password;
 	NSString		*passwordRepetition;
 	BOOL			shouldBeSplitted;
-	BOOL			pieceSizeNeverEntered;
 	float			pieceSize;
 	int				pieceSizeUnit;
 	NSMutableArray	*filesToArchive;
+	
+	//Page-specific
+	BOOL			passwordNeverEntered;
+	BOOL			passwordRepetitionNeverEntered;
+	BOOL			pieceSizeNeverEntered;
 	
 	//Page-specific UI
 	NSImageView		*compressionLevelWarningImage;
@@ -53,10 +59,7 @@
 	NSTextField		*filesToArchiveLabel;
 }
 
-@property (assign)				int				firstPage;
-@property (assign)				int				currentPage;
-@property (assign)				BOOL			isShown;
-@property (assign)				BOOL			finishedSuccessfully;
+@property (readonly)			BOOL			isShown;
 
 @property (assign)	IBOutlet	NSTextField		*pageTitleLabel;
 @property (assign)	IBOutlet	NSView			*contentViewWrapper;
@@ -64,19 +67,17 @@
 @property (assign)	IBOutlet	NSButton		*previousPageButton;
 @property (assign)	IBOutlet	NSButton		*nextPageButton;
 
-@property (assign)				ArchiveTaskMode	mode;
+//Unfortunatly, bindings must be readwrite, because a change is only recognized if set through a setter
+@property (readwrite)			WizardMode		mode;
 @property (readwrite, copy)		NSString		*file;
-@property (assign)				int				compressionLevel;
-@property (assign)				BOOL			shouldBeProtected;
-@property (assign)				BOOL			passwordNeverEntered;
-@property (assign)				BOOL			passwordRepetitionNeverEntered;
+@property (readwrite)			int				compressionLevel;
+@property (readwrite)			BOOL			shouldBeProtected;
 @property (readwrite, copy)		NSString		*password;
 @property (readwrite, copy)		NSString		*passwordRepetition;
-@property (assign)				BOOL			shouldBeSplitted;
-@property (assign)				BOOL			pieceSizeNeverEntered;
-@property (assign)				float			pieceSize;
-@property (assign)				int				pieceSizeUnit;
-@property (readwrite, assign)	NSMutableArray	*filesToArchive;
+@property (readwrite)			BOOL			shouldBeSplitted;
+@property (readwrite)			float			pieceSize;
+@property (readwrite)			int				pieceSizeUnit;
+@property (readwrite, retain)	NSMutableArray	*filesToArchive;
 
 @property (assign)	IBOutlet	NSImageView		*compressionLevelWarningImage;
 @property (assign)	IBOutlet	NSTextField		*compressionLevelWarningLabel;

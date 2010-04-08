@@ -1,51 +1,61 @@
 //
-//  RarController.h
+//  RAUTaskController.h
 //  RAR-Archive Utility
 //
-//  Created by BlackWolf on 10.02.10.
+//  Created by BlackWolf on 01.04.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RAUTask.h" //Importing RAUTaskDelegate
 
 
-#define TaskControllerNeedsPasswordNotification	@"TaskControllerNeedsPasswordNotification"
-#define TaskControllerDidFinishNotification		@"TaskControllerDidFinishNotification"
+@class RAUTaskController;
+@protocol RAUTaskControllerDelegate
+-(void)taskControllerNeedsPassword:(RAUTaskController *)needyController;
+-(void)taskControllerRarfileInvalid:(RAUTaskController *)invalidController;
+-(void)taskControllerIsReady:(RAUTaskController *)readyController;
+-(void)taskControllerDidFinish:(RAUTaskController *)finishedController;
+@end
 
 
-@class RAUTaskViewController, RAUTask, RAURarfile;
-@interface RAUTaskController : NSObject {
-	RAURarfile				*file;
-	NSString				*password;
-	RAUTask					*task;
-	NSDate					*taskStartDate;
-	RAUTaskViewController	*viewController;
-	double					ETAFirstHalfFactor;
-	double					ETALastRuntime;
-	double					ETALastTotalRuntime;
+@class RAUPath, RAURarfile, RAUTask, RAUTaskViewController;
+@interface RAUTaskController : NSObject <RAUTaskDelegate> {
+	id<RAUTaskControllerDelegate>	delegate;
+	RAUPath							*rarfilePath;
+	RAURarfile						*rarfile;
+	NSString						*passwordArgument;
+	RAUTask							*task;
+	NSDate							*taskStartDate;
+	RAUTaskViewController			*viewController;
+	double							ETAFirstHalfFactor;
+	double							ETALastRuntime;
+	double							ETALastTotalRuntime;
 }
 
-@property (readwrite, assign)	RAURarfile				*file;
-@property (readwrite, copy)		NSString				*password;
-@property (readwrite, assign)	RAUTask					*task;
-@property (readwrite, assign)	NSDate					*taskStartDate;
-@property (readwrite, assign)	RAUTaskViewController	*viewController;
-@property (assign)				double					ETAFirstHalfFactor;
-@property (assign)				double					ETALastRuntime;
-@property (assign)				double					ETALastTotalRuntime;
+@property (readwrite, assign)	id<RAUTaskControllerDelegate>	delegate;
+@property (readwrite, copy)		RAUPath							*rarfilePath;
+@property (readonly, assign)	RAURarfile						*rarfile;
+@property (readwrite, copy)		NSString						*passwordArgument;
+@property (readonly, assign)	RAUTask							*task;
+@property (readonly, assign)	NSDate							*taskStartDate;
+@property (readonly, assign)	RAUTaskViewController			*viewController;
+@property (readonly)			double							ETAFirstHalfFactor;
+@property (readonly)			double							ETALastRuntime;
+@property (readonly)			double							ETALastTotalRuntime;
 
--(void)createRarfileFromPath:(NSString *)path;
--(void)fileWasCompleted:(NSNotification *)notification;
--(void)checkPassword:(NSString *)passwordToCheck;
--(void)passwordHasBeenChecked:(NSNotification *)notification;
+-(void)initView;
+-(void)didFinish;
+-(void)rarfileWasChecked:(NSNotification *)notification;
+-(void)passwordWasChecked:(NSNotification *)notification;
 -(void)taskWillLaunch;
 -(void)launchTask;
 -(void)taskDidLaunch;
 -(void)terminateTask;
--(void)taskDidFinish:(NSNotification *)notification;
--(void)progressWasUpdated:(NSNotification *)notification;
+-(void)taskDidFinish:(RAUTask *)finishedTask;
+-(void)progressTimerFired:(NSTimer*)theTimer;
+-(void)taskProgressWasUpdated:(RAUTask *)updatedTask;
 -(void)stopButtonClicked:(NSNotification *)notification;
--(void)didFinish;
 -(NSString *)getETAString;
 
 @end

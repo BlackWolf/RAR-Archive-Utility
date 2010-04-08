@@ -1,8 +1,8 @@
 //
-//  Unrarer.h
+//  RAUExtractTask.h
 //  RAR-Archive Utility
 //
-//  Created by BlackWolf on 09.02.10.
+//  Created by BlackWolf on 01.04.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
@@ -10,26 +10,21 @@
 #import "RAUTask.h" 
 
 
-typedef enum {
-	ExtractTaskModeCheck	=	0,
-	ExtractTaskModeExtract	=	1
-} ExtractTaskMode;
-
-
-@class RAURarfile;
+@class RAURarfile, RAUPath;
 @interface RAUExtractTask : RAUTask {
-	RAURarfile		*file;
-	ExtractTaskMode	mode;
-	NSString		*password;
-	NSString		*extractionPath;
+	RAURarfile		*rarfile;
+	RAUPath			*tmpPath;
+	int				currentPart;
+	int				numberOfParts;
+	NSString		*passwordArgument;
 }
 
-@property (readwrite, assign)	RAURarfile		*file;
-@property (readonly)			ExtractTaskMode	mode;
-@property (readwrite, copy)		NSString		*password;
-@property (readwrite, copy)		NSString		*extractionPath;
+@property (readonly, retain)	RAURarfile		*rarfile;
+@property (readonly, retain)	RAUPath			*tmpPath;
+@property (readonly)			int				currentPart;
+@property (readonly)			int				numberOfParts;
+@property (readwrite, copy)		NSString		*passwordArgument;
 
--(id)initWithFile:(RAURarfile *)targetFile mode:(ExtractTaskMode)taskMode password:(NSString *)taskPassword;
--(id)initWithFile:(RAURarfile *)targetFile mode:(ExtractTaskMode)taskMode;
+-(id)initWithFile:(RAURarfile *)sourceFile;
 
 @end

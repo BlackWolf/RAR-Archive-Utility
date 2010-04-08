@@ -16,6 +16,11 @@
 "About a day" = "Ungefähr ein Tag";
 "About %d days" = "Ungefähr %1$d Tage";
 
+/* Error messages */
+"\"%@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer." 
+= 
+"\"%1$@\" scheint kein RAR-Archiv zu sein, oder ist ein unbekanntes Format.\nWenn die Datei gültig sein sollte, versuchen Sie es erneut.\n\nWenn dieser Fehler wiederholt auftritt und Sie sicher sind, dass die Datei gültig ist, wenden Sie sich bitte an den Entwickler.";
+
 /* Passwort sheet */
 "\"%@.%@\" needs a password" = "\"%1$@.%2$@\" benötigt ein Passwort";
 

@@ -1,8 +1,8 @@
 //
-//  ExtractController.h
+//  RAUExtractTaskController.h
 //  RAR-Archive Utility
 //
-//  Created by BlackWolf on 12.02.10.
+//  Created by BlackWolf on 01.04.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
@@ -10,10 +10,14 @@
 #import "RAUTaskController.h"
 
 
+@class RAUExtractTask;
 @interface RAUExtractTaskController : RAUTaskController {
+	RAUExtractTask *extractTask;
 }
 
--(id)initWithFile:(NSString *)filePath;
--(void)initView;
+@property (readonly)	RAUExtractTask	*extractTask;
+
+-(id)initWithFilePath:(RAUPath *)pathToExtract;
+-(id)initWithStringPath:(NSString *)pathToExtract;
 
 @end

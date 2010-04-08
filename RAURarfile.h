@@ -1,41 +1,40 @@
 //
-//  Rarfile.h
+//  RAURarfile.h
 //  RAR-Archive Utility
 //
-//  Created by BlackWolf on 28.01.10.
+//  Created by BlackWolf on 02.04.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RAUTask.h" //Importing RAUTaskDelegate
 
 
-#define RarfileCompletedNotification	@"RarfileCompletedNotification"
+#define RarfileWasCheckedNotification			@"RarfileWasCheckedNotification"
+#define RarfilePasswordWasCheckedNotification	@"RarfilePasswordWasCheckedNotification"
 
 
-@class RAUExtractTask;
-@interface RAURarfile : NSObject {
-	NSString		*fullPath;
-	NSString		*path;
-	NSString		*name;
-	NSString		*multipartExtension;
-	NSString		*extension;
-	RAUExtractTask	*checkTask;
-	BOOL			isValid;
-	BOOL			isPasswordProtected;
-	int				numberOfParts;
+@class RAUPath, RAUCheckTask;
+@interface RAURarfile : NSObject <RAUTaskDelegate> {
+	RAUPath		*path;
+	BOOL		isValid;
+	BOOL		isPasswordProtected;
+	int			numberOfParts;
+	BOOL		passwordFound;
+	NSString	*correctPassword;
 }
 
-@property (readwrite, copy)		NSString		*fullPath;
-@property (readwrite, copy)		NSString		*path;
-@property (readwrite, copy)		NSString		*name;
-@property (readwrite, copy)		NSString		*multipartExtension;
-@property (readwrite, copy)		NSString		*extension;
-@property (readwrite, assign)	RAUExtractTask	*checkTask;
-@property (readonly)			BOOL			isValid;
-@property (readonly)			BOOL			isPasswordProtected;
-@property (readonly)			int				numberOfParts;
+@property (readonly, copy)	RAUPath		*path;
+@property (readonly)		BOOL		isValid;
+@property (readonly)		BOOL		isPasswordProtected;
+@property (readonly)		int			numberOfParts;
+@property (readonly)		BOOL		passwordFound;
+@property (readonly, copy)	NSString	*correctPassword;
 
--(id)initWithFile:(NSString *)file;
--(void)fileCheckFinished:(NSNotification *)notification;
+-(id)initWithFilePath:(RAUPath *)filePath;
+-(void)rarfileWasChecked:(RAUCheckTask *)checkTask;
+-(void)checkPassword:(NSString *)passwordToCheck;
+-(void)passwordWasChecked:(RAUCheckTask *)finishedTask;
+-(void)taskDidFinish:(RAUTask *)finishedTask;
 
 @end

@@ -5,7 +5,7 @@
 //  Created by BlackWolf on 29.01.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
-// This class represents the X-Button on each TaskView. We subclass NSButton to enable the imagechange when hovering over this button
+// This class represents the X-Button on a TaskView. We subclass NSButton to enable the imagechange when hovering over this button
 //
 
 #import "RAUStopButton.h"

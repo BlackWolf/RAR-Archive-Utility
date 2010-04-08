@@ -16,6 +16,6 @@
 	NSMutableArray *draggedFiles;
 }
 
-@property (readwrite, assign)	NSMutableArray	*draggedFiles;
+@property (readwrite, retain)	NSMutableArray	*draggedFiles;
 
 @end

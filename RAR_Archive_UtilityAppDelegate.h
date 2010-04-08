@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RAUTaskController.h"
 
 
 @class RAUMainWindow, RAUTaskController, RAUExtractTaskController, RAUArchiveWizardController;
-@interface RAR_Archive_UtilityAppDelegate : NSObject <NSApplicationDelegate> {
+@interface RAR_Archive_UtilityAppDelegate : NSObject <NSApplicationDelegate, RAUTaskControllerDelegate> {
     RAUMainWindow						*window;
 	NSView								*windowView;
 	NSWindow							*passwordSheet;
@@ -22,7 +23,7 @@
 	BOOL								terminating;
 	NSMutableArray						*taskController;
 	BOOL								passwordSheetIsShowing;
-	RAUExtractTaskController			*currentPasswordSheetTask;
+	RAUTaskController					*currentPasswordSheetTask;
 	NSMutableArray						*waitingPasswordSheetTasks;
 	RAUArchiveWizardController			*archiveWizard;
 }
@@ -36,16 +37,16 @@
 @property (readonly)						BOOL								applicationDidFinishLaunching;
 @property (readonly)						BOOL								terminateWhenDone;
 @property (readonly)						BOOL								terminating;
-@property (readwrite, assign)				NSMutableArray						*taskController;
+@property (readonly, assign)				NSMutableArray						*taskController;
 @property (readonly)						BOOL								passwordSheetIsShowing;
-@property (readwrite, assign)				RAUExtractTaskController			*currentPasswordSheetTask;
-@property (readwrite, assign)				NSMutableArray						*waitingPasswordSheetTasks;
-@property (readwrite, assign)				RAUArchiveWizardController			*archiveWizard;
+@property (readonly, retain)				RAUTaskController					*currentPasswordSheetTask;
+@property (readonly, assign)				NSMutableArray						*waitingPasswordSheetTasks;
+@property (readonly, assign)				RAUArchiveWizardController			*archiveWizard;
 
 -(void)addTaskController:(RAUTaskController *)newController;
--(void)taskControllerDidFinish:(NSNotification *)notification;
--(void)passwordSheetRequested:(NSNotification *)notification;
--(void)showPasswordSheet:(RAUExtractTaskController *)protectedFile;
+-(void)taskControllerDidFinish:(RAUTaskController *)finishedController;
+-(void)taskControllerNeedsPassword:(RAUTaskController *)needyController;
+-(void)showPasswordSheet:(RAUTaskController *)needyController;
 -(IBAction)passwordSheetPressedOK:(id)sender;
 -(IBAction)passwordSheetPressedCancel:(id)sender;
 -(void)dismissPasswordSheet;

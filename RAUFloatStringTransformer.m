@@ -37,7 +37,7 @@
 	else return nil;
 	
 	if (floatValue == 0) return nil;
-	else return [NSString stringWithFormat:@"%f", floatValue];
+	else return [NSString stringWithFormat:@"%g", floatValue];
 }
 
 /* From string to float */

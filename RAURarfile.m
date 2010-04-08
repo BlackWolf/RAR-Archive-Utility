@@ -1,94 +1,115 @@
 //
-//  Rarfile.m
+//  RAURarfile.m
 //  RAR-Archive Utility
 //
-//  Created by BlackWolf on 28.01.10.
+//  Created by BlackWolf on 02.04.10.
 //  Copyright 2010 Mario Schreiner. All rights reserved.
 //
-// An instance of RAURarfile represents an existing rarfile on the users hard drive. When created, this class checks if the provided
-// file is a valid archive, if it is password protected and if it is multiparted. Besides that, it's an easy way to access the different
-// parts of the rarfiles path
+// An instance of this class represents an existing rarfile on the users hard drive. It checks the rarfile for validation and
+// password-protection. It can also check if a password is correct for a rarfile and return the result. When it is done doing it's
+// initial check and when it's done checking for a password, it sends a notification
 //
 
 #import "RAURarfile.h"
-#import "RAUExtractTask.h"
+#import "RAUCheckTask.h"
+#import "RAUPath.h"
+#import "RAUAuxiliary.h"
 
 
-#warning We probably want to rewrite this class, so we can create rarfiles from non-existing files (giving us path information etc.)
 @implementation RAURarfile
-@synthesize fullPath, path, name, multipartExtension, extension, checkTask, isValid, isPasswordProtected, numberOfParts;
 
--(id)initWithFile:(NSString *)file {
+#pragma mark -
+@synthesize path, isValid, isPasswordProtected, numberOfParts;
+
+-(id)initWithFilePath:(RAUPath *)filePath {
 	if (self = [super init]) {
-		self.fullPath			= file;
-		self.path				= [file stringByDeletingLastPathComponent];
-		self.name				= [[file lastPathComponent] stringByDeletingPathExtension];
-		self.multipartExtension	= [self.name pathExtension]; 
-		self.extension			= [[file lastPathComponent] pathExtension];
+		path = [filePath copy];
 		
-		if (self.multipartExtension != nil) self.name = [self.name stringByDeletingPathExtension];
-		
-#warning We should create a TaskController here. This'd also allow us to replace the TaskDidFinishNotification with a method call to RAUTaskController
-		//Create a task to check the file for validation and pwd
-		self.checkTask = [[RAUExtractTask alloc] initWithFile:self mode:ExtractTaskModeCheck];
-		
-		//Listen to when the check finishes
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(fileCheckFinished:)
-													 name:TaskDidFinishNotification
-												   object:self.checkTask];
-		
-		[self.checkTask launchTask];	
+		//Do the initial check to see if the rarfile is valid or password-protected
+		RAUCheckTask *checkTask = [[RAUCheckTask alloc] initWithFile:self];
+		[checkTask setDelegate:self];
+		[checkTask launchTask];
 	}
 	return self;
 }
 
-/* Automatically invoked when checkTask finished */
--(void)fileCheckFinished:(NSNotification *)notification {
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:TaskDidFinishNotification object:self.checkTask];
+/* Called when the initial check of the rarfile is done */
+-(void)rarfileWasChecked:(RAUCheckTask *)checkTask {
+	isValid				= (checkTask.detailedResult != CheckTaskResultArchiveInvalid);
+	isPasswordProtected = (checkTask.detailedResult == CheckTaskResultPasswordInvalid);
 	
-	isValid				= !(self.checkTask.result == TaskResultArchiveInvalid);
-	isPasswordProtected = (self.checkTask.result == TaskResultPasswordInvalid);
-	
-	//See if it is multiparted and how many parts it has
+	//See if file is multiparted and how many parts it has
 	numberOfParts = 0;
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
 	//First, check for the naming convention name.partXX.rar
-	NSArray *filesAtPath = [fileManager contentsOfDirectoryAtPath:self.path error:nil];
-	if ([[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"part[0-9]+"] evaluateWithObject:self.multipartExtension]) {
-		NSPredicate *isPart = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", [NSString stringWithFormat:@"%@.part[0-9]+.%@", self.name, self.extension]];
+	NSArray *filesAtPath = [fileManager contentsOfDirectoryAtPath:path.withoutFilename error:nil];
+	if ([[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"part[0-9]+"] evaluateWithObject:path.multipartExtension]) {
+		NSPredicate *isPart = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", [NSString stringWithFormat:@"%@.part[0-9]+.%@", path.filename, path.extension]];
 		for (NSString *fileAtPath in filesAtPath) {
 			if ([isPart evaluateWithObject:fileAtPath] == YES) numberOfParts++;
 		}
-	} else if ([self.multipartExtension length] > 0) {
-		//This prevents a wrong multipartExt for a file like name.something.rar (name should be name.something, multipartExt empty)
-		self.name = [self.name stringByAppendingString:[NSString stringWithFormat:@".%@",self.multipartExtension]];
-		self.multipartExtension = @"";
 	}
 	
 	//Now for the naming convention name.rXX
-	if ([[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"r[0-9]+"] evaluateWithObject:self.extension] && numberOfParts == 0) {
-		NSPredicate *isPart = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", [NSString stringWithFormat:@"%@.r[0-9]+", self.name]];
+	if ([[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"r[0-9]+"] evaluateWithObject:path.extension] && numberOfParts == 0) {
+		NSPredicate *isPart = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", [NSString stringWithFormat:@"%@.r[0-9]+", path.filename]];
 		for (NSString *fileAtPath in filesAtPath) {
 			if ([isPart evaluateWithObject:fileAtPath] == YES) numberOfParts++;
 		}
 	}
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:RarfileCompletedNotification object:self];
+	//If none of the previous did something, we have only a single part
+	if (numberOfParts == 0) numberOfParts = 1;
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:RarfileWasCheckedNotification object:self];
 }
 
 -(void)dealloc {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	[fullPath			release];
 	[path				release];
-	[name				release];
-	[multipartExtension	release];
-	[extension			release];
-	[checkTask			release];
+	[correctPassword	release];
 	
 	[super dealloc];
 }
+
+#pragma mark -
+#pragma mark Passwords
+@synthesize passwordFound, correctPassword;
+
+-(void)checkPassword:(NSString *)passwordToCheck {
+	RAUCheckTask *checkTask = [[RAUCheckTask alloc] initWithFile:self];
+	[checkTask setDelegate:self];
+	[checkTask setPasswordArgument:passwordToCheck];
+	[checkTask launchTask];
+}
+
+-(void)passwordWasChecked:(RAUCheckTask *)finishedTask {
+	if (finishedTask.detailedResult != CheckTaskResultPasswordInvalid) {
+		passwordFound = YES;
+		[correctPassword release];
+		correctPassword = [finishedTask.passwordArgument copy];
+	}
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:RarfilePasswordWasCheckedNotification object:self];
+}
+
+#pragma mark -
+#pragma mark RAUTaskDelegate
+
+/* RAUTaskDelegate method: Called when a checkTask finishes */
+-(void)taskDidFinish:(RAUTask *)finishedTask {
+	RAUCheckTask *checkTask = (RAUCheckTask *)finishedTask;
+	
+	if (checkTask.passwordArgument == nil) { //finishedTask was the initial checkTask
+		[self rarfileWasChecked:checkTask];
+	} else { //finishedTask was a password check
+		[self passwordWasChecked:checkTask];
+	}
+	
+	[checkTask release];
+}
+
+/* Just to satisfy the protocl */
+-(void)taskProgressWasUpdated:(RAUTask *)updatedTask {}
 
 @end

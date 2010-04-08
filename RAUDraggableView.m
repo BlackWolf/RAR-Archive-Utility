@@ -15,7 +15,7 @@
 @synthesize draggedFiles;
 
 -(void)awakeFromNib {
-	self.draggedFiles = [[NSMutableArray alloc] initWithCapacity:0];
+	draggedFiles = [[NSMutableArray alloc] initWithCapacity:0];
 	
 	//Register the view to accept drags
 	[self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]]; 
@@ -41,13 +41,13 @@
 		
 		for (NSString *file in files) {
 			BOOL fileAlreadyExists = NO;
-			for (NSString *existingFile in self.draggedFiles) {
+			for (NSString *existingFile in draggedFiles) {
 				if ([existingFile isEqualToString:file] == YES) {
 					fileAlreadyExists = YES;
 					break;
 				}
 			}
-			if (fileAlreadyExists == NO) [self.draggedFiles addObject:file];
+			if (fileAlreadyExists == NO) [draggedFiles addObject:file];
 		}
 		
 		[[NSNotificationCenter defaultCenter] postNotificationName:FilesDraggedNotification object:self];

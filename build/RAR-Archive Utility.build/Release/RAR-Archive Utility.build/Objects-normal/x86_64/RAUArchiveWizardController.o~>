@@ -1,6 +1,0 @@
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m: In function '-[RAUArchiveWizardController nextPageButtonClicked:]':
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m:168: error: 'LASTPAGE' undeclared (first use in this function)
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m:168: error: (Each undeclared identifier is reported only once
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m:168: error: for each function it appears in.)
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m: In function '-[RAUArchiveWizardController updateNavigationButtons]':
-/Users/BlackWolf/Documents/Cocoa/RAR-Archive Utility/RAUArchiveWizardController.m:227: error: 'LASTPAGE' undeclared (first use in this function)

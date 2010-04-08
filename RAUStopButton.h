@@ -10,7 +10,6 @@
 
 
 @interface RAUStopButton : NSButton {
-	
 }
 
 @end

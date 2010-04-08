@@ -16,6 +16,12 @@
 "About a day" = "About a day";
 "About %d days" = "About %1$d days";
 
+/* Error messages */
+"\"%@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer." 
+= 
+"\"%1$@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer.";
+
+
 /* Passwort sheet */
 "\"%@.%@\" needs a password" = "\"%1$@.%2$@\" needs a password";
 

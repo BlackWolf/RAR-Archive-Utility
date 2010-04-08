@@ -8,27 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m */; };
 		3310EDCE1118FC1A009D7DBE /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3310EDCD1118FC1A009D7DBE /* appicon.icns */; };
 		3310EE011118FF43009D7DBE /* RarfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3310EE001118FF43009D7DBE /* RarfileView.xib */; };
 		3310EE50111904C2009D7DBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3310EE4F111904C2009D7DBE /* Localizable.strings */; };
-		33243ED41121E69B0085DCDF /* RAUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 33243ED31121E69B0085DCDF /* RAUTask.m */; };
-		33243EDB112201A60085DCDF /* RAUExtractTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 33243EDA112201A60085DCDF /* RAUExtractTask.m */; };
-		333C33DA11443DA400D18AC3 /* RAUArchiveWizardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C33D911443DA400D18AC3 /* RAUArchiveWizardController.m */; };
+		331F034B1161638B00F04F16 /* RAUAuxiliary.m in Sources */ = {isa = PBXBuildFile; fileRef = 331F034A1161638B00F04F16 /* RAUAuxiliary.m */; };
+		332907671163F3010015B23C /* RAUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 332907661163F3010015B23C /* RAUTask.m */; };
+		3329076A1163F3090015B23C /* RAUCheckTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 332907691163F3090015B23C /* RAUCheckTask.m */; };
+		332907B81163FE5C0015B23C /* RAUExtractTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 332907B71163FE5C0015B23C /* RAUExtractTask.m */; };
+		332907FB11640A350015B23C /* RAUCreateTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 332907FA11640A350015B23C /* RAUCreateTask.m */; };
+		33290851116414CB0015B23C /* RAUAddTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 33290850116414CB0015B23C /* RAUAddTask.m */; };
+		3329092911641E8F0015B23C /* RAR_Archive_UtilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m */; };
+		3329092D11641EAD0015B23C /* RAUExtractTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329092C11641EAD0015B23C /* RAUExtractTaskController.m */; };
+		3329095411641FEC0015B23C /* RAUTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329095311641FEC0015B23C /* RAUTaskController.m */; };
 		333EAD1C114D8F4400D867E3 /* ArchiveWizardWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333EAD1B114D8F4400D867E3 /* ArchiveWizardWindow.xib */; };
 		333EAD20114D8FA900D867E3 /* Page1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333EAD1F114D8FA900D867E3 /* Page1.xib */; };
 		333EAD24114D90D300D867E3 /* Page2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333EAD23114D90D300D867E3 /* Page2.xib */; };
 		333EAD28114D90FD00D867E3 /* Page3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333EAD27114D90FD00D867E3 /* Page3.xib */; };
 		333EAD2C114D923300D867E3 /* Page4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333EAD2B114D923300D867E3 /* Page4.xib */; };
-		33506C1F11229E6100E26B81 /* RAUTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33506C1E11229E6100E26B81 /* RAUTaskController.m */; };
-		335B11E2111F838000112BD1 /* RAUArchiveTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 335B11E1111F838000112BD1 /* RAUArchiveTask.m */; };
+		3349734E116BFF0000ED3227 /* RAUPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3389D66E116A024C00F779F9 /* RAUPath.m */; };
 		335B120B111F860D00112BD1 /* rar in Resources */ = {isa = PBXBuildFile; fileRef = 335B120A111F860D00112BD1 /* rar */; };
 		33778204113F3120006DE566 /* caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 33778203113F3120006DE566 /* caution.png */; };
+		3379FFA61165743300515909 /* RAURarfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3379FFA51165743300515909 /* RAURarfile.m */; };
 		339D263011121938001B81A4 /* RAUTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339D262F11121938001B81A4 /* RAUTaskViewController.m */; };
 		33A46CB21113CDF3008D523F /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A46CB11113CDF3008D523F /* warning.png */; };
-		33B1CD291111074E00F5B7E8 /* RAURarfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B1CD281111074E00F5B7E8 /* RAURarfile.m */; };
 		33B1CDB7111112BA00F5B7E8 /* unrar in Resources */ = {isa = PBXBuildFile; fileRef = 33B1CDB6111112BA00F5B7E8 /* unrar */; };
+		33BCE0D2116D0BDA00117600 /* RAUAddTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BCDFAF116CD1B700117600 /* RAUAddTaskController.m */; };
 		33C1B9061141C129004B9470 /* RAUDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C1B9051141C129004B9470 /* RAUDraggableView.m */; };
+		33D95CFE1168126600041922 /* RAUCreateTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D95CFD1168126600041922 /* RAUCreateTaskController.m */; };
+		33D95D2B11681B7200041922 /* RAUArchiveWizardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333C33D911443DA400D18AC3 /* RAUArchiveWizardController.m */; };
 		33D9B04C11131B4500E53185 /* RAUStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9B04B11131B4500E53185 /* RAUStopButton.m */; };
 		33D9B7ED11136D8100E53185 /* RAUMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9B7EC11136D8100E53185 /* RAUMainWindow.m */; };
 		33DE862E11213DA300723511 /* stopHovered.png in Resources */ = {isa = PBXBuildFile; fileRef = 33DE862B11213DA300723511 /* stopHovered.png */; };
@@ -38,8 +45,6 @@
 		33E1F8531145C0BA00AEF576 /* RAUFloatStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E1F8521145C0BA00AEF576 /* RAUFloatStringTransformer.m */; };
 		33E1F8981145CA9700AEF576 /* RAUIsPositiveTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E1F8971145CA9700AEF576 /* RAUIsPositiveTransformer.m */; };
 		33E1FA631145D8F100AEF576 /* RAUArrayToListTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E1FA621145D8F100AEF576 /* RAUArrayToListTransformer.m */; };
-		33EE2EC31125FEF900CF29C0 /* RAUExtractTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE2EC21125FEF900CF29C0 /* RAUExtractTaskController.m */; };
-		33EE2F5B1126064B00CF29C0 /* RAUArchiveTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE2F5A1126064B00CF29C0 /* RAUArchiveTaskController.m */; };
 		33FD45D61114864200D2AEC8 /* raricon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 33FD45D51114864200D2AEC8 /* raricon.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -62,10 +67,22 @@
 		3310EE021118FF4B009D7DBE /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/RarfileView.xib; sourceTree = "<group>"; };
 		3310EE4D111904B5009D7DBE /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3310EE51111904CA009D7DBE /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
-		33243ED21121E69B0085DCDF /* RAUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTask.h; sourceTree = "<group>"; };
-		33243ED31121E69B0085DCDF /* RAUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTask.m; sourceTree = "<group>"; };
-		33243ED9112201A60085DCDF /* RAUExtractTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUExtractTask.h; sourceTree = "<group>"; };
-		33243EDA112201A60085DCDF /* RAUExtractTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUExtractTask.m; sourceTree = "<group>"; };
+		331F034A1161638B00F04F16 /* RAUAuxiliary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUAuxiliary.m; sourceTree = "<group>"; };
+		332907651163F3010015B23C /* RAUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTask.h; sourceTree = "<group>"; };
+		332907661163F3010015B23C /* RAUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTask.m; sourceTree = "<group>"; };
+		332907681163F3090015B23C /* RAUCheckTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUCheckTask.h; sourceTree = "<group>"; };
+		332907691163F3090015B23C /* RAUCheckTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUCheckTask.m; sourceTree = "<group>"; };
+		332907B61163FE5C0015B23C /* RAUExtractTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUExtractTask.h; sourceTree = "<group>"; };
+		332907B71163FE5C0015B23C /* RAUExtractTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUExtractTask.m; sourceTree = "<group>"; };
+		332907F911640A350015B23C /* RAUCreateTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUCreateTask.h; sourceTree = "<group>"; };
+		332907FA11640A350015B23C /* RAUCreateTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUCreateTask.m; sourceTree = "<group>"; };
+		3329084F116414CB0015B23C /* RAUAddTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUAddTask.h; sourceTree = "<group>"; };
+		33290850116414CB0015B23C /* RAUAddTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUAddTask.m; sourceTree = "<group>"; };
+		332908C111641A800015B23C /* RAUAuxiliary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUAuxiliary.h; sourceTree = "<group>"; };
+		3329092B11641EAD0015B23C /* RAUExtractTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUExtractTaskController.h; sourceTree = "<group>"; };
+		3329092C11641EAD0015B23C /* RAUExtractTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUExtractTaskController.m; sourceTree = "<group>"; };
+		3329095211641FEC0015B23C /* RAUTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTaskController.h; sourceTree = "<group>"; };
+		3329095311641FEC0015B23C /* RAUTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTaskController.m; sourceTree = "<group>"; };
 		333C33D811443DA400D18AC3 /* RAUArchiveWizardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUArchiveWizardController.h; sourceTree = "<group>"; };
 		333C33D911443DA400D18AC3 /* RAUArchiveWizardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUArchiveWizardController.m; sourceTree = "<group>"; };
 		333EAD0B114D8CD700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -74,25 +91,27 @@
 		333EAD25114D90D700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page2.xib; sourceTree = "<group>"; };
 		333EAD29114D910100D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page3.xib; sourceTree = "<group>"; };
 		333EAD2D114D923700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page4.xib; sourceTree = "<group>"; };
-		33506C1D11229E6100E26B81 /* RAUTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTaskController.h; sourceTree = "<group>"; };
-		33506C1E11229E6100E26B81 /* RAUTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTaskController.m; sourceTree = "<group>"; };
-		335B11E0111F838000112BD1 /* RAUArchiveTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUArchiveTask.h; sourceTree = "<group>"; };
-		335B11E1111F838000112BD1 /* RAUArchiveTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUArchiveTask.m; sourceTree = "<group>"; };
 		335B120A111F860D00112BD1 /* rar */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = rar; sourceTree = "<group>"; };
 		3377807B113F0C14006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page2.xib; sourceTree = "<group>"; };
 		337781FF113F2AF5006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page3.xib; sourceTree = "<group>"; };
 		33778203113F3120006DE566 /* caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caution.png; sourceTree = "<group>"; };
 		33778384113F4CAE006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page4.xib; sourceTree = "<group>"; };
+		3379FFA41165743300515909 /* RAURarfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAURarfile.h; sourceTree = "<group>"; };
+		3379FFA51165743300515909 /* RAURarfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAURarfile.m; sourceTree = "<group>"; };
+		3389D66D116A024C00F779F9 /* RAUPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUPath.h; sourceTree = "<group>"; };
+		3389D66E116A024C00F779F9 /* RAUPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUPath.m; sourceTree = "<group>"; };
 		339AB352113B3E9600E985ED /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ArchiveWizardWindow.xib; sourceTree = "<group>"; };
 		339AB378113B53ED00E985ED /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page1.xib; sourceTree = "<group>"; };
 		339D262E11121938001B81A4 /* RAUTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTaskViewController.h; sourceTree = "<group>"; };
 		339D262F11121938001B81A4 /* RAUTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTaskViewController.m; sourceTree = "<group>"; };
 		33A46CB11113CDF3008D523F /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
-		33B1CD271111074E00F5B7E8 /* RAURarfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAURarfile.h; sourceTree = "<group>"; };
-		33B1CD281111074E00F5B7E8 /* RAURarfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAURarfile.m; sourceTree = "<group>"; };
 		33B1CDB6111112BA00F5B7E8 /* unrar */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = unrar; sourceTree = "<group>"; };
+		33BCDFAE116CD1B700117600 /* RAUAddTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUAddTaskController.h; sourceTree = "<group>"; };
+		33BCDFAF116CD1B700117600 /* RAUAddTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUAddTaskController.m; sourceTree = "<group>"; };
 		33C1B9041141C129004B9470 /* RAUDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUDraggableView.h; sourceTree = "<group>"; };
 		33C1B9051141C129004B9470 /* RAUDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUDraggableView.m; sourceTree = "<group>"; };
+		33D95CFC1168126600041922 /* RAUCreateTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUCreateTaskController.h; sourceTree = "<group>"; };
+		33D95CFD1168126600041922 /* RAUCreateTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUCreateTaskController.m; sourceTree = "<group>"; };
 		33D9B04A11131B4500E53185 /* RAUStopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUStopButton.h; sourceTree = "<group>"; };
 		33D9B04B11131B4500E53185 /* RAUStopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUStopButton.m; sourceTree = "<group>"; };
 		33D9B7EB11136D8100E53185 /* RAUMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUMainWindow.h; sourceTree = "<group>"; };
@@ -104,10 +123,6 @@
 		33E1F8521145C0BA00AEF576 /* RAUFloatStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUFloatStringTransformer.m; sourceTree = "<group>"; };
 		33E1F8971145CA9700AEF576 /* RAUIsPositiveTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUIsPositiveTransformer.m; sourceTree = "<group>"; };
 		33E1FA621145D8F100AEF576 /* RAUArrayToListTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUArrayToListTransformer.m; sourceTree = "<group>"; };
-		33EE2EC11125FEF900CF29C0 /* RAUExtractTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUExtractTaskController.h; sourceTree = "<group>"; };
-		33EE2EC21125FEF900CF29C0 /* RAUExtractTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUExtractTaskController.m; sourceTree = "<group>"; };
-		33EE2F591126064B00CF29C0 /* RAUArchiveTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUArchiveTaskController.h; sourceTree = "<group>"; };
-		33EE2F5A1126064B00CF29C0 /* RAUArchiveTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUArchiveTaskController.m; sourceTree = "<group>"; };
 		33FD45D51114864200D2AEC8 /* raricon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = raricon.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RAR_Archive_Utility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RAR_Archive_Utility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* RAR-Archive Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RAR-Archive Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +148,12 @@
 				33989F99112A14F000DD57C2 /* UI */,
 				256AC3D80F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m */,
-				33B1CD271111074E00F5B7E8 /* RAURarfile.h */,
-				33B1CD281111074E00F5B7E8 /* RAURarfile.m */,
+				3379FFA41165743300515909 /* RAURarfile.h */,
+				3379FFA51165743300515909 /* RAURarfile.m */,
+				332908C111641A800015B23C /* RAUAuxiliary.h */,
+				331F034A1161638B00F04F16 /* RAUAuxiliary.m */,
+				3389D66D116A024C00F779F9 /* RAUPath.h */,
+				3389D66E116A024C00F779F9 /* RAUPath.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -231,12 +250,14 @@
 		33989F97112A14B100DD57C2 /* TaskController */ = {
 			isa = PBXGroup;
 			children = (
-				33506C1D11229E6100E26B81 /* RAUTaskController.h */,
-				33506C1E11229E6100E26B81 /* RAUTaskController.m */,
-				33EE2EC11125FEF900CF29C0 /* RAUExtractTaskController.h */,
-				33EE2EC21125FEF900CF29C0 /* RAUExtractTaskController.m */,
-				33EE2F591126064B00CF29C0 /* RAUArchiveTaskController.h */,
-				33EE2F5A1126064B00CF29C0 /* RAUArchiveTaskController.m */,
+				3329095211641FEC0015B23C /* RAUTaskController.h */,
+				3329095311641FEC0015B23C /* RAUTaskController.m */,
+				3329092B11641EAD0015B23C /* RAUExtractTaskController.h */,
+				3329092C11641EAD0015B23C /* RAUExtractTaskController.m */,
+				33D95CFC1168126600041922 /* RAUCreateTaskController.h */,
+				33D95CFD1168126600041922 /* RAUCreateTaskController.m */,
+				33BCDFAE116CD1B700117600 /* RAUAddTaskController.h */,
+				33BCDFAF116CD1B700117600 /* RAUAddTaskController.m */,
 			);
 			name = TaskController;
 			sourceTree = "<group>";
@@ -244,12 +265,16 @@
 		33989F98112A14C000DD57C2 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				33243ED21121E69B0085DCDF /* RAUTask.h */,
-				33243ED31121E69B0085DCDF /* RAUTask.m */,
-				33243ED9112201A60085DCDF /* RAUExtractTask.h */,
-				33243EDA112201A60085DCDF /* RAUExtractTask.m */,
-				335B11E0111F838000112BD1 /* RAUArchiveTask.h */,
-				335B11E1111F838000112BD1 /* RAUArchiveTask.m */,
+				332907651163F3010015B23C /* RAUTask.h */,
+				332907661163F3010015B23C /* RAUTask.m */,
+				332907681163F3090015B23C /* RAUCheckTask.h */,
+				332907691163F3090015B23C /* RAUCheckTask.m */,
+				332907B61163FE5C0015B23C /* RAUExtractTask.h */,
+				332907B71163FE5C0015B23C /* RAUExtractTask.m */,
+				332907F911640A350015B23C /* RAUCreateTask.h */,
+				332907FA11640A350015B23C /* RAUCreateTask.m */,
+				3329084F116414CB0015B23C /* RAUAddTask.h */,
+				33290850116414CB0015B23C /* RAUAddTask.m */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -310,6 +335,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Mario Schreiner";
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RAR-Archive Utility" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
@@ -357,22 +385,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m in Sources */,
-				33B1CD291111074E00F5B7E8 /* RAURarfile.m in Sources */,
 				339D263011121938001B81A4 /* RAUTaskViewController.m in Sources */,
 				33D9B04C11131B4500E53185 /* RAUStopButton.m in Sources */,
 				33D9B7ED11136D8100E53185 /* RAUMainWindow.m in Sources */,
-				335B11E2111F838000112BD1 /* RAUArchiveTask.m in Sources */,
-				33243ED41121E69B0085DCDF /* RAUTask.m in Sources */,
-				33243EDB112201A60085DCDF /* RAUExtractTask.m in Sources */,
-				33506C1F11229E6100E26B81 /* RAUTaskController.m in Sources */,
-				33EE2EC31125FEF900CF29C0 /* RAUExtractTaskController.m in Sources */,
-				33EE2F5B1126064B00CF29C0 /* RAUArchiveTaskController.m in Sources */,
 				33C1B9061141C129004B9470 /* RAUDraggableView.m in Sources */,
-				333C33DA11443DA400D18AC3 /* RAUArchiveWizardController.m in Sources */,
 				33E1F8531145C0BA00AEF576 /* RAUFloatStringTransformer.m in Sources */,
 				33E1F8981145CA9700AEF576 /* RAUIsPositiveTransformer.m in Sources */,
 				33E1FA631145D8F100AEF576 /* RAUArrayToListTransformer.m in Sources */,
+				331F034B1161638B00F04F16 /* RAUAuxiliary.m in Sources */,
+				332907671163F3010015B23C /* RAUTask.m in Sources */,
+				3329076A1163F3090015B23C /* RAUCheckTask.m in Sources */,
+				332907B81163FE5C0015B23C /* RAUExtractTask.m in Sources */,
+				332907FB11640A350015B23C /* RAUCreateTask.m in Sources */,
+				33290851116414CB0015B23C /* RAUAddTask.m in Sources */,
+				3329092911641E8F0015B23C /* RAR_Archive_UtilityAppDelegate.m in Sources */,
+				3329092D11641EAD0015B23C /* RAUExtractTaskController.m in Sources */,
+				3329095411641FEC0015B23C /* RAUTaskController.m in Sources */,
+				3379FFA61165743300515909 /* RAURarfile.m in Sources */,
+				33D95CFE1168126600041922 /* RAUCreateTaskController.m in Sources */,
+				33D95D2B11681B7200041922 /* RAUArchiveWizardController.m in Sources */,
+				3349734E116BFF0000ED3227 /* RAUPath.m in Sources */,
+				33BCE0D2116D0BDA00117600 /* RAUAddTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

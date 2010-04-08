@@ -35,8 +35,8 @@
 	
 	if (value == nil) return no;
 	
-	if ([value respondsToSelector:@selector(intValue)]) {
-		if ([value intValue] > 0) return yes;
+	if ([value respondsToSelector:@selector(floatValue)]) {
+		if ([value floatValue] > 0) return yes;
 		else return no;
 	}
 	else return no;
