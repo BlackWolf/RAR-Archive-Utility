@@ -12,6 +12,8 @@
 #import "RAUPath.h"
 
 
+
+
 @implementation RAUAuxiliary
 
 #pragma mark -
@@ -74,7 +76,7 @@
 }
 
 #pragma mark -
-#pragma mark Counting files
+#pragma mark Stuff
 
 /* Takes a path as a string and returns the number of files in it and all subdirectories */
 +(int)filesInStringPath:(NSString *)path {
@@ -84,11 +86,8 @@
 	return [[dirEnumerator allObjects] count]+1; //+1 because we want to count the path itself as well
 }
 +(int)filesInPath:(RAUPath *)path {
-	return [self filesInStringPath:path.complete];
+	return [self filesInStringPath:path.completePath];
 }
-
-#pragma mark -
-#pragma mark Stuff
 
 /* Uses an applescript to reveal path in finder */
 +(void)revealInFinder:(RAUPath *)path {
@@ -96,7 +95,7 @@
 	NSString *pathToDesktop = [NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"];
 	if ([path.withoutFilename isEqualToString:pathToDesktop] == NO && [[path.withoutFilename stringByDeletingLastPathComponent] isEqualToString:pathToDesktop] == NO) {
 		//This C-Script converts from normal paths to HFS-Paths ("HD:Users:Me:Something") (found via google)
-		CFURLRef url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)path.complete, kCFURLPOSIXPathStyle, YES);
+		CFURLRef url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)path.completePath, kCFURLPOSIXPathStyle, YES);
 		CFStringRef hfsPath = CFURLCopyFileSystemPath(url, kCFURLHFSPathStyle);
 		
 		NSString *scriptSourceCode = [NSString stringWithFormat:@"tell application \"Finder\" to reveal \"%@\"", hfsPath];
@@ -107,6 +106,37 @@
 		[appleScript executeAndReturnError:nil];
 		[appleScript release];
 	}	
+}
+
+/* This creates a string with text and the font fontName and decreases its size until it fits in targetSize or reaches minSize.
+ The method than returns the font that makes the text fit into targetSize */
++(NSFont *)fontFittingToSize:(NSSize)targetSize withText:(NSString *)text fontName:(NSString *)fontName minPtSize:(float)minSize maxPtSize:(float)maxSize {
+	NSFont *currentFont	= nil;
+	float currentPtSize	= maxSize;
+	NSSize currentSize	= NSMakeSize(targetSize.width+1, targetSize.height+1); 
+	
+	//As long as the currentSize of the font is bigger than the targetSize, lower the font size and try again
+	while (currentSize.width > targetSize.width || currentSize.height > targetSize.height) {
+		currentFont = [NSFont fontWithName:fontName size:currentPtSize];
+		
+		//Create a NSAttributedString with the text and fittingFont and get its size
+		NSDictionary *stringAttributes = [NSDictionary dictionaryWithObject:currentFont forKey:NSFontAttributeName];
+		NSAttributedString *string = [[NSAttributedString alloc] initWithString:text attributes:stringAttributes];
+		currentSize = [string size];
+		[string release];
+		
+		if (currentPtSize == minSize) break;
+		currentPtSize -= 0.25;
+		if (currentPtSize < minSize) currentPtSize = minSize;
+	}
+	return currentFont;
+}
+
+/* This returns a boolean value determining if path is a directory or not (it must exist, of course) */
++(BOOL)isStringPathDirectory:(NSString *)path {
+	BOOL pathIsDirectory;
+	[[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&pathIsDirectory];
+	return pathIsDirectory;
 }
 
 @end

@@ -9,7 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 
+
+
 @interface RAUStopButton : NSButton {
+	BOOL mouseIn;
 }
 
 @end

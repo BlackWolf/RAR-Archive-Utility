@@ -12,6 +12,8 @@
 #define FilesDraggedNotification	@"FilesDraggedNotification"
 
 
+
+
 @interface RAUDraggableView : NSView {
 	NSMutableArray *draggedFiles;
 }

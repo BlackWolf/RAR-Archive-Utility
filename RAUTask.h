@@ -15,7 +15,6 @@ typedef enum {
 	TaskResultFailed			= 2
 } TaskResult;
 
-
 @class RAUTask;
 @protocol RAUTaskDelegate
 -(void)taskProgressWasUpdated:(RAUTask *)updatedTask;
@@ -25,30 +24,21 @@ typedef enum {
 @end
 
 
+
+
 @interface RAUTask : NSObject {
 	id<RAUTaskDelegate>	delegate;
 	int					progress;
 	TaskResult			result;
 	NSTask				*task;
-	NSFileHandle		*fileHandle;
 }
 
 @property (readwrite, assign)	id<RAUTaskDelegate>	delegate;
 @property (readonly)			int					progress;
 @property (readonly)			TaskResult			result;
-@property (readonly, assign)	NSTask				*task;
-@property (readonly, retain)	NSFileHandle		*fileHandle;
+@property (readonly, retain)	NSTask				*task;
 
--(void)willFinish;
--(void)didFinish;
--(void)taskWillLaunch;
 -(void)launchTask;
--(void)taskDidLaunch;
 -(void)terminateTask;
--(void)taskDidTerminate:(NSNotification *)notification;
--(void)receivedNewOutput:(NSNotification *)notification;
--(void)parseNewOutput:(NSString *)output;
--(int)parseProgressFromString:(NSString *)output;
-
 
 @end

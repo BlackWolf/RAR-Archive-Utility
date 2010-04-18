@@ -17,56 +17,76 @@
 #import "RAUDraggableView.h"
 
 
-@implementation RAUArchiveWizardController
 
+
+@interface RAUArchiveWizardController ()
+@property (readwrite)			BOOL			isShown;
+@property (readwrite)			int				firstPage;
+@property (readwrite)			int				currentPage;
+@property (readwrite)			BOOL			finishedSuccessfully;
+@property (readwrite)			BOOL			passwordNeverEntered;
+@property (readwrite)			BOOL			passwordRepetitionNeverEntered;
+@property (readwrite)			BOOL			pieceSizeNeverEntered;
+@property (readwrite)			WizardMode		mode;
+@property (readwrite, copy)		NSString		*file;
+@property (readwrite)			int				compressionLevel;
+@property (readwrite)			BOOL			shouldBeProtected;
+@property (readwrite, copy)		NSString		*password;
+@property (readwrite, copy)		NSString		*passwordRepetition;
+@property (readwrite)			BOOL			shouldBeSplitted;
+@property (readwrite)			float			pieceSize;
+@property (readwrite)			FileUnit		pieceSizeUnit;
+@property (readwrite, retain)	NSMutableArray	*filesToArchive;
+
+-(void)updateNavigationButtons;
+-(void)loadPage:(int)pageNumber;
+-(void)unloadCurrentPage;
+-(BOOL)currentPageReady;
+-(void)displayOrHideCompressionWarning;
+-(BOOL)isPasswordCorrect;
+-(BOOL)IsPasswordRepetitionCorrect;
+-(void)displayOrHidePasswordWarnings;
+-(BOOL)pieceSizeCorrect;
+-(void)userAddedFilesToArchive:(NSNotification *)notification;
+@end
 #pragma mark -
-//@synthesize firstPage, currentPage, isShown, finishedSuccessfully;
-@synthesize isShown;
+
+
+
+
+@implementation RAUArchiveWizardController
+#pragma mark -
+@synthesize delegate, firstPage, currentPage, isShown, finishedSuccessfully;
 @synthesize pageTitleLabel, contentViewWrapper, contentView, previousPageButton, nextPageButton;
 
 -(id)init {
-	return [super initWithWindowNibName:@"ArchiveWizardWindow"];
+	return [super initWithWindowNibName:@"ArchiveWizardWindow" owner:self];
 }
 
--(void)showCompleteWizard {
-	self.mode = WizardModeCreate; //Initializes the UI
-	[self showWindowWithPage:1];
-}
-
--(void)showCreateWizard {
-	self.mode = WizardModeCreate;
-	[self showWindowWithPage:2];
-	[self userWantsToChoseFile:self]; //Show the "New file"-Dialog
-}
-
--(void)showAddWizard {
-	self.mode = WizardModeAdd;
-	[self showWindowWithPage:2];
-	[self userWantsToChoseFile:self]; //Show the "Chose file"-Dialog
-}
-
-/* Shows the wizard starting at the given page */
--(void)showWindowWithPage:(int)startingPage {
-	if (isShown == NO) { //Allow only one instance of the window
-		firstPage						= startingPage;
-		isShown							= YES;
-		finishedSuccessfully			= NO;
+/* Init. Shows the wizard starting at the given page */
+-(void)showWindowWithPage:(int)_firstPage mode:(WizardMode)_mode {
+	if (self.isShown == NO) { //Allow only one instance of the window
+		self.isShown						= YES;
+		self.firstPage						= _firstPage;
+		self.currentPage					= 0;
+		self.finishedSuccessfully			= NO;
+		self.passwordNeverEntered			= YES;
+		self.passwordRepetitionNeverEntered	= YES;
+		self.pieceSizeNeverEntered			= YES;
 		
 		//By setting these variables we also initialize the UI binded to that variables
-		self.file						= nil;
-		self.compressionLevel			= 3;
-		self.shouldBeProtected			= NO;
-		passwordNeverEntered			= YES;
-		passwordRepetitionNeverEntered	= YES;
-		self.password					= nil;
-		self.passwordRepetition			= nil;
-		self.shouldBeSplitted			= NO;
-		pieceSizeNeverEntered			= YES;
-		self.pieceSize					= 0;
-		self.pieceSizeUnit				= 1;
-		self.filesToArchive				= nil;
+		self.mode							= _mode;
+		self.file							= nil;
+		self.compressionLevel				= 3;
+		self.shouldBeProtected				= NO;
+		self.password						= nil;
+		self.passwordRepetition				= nil;
+		self.shouldBeSplitted				= NO;
+		self.pieceSize						= 0;
+		self.pieceSizeUnit					= FileUnitMB;
+		self.filesToArchive					= nil;
 		
-		[self.window setDelegate:self]; //So we can capture message regarding the window
+		[self.window setDelegate:self]; 
 		
 		//Position and display the wizard window
 		NSSize screenSize = [[self.window screen] frame].size;
@@ -77,93 +97,115 @@
 		[super showWindow:self];
 		[self.window makeKeyWindow];
 		
-		[self loadPage:firstPage];
+		[self loadPage:self.firstPage];
 	}
+}
+
+-(void)showCompleteWizard {
+	[self showWindowWithPage:1 mode:WizardModeCreate];
+}
+
+-(void)showCreateWizard {
+	[self showWindowWithPage:2 mode:WizardModeCreate];
+	[self userWantsToChoseFile:self]; //Show the "New file"-Dialog
+}
+
+-(void)showAddWizard {
+	[self showWindowWithPage:2 mode:WizardModeAdd];
+	[self userWantsToChoseFile:self]; //Show the "Chose file"-Dialog
 }
 
 /* Wizard-window is closed by any means (it finished, X clicked, quit button clicked, ...) */
 -(void)windowWillClose:(NSNotification *)notification {
 	[self unloadCurrentPage];
 	
-	RAR_Archive_UtilityAppDelegate *appDelegate = (RAR_Archive_UtilityAppDelegate *)[[NSApplication sharedApplication] delegate];
-	[appDelegate archiveWizardDidClose:finishedSuccessfully];
+	[delegate archiveWizardDidClose:self finishedSuccessfully:self.finishedSuccessfully];
 	
-	isShown = NO;
+	self.isShown = NO;
+}
+
+-(void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	self.file				= nil;
+	self.password			= nil;
+	self.passwordRepetition	= nil;
+	self.filesToArchive		= nil;
+	
+	[super dealloc];
 }
 
 #pragma mark -
 #pragma mark Navigating through pages
 
--(IBAction)previousPageButtonClicked:(id)sender {
-	if ([previousPageButton isEnabled] == YES) {
-		[previousPageButton setEnabled:NO]; 
-		if (currentPage > firstPage)
-			[self loadPage:(currentPage-1)];
+-(IBAction)previousPageButtonPressed:(id)sender {
+	if ([self.previousPageButton isEnabled] == YES) {
+		[self.previousPageButton setEnabled:NO]; 
+		if (self.currentPage > self.firstPage)
+			[self loadPage:(self.currentPage-1)];
 	}
 }
 
--(IBAction)nextPageButtonClicked:(id)sender {
-	if ([nextPageButton isEnabled] == YES) {
-		[nextPageButton setEnabled:NO]; 
+-(IBAction)nextPageButtonPressed:(id)sender {
+	if ([self.nextPageButton isEnabled] == YES) {
+		[self.nextPageButton setEnabled:NO]; 
 		
-		if (currentPage >= LASTPAGE) { //Last page - Finish the wizard
-			RAR_Archive_UtilityAppDelegate *appDelegate = (RAR_Archive_UtilityAppDelegate *)[[NSApplication sharedApplication] delegate];
-			
-			RAUPath *filePath = [RAUPath pathWithFile:file];
+		if (currentPage >= LASTPAGE) { //Last page - Finish the wizard			
+			RAUPath *filePath = [RAUPath pathWithFile:self.file];
 			
 			//Create the TaskController with all data the user entered
-			if (mode == WizardModeCreate) {
-				RAUCreateTaskController *createController = [[RAUCreateTaskController alloc] initWithFilesToArchive:filesToArchive];
+			if (self.mode == WizardModeCreate) {
+				RAUCreateTaskController *createController = [[RAUCreateTaskController alloc] initWithFilesToArchive:self.filesToArchive];
 				[createController setTargetRarfileArgument:filePath];
-				[createController setCompressionLevelArgument:compressionLevel];
-				if (shouldBeProtected == YES) {
-					[createController setPasswordArgument:password];
+				[createController setCompressionLevelArgument:self.compressionLevel];
+				if (self.shouldBeProtected == YES) {
+					[createController setPasswordArgument:self.password];
 				}
-				if (shouldBeSplitted == YES) {
-					if (pieceSizeUnit == 1) pieceSize *= 1000;
-					if (pieceSizeUnit == 2) pieceSize *= 1000000;
-					[createController setPieceSizeArgument:pieceSize];
+				if (self.shouldBeSplitted == YES) {
+					if (self.pieceSizeUnit == FileUnitMB) self.pieceSize *= 1000;
+					if (self.pieceSizeUnit == FileUnitGB) self.pieceSize *= 1000000;
+					[createController setPieceSizeArgument:self.pieceSize];
 				}
 				
-				[appDelegate addTaskController:createController];
+				[delegate archiveWizard:self createdTaskController:createController];
 				[createController release];
 			}
 			
-			if (mode == WizardModeAdd) {
-				RAUAddTaskController *addController = [[RAUAddTaskController alloc] initWithFilesToArchive:filesToArchive inRarfile:filePath];
-				[addController setCompressionLevelArgument:compressionLevel];
-				if (shouldBeProtected == YES) {
-					[addController setPasswordArgument:password];
+			if (self.mode == WizardModeAdd) {
+				RAUAddTaskController *addController = [[RAUAddTaskController alloc] initWithFilesToArchive:self.filesToArchive inRarfile:filePath];
+				[addController setCompressionLevelArgument:self.compressionLevel];
+				if (self.shouldBeProtected == YES) {
+					[addController setPasswordArgument:self.password];
 				}
 				
-				[appDelegate addTaskController:addController];
+				[delegate archiveWizard:self createdTaskController:addController];
 				[addController release];
 			}
 			
-			finishedSuccessfully = YES;
+			self.finishedSuccessfully = YES;
 			[self close];
 		}
 		else if ([self currentPageReady] == YES) { //not the last page and current page is ready to proceed
-			[self loadPage:(currentPage+1)];
+			[self loadPage:(self.currentPage+1)];
 		}
 	}
 }
 
--(IBAction)quitButtonClicked:(id)sender {
+-(IBAction)quitButtonPressed:(id)sender {
 	[self close];
 }
 
 -(void)updateNavigationButtons {
 	//Go-Back-Button
-	if (currentPage == firstPage)	[previousPageButton setEnabled:NO];
-	else							[previousPageButton setEnabled:YES];
+	if (self.currentPage == self.firstPage)	[self.previousPageButton setEnabled:NO];
+	else									[self.previousPageButton setEnabled:YES];
 	
 	//Contine-Button
-	if ([self currentPageReady] == NO)	[nextPageButton setEnabled:NO];
-	else								[nextPageButton setEnabled:YES];
+	if ([self currentPageReady] == NO)	[self.nextPageButton setEnabled:NO];
+	else								[self.nextPageButton setEnabled:YES];
 	
-	if (currentPage == LASTPAGE)	[nextPageButton setTitle:NSLocalizedString(@"Finish", nil)]; 
-	else							[nextPageButton setTitle:NSLocalizedString(@"Continue", nil)];
+	if (self.currentPage == LASTPAGE)	[self.nextPageButton setTitle:NSLocalizedString(@"Finish", nil)]; 
+	else								[self.nextPageButton setTitle:NSLocalizedString(@"Continue", nil)];
 }
 
 /* Needed so the user can navigate the wizard with enter/backspace keys */
@@ -171,8 +213,8 @@
 	NSString *pressedKeys = [event charactersIgnoringModifiers];
 	if ([pressedKeys length] > 0) {
 		unichar lastCharPressed = [pressedKeys characterAtIndex:[pressedKeys length]-1];
-		if (lastCharPressed == NSEnterCharacter || lastCharPressed == NSCarriageReturnCharacter) [self nextPageButtonClicked:self];
-		if (lastCharPressed == NSDeleteCharacter) [self previousPageButtonClicked:self];
+		if (lastCharPressed == NSEnterCharacter || lastCharPressed == NSCarriageReturnCharacter) [self nextPageButtonPressed:self];
+		if (lastCharPressed == NSDeleteCharacter) [self previousPageButtonPressed:self];
 	}
 }
 
@@ -186,70 +228,72 @@
 	//Display the new content view. loadNibNamed loads the new pages view into contentView
 	NSString *nibToLoad = [NSString stringWithFormat:@"Page%d",pageNumber];
 	[NSBundle loadNibNamed:nibToLoad owner:self]; 
-	[contentViewWrapper addSubview:contentView];
+	[self.contentViewWrapper addSubview:self.contentView];
 	
-	currentPage = pageNumber;
+	self.currentPage = pageNumber;
 	
 	//Initialize the UI of the page we just loaded
 	NSString *pageTitle = nil;
-	switch (currentPage) {
+	switch (self.currentPage) {
 		case 1: //Mode-Page
 			pageTitle = NSLocalizedString(@"Select a mode", nil);
 			break;
 		case 2: //File-Page
-			if (mode == WizardModeCreate)	pageTitle = NSLocalizedString(@"Select where to create the new RAR-File", nil);
-			if (mode == WizardModeAdd)		pageTitle = NSLocalizedString(@"Select which RAR-File to change", nil);
+			if (self.mode == WizardModeCreate)	pageTitle = NSLocalizedString(@"Select where to create the new RAR-File", nil);
+			if (self.mode == WizardModeAdd)		pageTitle = NSLocalizedString(@"Select which RAR-File to change", nil);
 			break;
 		case 3: //Options-Page
 			pageTitle = NSLocalizedString(@"Select additional options", nil);
 			[self userChoseCompressionLevel:self]; //Display compression warning if necessary
 			[self displayOrHidePasswordWarnings]; //Display password warning if necessary
-			if (mode == WizardModeAdd) [splitCheckbox setHidden:YES];
+			if (self.mode == WizardModeAdd) [self.splitCheckbox setHidden:YES];
 			break;
 		case 4: //Files-to-archive-Page
 			pageTitle = NSLocalizedString(@"Select the files you want to archive", nil);
 			
-			if ([filesToArchive count] > 0) { //Restore previously dragged files if there are any
-				[(RAUDraggableView *)contentView setDraggedFiles:filesToArchive];
+			if ([self.filesToArchive count] > 0) { //Restore previously dragged files if there are any
+				[(RAUDraggableView *)self.contentView setDraggedFiles:self.filesToArchive];
 			} else {
-				[filesToArchiveLabel setStringValue:NSLocalizedString(@"Drag the files to be archived in here", nil)];
+				[self.filesToArchiveLabel setStringValue:NSLocalizedString(@"Drag the files to be archived in here", nil)];
 			}
 			
 			//Listen to when files are dragged onto the view
+			//Remove already existing listeners so we don't double-listen
+			[[NSNotificationCenter defaultCenter] removeObserver:self name:FilesDraggedNotification object:self.contentView];
 			[[NSNotificationCenter defaultCenter] addObserver:self
 													 selector:@selector(userAddedFilesToArchive:)
 														 name:FilesDraggedNotification
-													   object:contentView];
+													   object:self.contentView];
 			break;
 	}
-	[pageTitleLabel setStringValue:pageTitle];
+	[self.pageTitleLabel setStringValue:pageTitle];
 	[self updateNavigationButtons];
 }
 
 /* Remove the currently loaded page from the wizard window */
 -(void)unloadCurrentPage {
-	if (contentView != nil) [contentView removeFromSuperview];
-	contentView = nil;
+	if (self.contentView != nil) [self.contentView removeFromSuperview];
+	self.contentView = nil;
 }
 
 /* Returns a boolean value determining if the current page is ready to proceed to the next page */
 -(BOOL)currentPageReady {
-	switch (currentPage) {
+	switch (self.currentPage) {
 		case 1: //Mode - always ready
 			return YES;
 			break;
 		case 2: //File - when a file was entered, page is ready
-			return ([file length] > 0);
+			return ([self.file length] > 0);
 			break;
 		case 3: //Options - If password wished, passwort must have been entered twice. If split wished, split value must have been entered
-			if (shouldBeProtected == YES && ([self isPasswordCorrect] == NO || [self IsPasswordRepetitionCorrect] == NO))
+			if (self.shouldBeProtected == YES && ([self isPasswordCorrect] == NO || [self IsPasswordRepetitionCorrect] == NO))
 				return NO;
-			if (shouldBeSplitted == YES && [self pieceSizeCorrect] == NO) 
+			if (self.shouldBeSplitted == YES && [self pieceSizeCorrect] == NO) 
 				return NO;
 			return YES;
 			break;
 		case 4: //Files to archive - ready as soon as at least one file was dragged into the view
-			return ([filesToArchive count] > 0);
+			return ([self.filesToArchive count] > 0);
 			break;
 	}
 	
@@ -272,14 +316,14 @@
 @synthesize file;
 
 -(IBAction)userWantsToChoseFile:(id)sender {
-	if (mode == WizardModeAdd) { //Show an openPanel to open an existing rarfile
+	if (self.mode == WizardModeAdd) { //Show an openPanel to open an existing rarfile
 		NSOpenPanel* fileDialog = [NSOpenPanel openPanel];
 		[fileDialog setCanChooseFiles:YES];
 		[fileDialog setCanChooseDirectories:NO];
 	
 		int result = [fileDialog runModalForDirectory:[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] file:nil types:[NSArray arrayWithObject:@"rar"]];
 		if (result == NSOKButton)
-			self.file = [[[fileDialog filenames] objectAtIndex:0] copy]; //We don't allow multiple file selection, so always take index 0
+			self.file = [[fileDialog filenames] objectAtIndex:0]; //We don't allow multiple file selection, so always take index 0
 	}
 	
 	if (mode == WizardModeCreate) { //Show a savePanel to chose the location of a completly new rarfile
@@ -296,14 +340,9 @@
 
 #pragma mark -
 #pragma mark Page 3 (Options)
-/*
 @synthesize compressionLevel;
-@synthesize shouldBeProtected, passwordNeverEntered, passwordRepetitionNeverEntered, password, passwordRepetition;
-@synthesize shouldBeSplitted, pieceSizeNeverEntered, pieceSize, pieceSizeUnit;
- */
-@synthesize compressionLevel;
-@synthesize shouldBeProtected, password, passwordRepetition;
-@synthesize shouldBeSplitted, pieceSize, pieceSizeUnit;
+@synthesize shouldBeProtected, password, passwordRepetition, passwordNeverEntered, passwordRepetitionNeverEntered;
+@synthesize shouldBeSplitted, pieceSize, pieceSizeUnit, pieceSizeNeverEntered;
 @synthesize compressionLevelWarningImage, compressionLevelWarningLabel;
 @synthesize passwordRepetitionWarningImage, passwordRepetitionWarningLabel, passwordWarningImage, passwordWarningLabel;
 @synthesize splitCheckbox;
@@ -315,12 +354,12 @@
 
 -(void)displayOrHideCompressionWarning {
 	//When the user selects "Store only" or "Very strong compression" display a warning
-	if (compressionLevel == 0) [compressionLevelWarningLabel setStringValue:NSLocalizedString(@"Your files will not be compressed", nil)];
-	if (compressionLevel == 5) [compressionLevelWarningLabel setStringValue:NSLocalizedString(@"This might take a very long time", nil)];
+	if (self.compressionLevel == 0) [self.compressionLevelWarningLabel setStringValue:NSLocalizedString(@"Your files will not be compressed", nil)];
+	if (self.compressionLevel == 5) [self.compressionLevelWarningLabel setStringValue:NSLocalizedString(@"This might take a very long time", nil)];
 	
-	BOOL showWarning = (compressionLevel == 0 || compressionLevel == 5);
-	[compressionLevelWarningImage setHidden:!showWarning];
-	[compressionLevelWarningLabel setHidden:!showWarning];
+	BOOL showWarning = (self.compressionLevel == 0 || self.compressionLevel == 5);
+	[self.compressionLevelWarningImage setHidden:!showWarning];
+	[self.compressionLevelWarningLabel setHidden:!showWarning];
 }
 
 /* User checked or unchecked the passwort checkbox */
@@ -329,26 +368,26 @@
 }
 
 -(BOOL)isPasswordCorrect {
-	return ([password length] > 0);
+	return ([self.password length] > 0);
 }
 
 -(BOOL)IsPasswordRepetitionCorrect {
-	return ([password isEqualToString:passwordRepetition] == YES);
+	return ([self.password isEqualToString:self.passwordRepetition] == YES);
 }
 
 -(void)displayOrHidePasswordWarnings {
 	//Show warning if nothing was entered. If the user never TRIED to enter something, do not show a warning
-	BOOL showPasswordWarning = ([self isPasswordCorrect] == NO && passwordNeverEntered == NO);
+	BOOL showPasswordWarning = ([self isPasswordCorrect] == NO && self.passwordNeverEntered == NO);
 	//Show warning if password and repetition are not identical. Don't if user didn't even try to enter yet
-	BOOL showRepetitionWarning = ([self isPasswordCorrect] == YES && [self IsPasswordRepetitionCorrect] == NO && passwordRepetitionNeverEntered == NO);
+	BOOL showRepetitionWarning = ([self isPasswordCorrect] == YES && [self IsPasswordRepetitionCorrect] == NO && self.passwordRepetitionNeverEntered == NO);
 	BOOL showWarning = (showPasswordWarning == YES || showRepetitionWarning == YES);
 	
 	//Don't show both warnings and give priority to the "no password" warning
-	if (showPasswordWarning == YES) [passwordWarningLabel setStringValue:NSLocalizedString(@"Please enter a password", nil)];
-	else if (showRepetitionWarning == YES) [passwordWarningLabel setStringValue:NSLocalizedString(@"Passwords not identical", nil)];
+	if (showPasswordWarning == YES)			[self.passwordWarningLabel setStringValue:NSLocalizedString(@"Please enter a password", nil)];
+	else if (showRepetitionWarning == YES)	[self.passwordWarningLabel setStringValue:NSLocalizedString(@"Passwords not identical", nil)];
 	
-	[passwordWarningImage setHidden:!showWarning];
-	[passwordWarningLabel setHidden:!showWarning];
+	[self.passwordWarningImage setHidden:!showWarning];
+	[self.passwordWarningLabel setHidden:!showWarning];
 }
 
 /* Automatically called every time the user changes a character in the password field */
@@ -356,7 +395,7 @@
 	[password release];
 	password = [value copy];
 	
-	if ([value length] > 0) passwordNeverEntered = NO;
+	if ([value length] > 0) self.passwordNeverEntered = NO;
 	[self displayOrHidePasswordWarnings];
 	[self updateNavigationButtons];
 }
@@ -366,7 +405,7 @@
 	[passwordRepetition release];
 	passwordRepetition = [value copy];
 	
-	if (value > 0) passwordRepetitionNeverEntered = NO;
+	if (value > 0) self.passwordRepetitionNeverEntered = NO;
 	[self displayOrHidePasswordWarnings];
 	[self updateNavigationButtons];
 }
@@ -377,14 +416,14 @@
 }
 
 -(BOOL)pieceSizeCorrect {
-	return (pieceSize > 0);
+	return (self.pieceSize > 0);
 }
 
 /* Automatically called every time the user changes a character in the piece-size field */
 -(void)setPieceSize:(float)value {
 	pieceSize = value;
 	
-	pieceSizeNeverEntered = NO;
+	self.pieceSizeNeverEntered = NO;
 	[self updateNavigationButtons];
 }
 

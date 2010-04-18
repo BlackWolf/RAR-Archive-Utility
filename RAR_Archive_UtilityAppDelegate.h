@@ -8,49 +8,35 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTaskController.h"
+#import "RAUPasswordWindow.h"
+#import "RAUArchiveWizardController.h"
 
 
-@class RAUMainWindow, RAUTaskController, RAUExtractTaskController, RAUArchiveWizardController;
-@interface RAR_Archive_UtilityAppDelegate : NSObject <NSApplicationDelegate, RAUTaskControllerDelegate> {
-    RAUMainWindow						*window;
-	NSView								*windowView;
-	NSWindow							*passwordSheet;
-	NSTextField							*passwordSheetHeading;
-	NSTextField							*passwordSheetTextField;
-	
-	BOOL								applicationDidFinishLaunching;
-	BOOL								terminateWhenDone;
-	BOOL								terminating;
-	NSMutableArray						*taskController;
-	BOOL								passwordSheetIsShowing;
-	RAUTaskController					*currentPasswordSheetTask;
-	NSMutableArray						*waitingPasswordSheetTasks;
-	RAUArchiveWizardController			*archiveWizard;
+
+
+@class RAUMainWindow;
+@interface RAR_Archive_UtilityAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate, RAUTaskControllerDelegate, RAUPasswordWindowDelegate, RAUArchiveWizardControllerDelegate> {
+    RAUMainWindow				*window;
+	NSView						*windowView;
+	BOOL						applicationDidFinishLaunching;
+	BOOL						terminateWhenDone;
+	BOOL						terminating;
+	NSMutableArray				*taskController;
+	RAUPasswordWindow			*passwordWindow;
+	BOOL						passwordWindowIsShowing;
+	RAUTaskController			*passwordWindowCurrentTask;
+	NSMutableArray				*passwordWindowWaitingTasks;
+	RAUArchiveWizardController	*archiveWizard;
 }
 
-@property (assign)				IBOutlet	RAUMainWindow						*window;
-@property (assign)				IBOutlet	NSView								*windowView;
-@property (assign)				IBOutlet	NSWindow							*passwordSheet;
-@property (assign)				IBOutlet	NSTextField							*passwordSheetHeading;
-@property (assign)				IBOutlet	NSTextField							*passwordSheetTextField;
+@property (readwrite, assign)	IBOutlet	RAUMainWindow		*window;
+@property (readwrite, assign)	IBOutlet	NSView				*windowView;
+@property (readonly)						BOOL				applicationDidFinishLaunching;
+@property (readwrite)						BOOL				terminateWhenDone;
+@property (readonly)						BOOL				terminating;
+@property (readonly, retain)				NSMutableArray		*taskController;
+@property (readwrite, assign)	IBOutlet	RAUPasswordWindow	*passwordWindow;
 
-@property (readonly)						BOOL								applicationDidFinishLaunching;
-@property (readonly)						BOOL								terminateWhenDone;
-@property (readonly)						BOOL								terminating;
-@property (readonly, assign)				NSMutableArray						*taskController;
-@property (readonly)						BOOL								passwordSheetIsShowing;
-@property (readonly, retain)				RAUTaskController					*currentPasswordSheetTask;
-@property (readonly, assign)				NSMutableArray						*waitingPasswordSheetTasks;
-@property (readonly, assign)				RAUArchiveWizardController			*archiveWizard;
-
--(void)addTaskController:(RAUTaskController *)newController;
--(void)taskControllerDidFinish:(RAUTaskController *)finishedController;
--(void)taskControllerNeedsPassword:(RAUTaskController *)needyController;
--(void)showPasswordSheet:(RAUTaskController *)needyController;
--(IBAction)passwordSheetPressedOK:(id)sender;
--(IBAction)passwordSheetPressedCancel:(id)sender;
--(void)dismissPasswordSheet;
 -(IBAction)showArchiveWizard:(id)sender;
--(void)archiveWizardDidClose:(BOOL)successfully;
 
 @end

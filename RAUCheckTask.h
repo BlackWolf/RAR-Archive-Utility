@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTask.h"
+#import "RAUTaskPrivates.h"
 
 
 #define CheckTaskDidFinishNotification	@"CheckTaskDidFinishNotification"
@@ -16,6 +17,8 @@ typedef enum {
 	CheckTaskResultArchiveInvalid		= 1,
 	CheckTaskResultPasswordInvalid		= 2
 } CheckTaskResult;
+
+
 
 
 @class RAURarfile;
@@ -29,6 +32,6 @@ typedef enum {
 @property (readonly)			CheckTaskResult	detailedResult;
 @property (readwrite, copy)		NSString		*passwordArgument;
 
--(id)initWithFile:(RAURarfile *)sourceFile;
+-(id)initWithFile:(RAURarfile *)_rarfile;
 
 @end

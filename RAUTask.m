@@ -10,6 +10,9 @@
 //
 
 #import "RAUTask.h"
+#import "RAUTaskPrivates.h"
+
+
 
 
 @implementation RAUTask
@@ -19,8 +22,9 @@
 
 -(id)init {
 	if (self = [super init]) {
-		progress	=	0;
-		result		=	TaskResultNone;
+		self.progress	=  0;
+		self.result		= TaskResultNone;
+		self.task		= nil;
 	}
 	return self;
 }
@@ -30,8 +34,8 @@
 -(void)didFinish {
 	[self willFinish];
 	
-	if (task.terminationStatus == 0)	result = TaskResultOK;
-	else								result = TaskResultFailed;
+	if (self.task.terminationStatus == 0)	self.result = TaskResultOK;
+	else									self.result = TaskResultFailed;
 
 	[delegate taskDidFinish:self];
 }
@@ -39,37 +43,36 @@
 -(void)dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
-	[task		release]; //alloced in launchTask
-	[fileHandle release];
+	self.task = nil;
 	
 	[super dealloc];
 }
 
 #pragma mark -
 #pragma mark The NSTask
-@synthesize task, fileHandle;
+@synthesize task;
 
 -(void)taskWillLaunch {}
 -(void)launchTask {
-	[task release];
-	task = [[NSTask alloc] init];
+	NSTask *_task = [[NSTask alloc] init];
+	self.task = _task;
+	[_task release];
 	
 	[self taskWillLaunch];
 	
 	//Redirecting output to Pipe, then to NSFileHandle so we can catch it later
 	NSPipe *pipe = [NSPipe pipe];
-	[task setStandardOutput:pipe];
-	[task setStandardError:pipe];
-	[fileHandle release];
-	fileHandle = [[pipe fileHandleForReading] retain];
+	[self.task setStandardOutput:pipe];
+	[self.task setStandardError:pipe];
+	NSFileHandle *fileHandle = [pipe fileHandleForReading];
 	
-	[task launch]; 
+	[self.task launch]; 
 	
 	//Listen to when the task terminates and to new output from the task
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(taskDidTerminate:)
 												 name:NSTaskDidTerminateNotification
-											   object:task];
+											   object:self.task];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(receivedNewOutput:)
@@ -83,7 +86,7 @@
 -(void)taskDidLaunch {}
 
 -(void)terminateTask {
-	[task terminate];
+	[self.task terminate];
 }
 
 /* Automatically called when the NSTask terminated (either by calling terminateTask or because it actually finished) */
@@ -98,6 +101,7 @@
 /* Automatically invoked when new output is sent by the NSTask */
 -(void)receivedNewOutput:(NSNotification *)notification {
 	//Get the new output and check if it has any content (length > 0)
+	NSFileHandle *fileHandle = [notification object];
 	NSData *availableData = [fileHandle availableData];
 	if ([availableData length] == 0) return;
 	NSString *output = [[NSString alloc] initWithData:availableData encoding:NSASCIIStringEncoding];
@@ -143,8 +147,8 @@
 	
 	if ([output rangeOfString:@"%"].location != NSNotFound) { 
 		int newProgress = [self parseProgressFromString:output];
-		if (newProgress > progress) { //Safety measure
-			progress = newProgress;
+		if (newProgress > self.progress) { //Safety measure
+			self.progress = newProgress;
 			[delegate taskProgressWasUpdated:self];
 		}
 	}

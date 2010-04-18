@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTask.h"
+#import "RAUTaskPrivates.h"
 
 
 @class RAURarfile;
@@ -20,14 +21,14 @@
 	int			compressionLevelArgument;
 }
 
-@property (readonly, retain)	RAURarfile		*rarfile;
-@property (readonly, copy)		NSArray			*filesToArchive;
-@property (readonly)			int				currentFile;
-@property (readonly)			int				numberOfFiles;
-@property (readwrite, copy)		NSString		*passwordArgument;
-@property (readwrite)			int				compressionLevelArgument;
+@property (readonly, retain)	RAURarfile	*rarfile;
+@property (readonly, copy)		NSArray		*filesToArchive;
+@property (readonly)			int			currentFile;
+@property (readonly)			int			numberOfFiles;
+@property (readwrite, copy)		NSString	*passwordArgument;
+@property (readwrite)			int			compressionLevelArgument;
 
--(id)initWithFilesToArchive:(NSArray *)files withRarfile:(RAURarfile *)existingRarfile;
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive withRarfile:(RAURarfile *)_rarfile;
 
 
 @end

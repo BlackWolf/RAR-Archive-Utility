@@ -11,63 +11,79 @@
 #import "RAUPath.h"
 
 
-@implementation RAUPath
 
+
+@interface RAUPath ()
+@property (readwrite, copy)	NSString	*completePath;
+@property (readwrite, copy)	NSString	*withoutFilename;
+@property (readwrite, copy)	NSString	*filename;
+@property (readwrite, copy)	NSString	*multipartExtension;
+@property (readwrite, copy)	NSString	*extension;
+@property (readwrite, copy)	NSString	*completeExtension;
+@property (readwrite, copy)	NSString	*withoutExtensions;
+@property (readwrite, copy)	NSString	*filenameWithExtensions;
+@property (readwrite)		BOOL		isDirectory;
+@end
 #pragma mark -
-@synthesize complete, withoutFilename, filename, multipartExtension, extension;
+
+
+
+
+@implementation RAUPath
+#pragma mark -
+@synthesize completePath, withoutFilename, filename, multipartExtension, extension;
 @synthesize completeExtension, withoutExtensions, filenameWithExtensions, isDirectory;
 
--(id)initWithString:(NSString *)path isDirectory:(BOOL)shouldBeDirectory {
+-(id)initWithString:(NSString *)_completePath isDirectory:(BOOL)_isDirectory {
 	if (self = [super init]) {
-		complete = [path copy]; 
-		withoutFilename = [[path stringByDeletingLastPathComponent] copy]; 
+		self.completePath		= _completePath;
+		self.isDirectory		= _isDirectory;
 		
-		if (isDirectory == NO) {
+		if (self.isDirectory == NO) {
 			//filename is just the name with no extensions, so remove extension and multipart extension if they exist
-			filename			= [[[[path lastPathComponent] stringByDeletingPathExtension] stringByDeletingPathExtension] copy];
-			extension			= [[path pathExtension] copy];
-			multipartExtension	= [[[path stringByDeletingPathExtension] pathExtension] copy];
+			self.filename			= [[[_completePath lastPathComponent] stringByDeletingPathExtension] stringByDeletingPathExtension];
+			self.extension			= [_completePath pathExtension];
+			self.multipartExtension	= [[_completePath stringByDeletingPathExtension] pathExtension];
 			
 			//multipartExtension should only be "partXX". If it is anything else, it should be part of the filename
-			if ([multipartExtension length] > 0
-				&& [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"part[0-9]+"] evaluateWithObject:multipartExtension] == NO) {
-				[filename			autorelease];
-				[multipartExtension	autorelease];
-				filename			= [[NSString alloc] initWithFormat:@"%@.%@", filename, multipartExtension];
-				multipartExtension	= nil;
+			if ([self.multipartExtension length] > 0
+				&& [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"part[0-9]+"] evaluateWithObject:self.multipartExtension] == NO) {
+				self.filename			= [NSString stringWithFormat:@"%@.%@", self.filename, self.multipartExtension];
+				self.multipartExtension	= nil;
 			}
 			
 			//Get the completeExtension, which is MPExtension and extension including dots
-			if ([extension length] > 0) {
-				if ([multipartExtension length] > 0) {
-					completeExtension = [[NSString alloc] initWithFormat:@".%@.%@", multipartExtension, extension];
+			if ([self.extension length] > 0) {
+				if ([self.multipartExtension length] > 0) {
+					self.completeExtension = [NSString stringWithFormat:@".%@.%@", self.multipartExtension, self.extension];
 				} else {
-					completeExtension = [[NSString alloc] initWithFormat:@".%@", extension];
+					self.completeExtension = [NSString stringWithFormat:@".%@", self.extension];
 				}
 			} else {
-				completeExtension = nil;
+				self.completeExtension = nil;
 			}
 		} else { //directories have no extension
-			filename			= [[path lastPathComponent] copy];
-			extension			= nil;
-			multipartExtension	= nil;
-			completeExtension	= nil;
+			self.filename			= [_completePath lastPathComponent];
+			self.extension			= nil;
+			self.multipartExtension	= nil;
+			self.completeExtension	= nil;
 		}
 		
-		withoutExtensions = [[withoutFilename stringByAppendingPathComponent:filename] copy];
-		filenameWithExtensions = [[NSString alloc] initWithFormat:@"%@%@", filename, completeExtension];
-		isDirectory = shouldBeDirectory;
+		self.withoutFilename		= [_completePath stringByDeletingLastPathComponent]; 
+		self.withoutExtensions		= [self.withoutFilename stringByAppendingPathComponent:self.filename];
+		self.filenameWithExtensions = [NSString stringWithFormat:@"%@%@", self.filename, self.completeExtension];
 	}
 	return self;
 }
+
 -(id)initWithFile:(NSString *)pathToFile {
 	return [self initWithString:pathToFile isDirectory:NO];
 }
+
 -(id)initWithDirectory:(NSString *)pathToDirectory {
 	return [self initWithString:pathToDirectory isDirectory:YES];
 }
 
-/* Autoreleased inits */
 +(id)pathWithString:(NSString *)path isDirectory:(BOOL)shouldBeDirectory {
 	return [[[RAUPath alloc] initWithString:path	isDirectory:shouldBeDirectory] autorelease];
 }
@@ -79,18 +95,18 @@
 }
 
 -(id)copyWithZone:(NSZone *)zone {
-	return [[RAUPath alloc] initWithString:complete isDirectory:isDirectory];
+	return [self retain]; //Because this object is immutable, we don't need a real copy
 }
 
--(void)dealloc {
-	[complete				release];
-	[withoutFilename		release];
-	[filename				release];
-	[multipartExtension		release];
-	[extension				release];
-	[completeExtension		release];
-	[withoutExtensions		release];
-	[filenameWithExtensions	release];
+-(void)dealloc {	
+	self.completePath			= nil;
+	self.withoutFilename		= nil;
+	self.filename				= nil;
+	self.multipartExtension		= nil;
+	self.extension				= nil;
+	self.completeExtension		= nil;
+	self.withoutExtensions		= nil;
+	self.filenameWithExtensions	= nil;
 	
 	[super dealloc];
 }
@@ -99,9 +115,9 @@
 #pragma mark Getters
 /* Write getters for all properties so that they return an empty string instead of nil */
 
--(NSString *)complete {
-	if (complete == nil)	return @"";
-	else					return complete;
+-(NSString *)completePath {
+	if (completePath == nil)	return @"";
+	else						return completePath;
 }
 
 -(NSString *)withoutFilename {
@@ -117,6 +133,11 @@
 -(NSString *)multipartExtension {
 	if (multipartExtension == nil)	return @"";
 	else							return multipartExtension;
+}
+
+-(NSString *)extension {
+	if (extension == nil)	return @"";
+	else					return extension;
 }
 
 -(NSString *)completeExtension {

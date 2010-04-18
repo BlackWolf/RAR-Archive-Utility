@@ -13,11 +13,14 @@
 //
 
 #import "RAUTaskController.h"
+#import "RAUTaskControllerPrivates.h"
 #import "RAURarfile.h"
 #import "RAUCheckTask.h"
 #import "RAUPath.h"
 #import "RAUAuxiliary.h"
 #import "RAUTaskViewController.h"
+
+
 
 
 @implementation RAUTaskController
@@ -27,39 +30,52 @@
 
 -(id)init {
 	if (self = [super init]) {
-		viewController		= [[RAUTaskViewController alloc] initWithNibName:@"RarfileView" bundle:[NSBundle mainBundle]];
-		ETAFirstHalfFactor	= 1.0; //Standard value, can be overwritten by subclasses
+		RAUTaskViewController *_viewController = [[RAUTaskViewController alloc] init];
+		
+		self.rarfilePath			= nil;
+		self.rarfilePath			= nil;
+		self.passwordArgument		= nil;
+		self.task					= nil;
+		self.taskStartDate			= nil;
+		self.viewController			= _viewController;
+		self.ETAFirstHalfFactor		= 1.0; //Standard value, can be overwritten by subclasses
+		self.ETALastRuntime			= 0.0;
+		self.ETALastTotalRuntime	= 0.0;
+		
+		[_viewController release];
 		
 		[self performSelector:@selector(initView) withObject:nil afterDelay:0];
 		
 		//Listen to when the stop button on the task's view was clicked
 		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(stopButtonClicked:)
-													 name:TaskViewStopButtonClickedNotification
-												   object:viewController];
+												 selector:@selector(stopButtonPressed:)
+													 name:TaskViewStopButtonPressedNotification
+												   object:self.viewController];
 	}
 	return self;
 }
 
 -(void)initView {
 	//Set the view to "Preparing" state 
-	[viewController.statusLabel	setStringValue:NSLocalizedString(@"Preparing…", nil)];
-	[viewController.progress	setIndeterminate:YES];
-	[viewController.progress	startAnimation:self];
-	[viewController.partsLabel	setHidden:YES];
+	[self.viewController.statusLabel	setStringValue:NSLocalizedString(@"Preparing…", nil)];
+	[self.viewController.progress		setIndeterminate:YES];
+	[self.viewController.progress		startAnimation:self];
+	[self.viewController.partsLabel		setHidden:YES];
 }
 
 -(void)didFinish {
-	[delegate taskControllerDidFinish:self];
+	[self.delegate taskControllerDidFinish:self];
 }
 
 -(void)dealloc {
-	[rarfilePath		release];
-	[rarfile			release]; //alloced in setRarfilePath
-	[passwordArgument	release];
-	[task				release]; //alloced in taskWillLaunch
-	[taskStartDate		release]; //alloced in launchTask
-	[viewController		release]; //alloced in init
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	self.rarfilePath		= nil;
+	self.rarfile			= nil;
+	self.passwordArgument	= nil;
+	self.task				= nil;
+	self.taskStartDate		= nil;
+	self.viewController		= nil;
 	
 	[super dealloc];
 }
@@ -73,49 +89,56 @@
 	rarfilePath = [value copy];
 	
 	// When the rarfilePath is set, the rarfile is automatically set and checked. When the check is done, a message is sent to the delegate
-	[rarfile release];
-	rarfile = [[RAURarfile alloc] initWithFilePath:self.rarfilePath];
+	if (self.rarfilePath != nil) {
+		//First, remove the listeners for the old rarfile
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:RarfileWasCheckedNotification object:self.rarfile];
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:RarfilePasswordWasCheckedNotification object:self.rarfile];
+		
+		//Now, assign a new rarfile based on the rarfilePath
+		RAURarfile *_rarfile = [[RAURarfile alloc] initWithFilePath:self.rarfilePath];
+		self.rarfile = _rarfile;
+		[_rarfile release];
 	
-	//Listen to when the infos about the rarfile are completly gathered and to when a password-check finished
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(rarfileWasChecked:)
-												 name:RarfileWasCheckedNotification
-											   object:rarfile];
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(passwordWasChecked:)
-												 name:RarfilePasswordWasCheckedNotification
-											   object:rarfile];
+		//Finally, add the listeners again for the newly created rarfile
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(rarfileWasChecked:)
+													 name:RarfileWasCheckedNotification
+												   object:self.rarfile];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(passwordWasChecked:)
+													 name:RarfilePasswordWasCheckedNotification
+												   object:self.rarfile];
+	}
 }
 
 /* Automatically called when all infos about rarfile were gathered */
 -(void)rarfileWasChecked:(NSNotification *)notification {
-	if (rarfile.isValid == NO) { 
-		[delegate taskControllerRarfileInvalid:self];
+	if (self.rarfile.isValid == NO) { 
+		[self.delegate taskControllerRarfileInvalid:self];
 	} else {
-		if (rarfile.isPasswordProtected == YES) { 
-			[delegate taskControllerNeedsPassword:self];
+		if (self.rarfile.isPasswordProtected == YES) { 
+			[self.delegate taskControllerNeedsPassword:self];
 		} else { //Normal rarfile
-			[delegate taskControllerIsReady:self];
+			[self.delegate taskControllerIsReady:self];
 		}
 	}
 }
 
 -(void)setPasswordArgument:(NSString *)value {
-	if ([value length] > 0 && rarfile.passwordFound == NO) {
+	if ([value length] > 0 && self.rarfile.passwordFound == NO) {
 		[passwordArgument release];
 		passwordArgument = [value copy];
 		
-		[rarfile checkPassword:value];
-		//We already set up a listener to RarfilePasswordWasCheckedNotification in setRarfilePath:
+		[self.rarfile checkPassword:value];
 	}
 }
 
 -(void)passwordWasChecked:(NSNotification *)notification {
-	if (rarfile.passwordFound == YES) {
-		passwordArgument = [self.rarfile.correctPassword copy];
-		[delegate taskControllerIsReady:self];
+	if (self.rarfile.passwordFound == YES) {
+		self.passwordArgument = self.rarfile.correctPassword;
+		[self.delegate taskControllerIsReady:self];
 	} else {
-		[delegate taskControllerNeedsPassword:self];
+		[self.delegate taskControllerNeedsPassword:self];
 	}
 }
 
@@ -125,18 +148,20 @@
 
 -(void)taskWillLaunch {
 	//We assign a generic RAUTask here. It would be wise for subclasses to overwrite this with a subclass of RAUTask
-	[task release];
-	task = [[RAUTask alloc] init];
+	RAUTask *_task = [[RAUTask alloc] init];
+	self.task = _task;
+	[_task release];
 }
 
 -(void)launchTask {
-	[taskStartDate release];
-	taskStartDate = [[NSDate alloc] init]; 
+	NSDate *_taskStartDate = [[NSDate alloc] init]; 
+	self.taskStartDate = _taskStartDate;
+	[_taskStartDate release];
 	
 	[self taskWillLaunch];
 	
-	[task setDelegate:self];
-	[task launchTask];
+	[self.task setDelegate:self];
+	[self.task launchTask];
 	
 	[self taskDidLaunch];
 	
@@ -148,15 +173,15 @@
 
 -(void)terminateTask {
 	//Set GUI to "Cancelling" status
-	[viewController.statusLabel	setStringValue:NSLocalizedString(@"Cancelling…", nil)];
-	[viewController.progress	setIndeterminate:YES];
-	[viewController.progress	startAnimation:self];
-	[viewController.partsLabel	setHidden:YES];
-	[viewController lockView];
+	[self.viewController.statusLabel	setStringValue:NSLocalizedString(@"Cancelling…", nil)];
+	[self.viewController.progress		setIndeterminate:YES];
+	[self.viewController.progress		startAnimation:self];
+	[self.viewController.partsLabel		setHidden:YES];
+	[self.viewController				lockView];
 	
 	//If the task is running, terminate it (which will trigger taskDidFinish:), otherwise just call taskDidFinish:
-	if (task != nil) {
-		[task terminateTask];
+	if (self.task != nil) {
+		[self.task terminateTask];
 	}
 	else 
 		[self taskDidFinish:nil];
@@ -164,7 +189,7 @@
 
 /* Automatically called when the RAUTask did finish */
 -(void)taskDidFinish:(RAUTask *)finishedTask {
-	if (finishedTask == task)
+	if (finishedTask == self.task)
 		[self didFinish]; 
 }
 
@@ -175,26 +200,45 @@
 /* Automatically called every 10 seconds to update the progress UI */
 -(void)progressTimerFired:(NSTimer*)theTimer {
 	[self taskProgressWasUpdated:task];
-	if (task.task.isRunning == NO) [theTimer invalidate];
+	if (self.task.task.isRunning == NO) [theTimer invalidate];
 }
 
 /* Automatically invoked when the task updates it's progress or the progressTimer forces the progress UI to update */
 -(void)taskProgressWasUpdated:(RAUTask *)updatedTask {
-	[viewController.progress setDoubleValue:(double)task.progress];
+	[self.viewController.progress setDoubleValue:(double)task.progress];
 	
 	//If we finished, set UI to "Finish" while the task finishes
-	if (task.progress == 100) {
-		[viewController.statusLabel	setStringValue:NSLocalizedString(@"Finishing…", nil)];
-		[viewController.progress	setIndeterminate:YES];
-		[viewController.progress	startAnimation:self];
-		[viewController.partsLabel	setHidden:YES];
-		[viewController lockView];
+	if (self.task.progress == 100) {
+		[self.viewController.statusLabel	setStringValue:NSLocalizedString(@"Finishing…", nil)];
+		[self.viewController.progress		setIndeterminate:YES];
+		[self.viewController.progress		startAnimation:self];
+		[self.viewController.partsLabel		setHidden:YES];
+		[self.viewController				lockView];
 	}
 }
 
 /* Automatically invoked when the X-Button was clicked - user wants to cancel the task */
--(void)stopButtonClicked:(NSNotification *)notification {
+-(void)stopButtonPressed:(NSNotification *)notification {
 	[self terminateTask];
+}
+
+-(void)showErrorAndFinish:(NSString *)errorMessage {
+	[self.viewController showErrorMessage:errorMessage];
+	
+	//Listen to when the OK button on the error view was clicked
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(errorOKButtonPressed:)
+												 name:TaskViewErrorOKButtonPressedNotification
+											   object:self.viewController];
+}
+
+-(void)errorOKButtonPressed:(NSNotification *)notification {
+	//When an error is dismissed by the user, we always want to end this controller (only fatal errors get shown this way)
+	if (self.task != nil) {
+		[self.task terminateTask];
+	}
+	else 
+		[self taskDidFinish:nil];
 }
 
 #pragma mark -
@@ -209,14 +253,14 @@
 	if ((runtime < 25 && self.task.progress <= 2) || self.task.progress == 0) return NSLocalizedString(@"Calculating…", nil);
 	
 	double totalRuntime;
-	if (ETALastRuntime == 0) { //This method was never run before
+	if (self.ETALastRuntime == 0) { //This method was never run before
 		/* Make a first assumption. ETA is always too low at the beginning, so we multiply it with FirstHalfFactor (which can be 
 		 overwritten by subclasses) */
 		totalRuntime = runtime*(100.0/self.task.progress); 
-		totalRuntime *= ETAFirstHalfFactor; 
+		totalRuntime *= self.ETAFirstHalfFactor; 
 		
-		ETALastRuntime		= runtime;
-		ETALastTotalRuntime	= totalRuntime;
+		self.ETALastRuntime			= runtime;
+		self.ETALastTotalRuntime	= totalRuntime;
 	} else { 
 		/* Here we use EWMA, which takes old ETAs in account but still makes the current data point very significant. The formula:
 		 x*Y(t) + (1-x)*S(t-1), where ...
@@ -234,20 +278,20 @@
 		 Yeah, sick, I know ... ;-) I don't expect anyone to actually get this
 		 */
 		
-		double weighting = 0.4*((runtime-ETALastRuntime)/10);
+		double weighting = 0.4*((runtime-self.ETALastRuntime)/10);
 		if (weighting > 1) weighting = 1; //x must be between 0 and 1
 		
 		double currentETA = runtime*(100.0/self.task.progress); //ETA calculated by basic formula
 		
 		//On the first half of the progress, boost the ETA based on ETAFirstHalfFactor (which decreases over time)
-		if (self.task.progress <= 50) currentETA *= 1 + (1-self.task.progress/50.0)*(ETAFirstHalfFactor-1);
-		totalRuntime = weighting*currentETA + (1-weighting)*ETALastTotalRuntime; //Actual EWMA formula
+		if (self.task.progress <= 50) currentETA *= 1 + (1-self.task.progress/50.0)*(self.ETAFirstHalfFactor-1);
+		totalRuntime = weighting*currentETA + (1-weighting)*self.ETALastTotalRuntime; //Actual EWMA formula
 		
 		/* If the last calculation is younger, we simply display the current calculations, but they don't get taken into account in the next
 		 EWMA calculation (EWMA data points need to be evenly spread) */
-		if ((runtime-ETALastRuntime) >= 10) {
-			ETALastRuntime = runtime;
-			ETALastTotalRuntime = totalRuntime;
+		if ((runtime-self.ETALastRuntime) >= 10) {
+			self.ETALastRuntime			= runtime;
+			self.ETALastTotalRuntime	= totalRuntime;
 		}
 	}
 	

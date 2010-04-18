@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTaskController.h"
+#import "RAUTaskControllerPrivates.h"
+
+
 
 
 @class RAUCreateTask;
@@ -25,6 +28,6 @@
 @property (readwrite)			int				pieceSizeArgument;
 @property (readonly)			RAUCreateTask	*createTask;
 
--(id)initWithFilesToArchive:(NSArray *)files;
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive;
 
 @end

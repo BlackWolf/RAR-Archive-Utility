@@ -17,15 +17,28 @@
 #import "RAUPath.h"
 #import "RAUAuxiliary.h"
 
+
+
+
+@interface RAUCreateTaskController ()
+@property (readwrite, copy)		NSArray			*filesToArchive;
+@end
+#pragma mark -
+
+
+
+
 @implementation RAUCreateTaskController
+#pragma mark -
 @synthesize filesToArchive, targetRarfileArgument, compressionLevelArgument, pieceSizeArgument;
 
--(id)initWithFilesToArchive:(NSArray *)files {
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive {
 	if (self = [super init]) {
-		filesToArchive				= [files copy];
-		compressionLevelArgument	= 3;
-		pieceSizeArgument			= 0;
-		ETAFirstHalfFactor			= 1.45;
+		self.ETAFirstHalfFactor			= 1.45;
+		self.filesToArchive				= _filesToArchive;
+		self.targetRarfileArgument		= nil;
+		self.compressionLevelArgument	= 3;
+		self.pieceSizeArgument			= 0;
 	}
 	return self;
 }
@@ -35,10 +48,10 @@
 	[super initView];
 	
 	//Show self.file's icon together with the archiving indicator
-	[viewController.fileIcon setImage:[[NSWorkspace sharedWorkspace] iconForFileType:@"rar"]];
-	[viewController.fileIconArchivingIndicator setHidden:NO];
+	[self.viewController.fileIcon setImage:[[NSWorkspace sharedWorkspace] iconForFileType:@"rar"]];
+	[self.viewController.fileIconArchivingIndicator setHidden:NO];
 	
-	[delegate taskControllerIsReady:self];
+	[self.delegate taskControllerIsReady:self];
 }
 
 -(void)didFinish {
@@ -49,25 +62,24 @@
 		
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		
-		if (task.result == TaskResultOK) {
+		if (self.task.result == TaskResultOK) {
 			
 			/* Get the path and filename where the created rarfiles need to end up */
 			
 			NSString *targetPath;
 			NSString *targetFilename;
-			if (targetRarfileArgument != nil) {
-				targetPath = targetRarfileArgument.withoutFilename;
-				targetFilename = targetRarfileArgument.filename;
+			if (self.targetRarfileArgument != nil) {
+				targetPath		= self.targetRarfileArgument.withoutFilename;
+				targetFilename	= self.targetRarfileArgument.filename;
 			}
 			else {
-				NSString *firstArchivedFilePathString = (NSString *)[filesToArchive objectAtIndex:0];
-				BOOL firstArchivedFileIsDirectory;
-				[fileManager fileExistsAtPath:firstArchivedFilePathString isDirectory:&firstArchivedFileIsDirectory];
+				NSString *firstArchivedFilePathString = (NSString *)[self.filesToArchive objectAtIndex:0];
+				BOOL firstArchivedFileIsDirectory = [RAUAuxiliary isStringPathDirectory:firstArchivedFilePathString];
 				RAUPath *firstArchivedFilePath = [RAUPath pathWithString:firstArchivedFilePathString isDirectory:firstArchivedFileIsDirectory];
 				
 				targetPath = firstArchivedFilePath.withoutFilename;
 				
-				if ([filesToArchive count] == 1) { //only a single file was compressed - name the rarfile(s) like that file
+				if ([self.filesToArchive count] == 1) { //only a single file was compressed - name the rarfile(s) like that file
 					targetFilename = firstArchivedFilePath.filename;
 				} else {
 					targetFilename = @"Archive";
@@ -78,12 +90,12 @@
 			/* Go through all created rarfiles, and get their target path (which is targetPath/targetFilename.extensions). When we have
 			 all target Paths in a single array, we can finally determine the unique suffix we need */
 			
-			NSArray *createdFiles = [fileManager contentsOfDirectoryAtPath:self.createTask.tmpPath.complete error:nil];
+			NSArray *createdFiles = [fileManager contentsOfDirectoryAtPath:self.createTask.tmpPath.completePath error:nil];
 			NSMutableArray *createdFilePaths = [NSMutableArray arrayWithCapacity:1];
 			NSMutableArray *targetFilePaths = [NSMutableArray arrayWithCapacity:1];
 			
 			for (NSString *createdFile in createdFiles) {
-				NSString *createdFilePathString = [self.createTask.tmpPath.complete stringByAppendingPathComponent:createdFile];
+				NSString *createdFilePathString = [self.createTask.tmpPath.completePath stringByAppendingPathComponent:createdFile];
 				RAUPath *createdFilePath = [RAUPath pathWithFile:createdFilePathString];
 				NSString *targetFilePathString = [targetFile.withoutExtensions stringByAppendingString:createdFilePath.completeExtension];
 				RAUPath *targetFilePath = [RAUPath pathWithFile:targetFilePathString];
@@ -101,7 +113,7 @@
 				RAUPath *targetFilePath = [RAUPath pathWithFile:targetFilePathString];
 
 				NSString *finalFilePathString = [RAUAuxiliary stringPathForFilename:targetFilePath inPath:targetFilePath withSuffix:suffix];
-				[fileManager moveItemAtPath:createdFilePath.complete
+				[fileManager moveItemAtPath:createdFilePath.completePath
 									 toPath:finalFilePathString
 									  error:nil];
 				
@@ -109,7 +121,7 @@
 			}
 			[RAUAuxiliary revealInFinder:firstFileCopied];
 		}
-		[fileManager removeItemAtPath:self.createTask.tmpPath.complete error:nil]; //remove tmp-dir
+		[fileManager removeItemAtPath:self.createTask.tmpPath.completePath error:nil]; //remove tmp-dir
 		
 		[self performSelectorOnMainThread:@selector(callSuperDidFinish) withObject:nil waitUntilDone:NO];
 		
@@ -121,8 +133,8 @@
 }
 
 -(void)dealloc {
-	[filesToArchive			release];
-	[targetRarfileArgument	release];
+	self.filesToArchive			= nil;
+	self.targetRarfileArgument	= nil;
 	
 	[super dealloc];
 }
@@ -132,27 +144,31 @@
 @synthesize createTask;
 
 -(RAUCreateTask *)createTask {
-	return (RAUCreateTask *)task;
+	return (RAUCreateTask *)self.task;
 }
 
 -(void)taskWillLaunch {
-	task = [[RAUCreateTask alloc] initWithFilesToArchive:filesToArchive];
-	[self.createTask setPasswordArgument:passwordArgument];
-	[self.createTask setCompressionLevelArgument:compressionLevelArgument];
-	[self.createTask setPieceSizeArgument:pieceSizeArgument];
+	RAUCreateTask *_task = [[RAUCreateTask alloc] initWithFilesToArchive:filesToArchive];
+	self.task = _task;
+	[_task release];
+	
+	[self.createTask setPasswordArgument:self.passwordArgument];
+	[self.createTask setCompressionLevelArgument:self.compressionLevelArgument];
+	[self.createTask setPieceSizeArgument:self.pieceSizeArgument];
 }
 
 /* Automatically invoked when the Task updates its progress */
 -(void)taskProgressWasUpdated:(RAUTask *)updatedTask {
 	if (self.createTask.numberOfFiles > 0) {
-		[viewController.statusLabel setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Archiving %d files", nil), self.createTask.numberOfFiles]];
-		[viewController.progress	setIndeterminate:NO]; 
-		[viewController.partsLabel	setHidden:NO];
+		[self.viewController.progress	setIndeterminate:NO]; 
+		[self.viewController.partsLabel	setHidden:NO];
 	
 		NSString *runtimeString = [self getETAString];
 		
 		NSString *completeString;
 		if (self.createTask.numberOfFiles > 1) { //more than one file - we need the "file x of y label"
+			[self.viewController.statusLabel setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Archiving %d files", nil), self.createTask.numberOfFiles]];
+			
 			//numberOfFiles can be wrong. Even if it is, never show something like "File 11 of 10"
 			int numberOfFiles = self.createTask.numberOfFiles;
 			if (self.createTask.currentFile > numberOfFiles) numberOfFiles = self.createTask.currentFile;
@@ -160,9 +176,11 @@
 			NSString *fileString = [NSString stringWithFormat:NSLocalizedString(@"File %d of %d", nil), self.createTask.currentFile, numberOfFiles];
 			completeString = [NSString stringWithFormat:@"%@ - %@", fileString, runtimeString];
 		} else {
+			[self.viewController.statusLabel setStringValue:NSLocalizedString(@"Archiving 1 file", nil)];
+			
 			completeString = runtimeString;
 		}
-		[viewController.partsLabel setStringValue:completeString];
+		[self.viewController.partsLabel setStringValue:completeString];
 		
 		[super taskProgressWasUpdated:updatedTask];
 	}

@@ -18,14 +18,15 @@
 #import "RAUTaskViewController.h"
 
 
-@implementation RAUExtractTaskController
 
+
+@implementation RAUExtractTaskController
 #pragma mark -
 
--(id)initWithFilePath:(RAUPath *)pathToExtract {
+-(id)initWithFilePath:(RAUPath *)_rarfilePath {
 	if (self = [super init]) {
-		self.rarfilePath	= pathToExtract; //Setting this automatically sets rarfile and either invokes launchTask or asks for password
-		ETAFirstHalfFactor	= 1.7;
+		self.rarfilePath		= _rarfilePath; //Setting this automatically sets rarfile and either invokes launchTask or asks for password
+		self.ETAFirstHalfFactor	= 1.7;
 	}
 	return self;
 }
@@ -40,7 +41,7 @@
 	[super initView];
 	
 	//Show rarfile's icon
-	[viewController.fileIcon setImage:[[NSWorkspace sharedWorkspace] iconForFile:rarfile.path.complete]];
+	[self.viewController.fileIcon setImage:[[NSWorkspace sharedWorkspace] iconForFile:self.rarfile.path.completePath]];
 }
 
 -(void)didFinish {
@@ -52,53 +53,52 @@
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		
 		if (self.extractTask.result == TaskResultOK) { 
-			NSArray *extractedFiles = [fileManager contentsOfDirectoryAtPath:self.extractTask.tmpPath.complete error:nil];
+			NSArray *extractedFiles = [fileManager contentsOfDirectoryAtPath:self.extractTask.tmpPath.completePath error:nil];
 			RAUPath *targetPath;
 			
 			//If we extracted multiple files, we copy all the files in a new directory
 			if ([extractedFiles count] > 1) { 
 				//Determine the target directory
-				targetPath = [RAUAuxiliary uniquePathForStringFilename:rarfile.path.filename 
-														  inStringPath:rarfile.path.withoutFilename 
+				targetPath = [RAUAuxiliary uniquePathForStringFilename:self.rarfile.path.filename 
+														  inStringPath:self.rarfile.path.withoutFilename 
 														   isDirectory:YES];
 				
-				[fileManager createDirectoryAtPath:targetPath.complete withIntermediateDirectories:YES attributes:nil error:nil];
+				[fileManager createDirectoryAtPath:targetPath.completePath withIntermediateDirectories:YES attributes:nil error:nil];
 				
 				for (NSString *extractedFile in extractedFiles) {
-					[fileManager moveItemAtPath:[self.extractTask.tmpPath.complete	stringByAppendingPathComponent:extractedFile]
-										 toPath:[targetPath.complete				stringByAppendingPathComponent:extractedFile] 
+					[fileManager moveItemAtPath:[self.extractTask.tmpPath.completePath	stringByAppendingPathComponent:extractedFile]
+										 toPath:[targetPath.completePath				stringByAppendingPathComponent:extractedFile] 
 										  error:nil];
 				}
 			} else { //only a single file was extracted
 				NSString *extractedFile = (NSString *)[extractedFiles objectAtIndex:0];
-				NSString *extractedFilePathString = [self.extractTask.tmpPath.complete stringByAppendingPathComponent:extractedFile];
+				NSString *extractedFilePathString = [self.extractTask.tmpPath.completePath stringByAppendingPathComponent:extractedFile];
 				
-				BOOL extractedFileIsDirectory;
-				[fileManager fileExistsAtPath:extractedFilePathString isDirectory:&extractedFileIsDirectory];
+				BOOL extractedFileIsDirectory = [RAUAuxiliary isStringPathDirectory:extractedFilePathString];
 				RAUPath *extractedFilePath = [RAUPath pathWithString:extractedFilePathString isDirectory:extractedFileIsDirectory];
 				
-				targetPath = [RAUAuxiliary uniquePathForFilename:extractedFilePath inPath:rarfile.path];
+				targetPath = [RAUAuxiliary uniquePathForFilename:extractedFilePath inPath:self.rarfile.path];
 				
 				//If extracted file was no directory, simply copy it
 				if (extractedFileIsDirectory == NO) {
-					[fileManager moveItemAtPath:extractedFilePath.complete
-										 toPath:targetPath.complete 
+					[fileManager moveItemAtPath:extractedFilePath.completePath
+										 toPath:targetPath.completePath 
 										  error:nil];
 				} else { //extracted file was a directory - copy all its contents to a new directory with a unique name
-					NSArray *extractedSubFiles = [fileManager contentsOfDirectoryAtPath:extractedFilePath.complete error:nil];
+					NSArray *extractedSubFiles = [fileManager contentsOfDirectoryAtPath:extractedFilePath.completePath error:nil];
 					
-					[fileManager createDirectoryAtPath:targetPath.complete withIntermediateDirectories:YES attributes:nil error:nil];
+					[fileManager createDirectoryAtPath:targetPath.completePath withIntermediateDirectories:YES attributes:nil error:nil];
 					
 					for (NSString *extractedSubFile in extractedSubFiles) {
-						[fileManager moveItemAtPath:[extractedFilePath.complete	stringByAppendingPathComponent:extractedSubFile]
-											 toPath:[targetPath.complete		stringByAppendingPathComponent:extractedSubFile] 
+						[fileManager moveItemAtPath:[extractedFilePath.completePath	stringByAppendingPathComponent:extractedSubFile]
+											 toPath:[targetPath.completePath		stringByAppendingPathComponent:extractedSubFile] 
 											  error:nil];
 					}
 				}
 			}
 			[RAUAuxiliary revealInFinder:targetPath];
 		}
-		[fileManager removeItemAtPath:self.extractTask.tmpPath.complete error:nil]; 
+		[fileManager removeItemAtPath:self.extractTask.tmpPath.completePath error:nil]; 
 		
 		[self performSelectorOnMainThread:@selector(callSuperDidFinish) withObject:nil waitUntilDone:NO];
 		
@@ -115,27 +115,30 @@
 
 
 -(RAUExtractTask *)extractTask {
-	return (RAUExtractTask *)task;
+	return (RAUExtractTask *)self.task;
 }
 
 -(void)taskWillLaunch {
 	//Overwrite the standard RAUTask in self.task with an RAUExtractTask
-	task = [[RAUExtractTask alloc] initWithFile:rarfile];
-	[self.extractTask setPasswordArgument:passwordArgument];
+	RAUExtractTask *_task = [[RAUExtractTask alloc] initWithFile:self.rarfile];
+	self.task = _task;
+	[_task release];
 	
-	[self taskProgressWasUpdated:task];
+	[self.extractTask setPasswordArgument:self.passwordArgument];
+	
+	[self taskProgressWasUpdated:self.task];
 }
 
 /* Automatically invoked when the Task updates its progress */
 -(void)taskProgressWasUpdated:(RAUTask *)updatedTask {
-	[viewController.statusLabel setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Extracting \"%@.%@\"", nil), rarfile.path.filename, rarfile.path.extension]];
-	[viewController.progress	setIndeterminate:NO]; 
-	[viewController.partsLabel	setHidden:NO];
+	[self.viewController.statusLabel	setStringValue:[NSString stringWithFormat:NSLocalizedString(@"Extracting \"%@.%@\"", nil), self.rarfile.path.filename, self.rarfile.path.extension]];
+	[self.viewController.progress		setIndeterminate:NO]; 
+	[self.viewController.partsLabel		setHidden:NO];
 	
 	NSString *runtimeString = [self getETAString];
 	
 	NSString *completeString;
-	if (rarfile.numberOfParts > 1) { //Multiple parts - we need the "Part x of y" string
+	if (self.rarfile.numberOfParts > 1) { //Multiple parts - we need the "Part x of y" string
 		//numberOfParts can be wrong. Even if it is, never show something like "Part 4 of 3"
 		int numberOfParts = self.extractTask.numberOfParts;
 		if (self.extractTask.currentPart > self.extractTask.numberOfParts) numberOfParts = self.extractTask.currentPart;
@@ -145,7 +148,7 @@
 	} else { //Single part - only show ETA
 		completeString = runtimeString;
 	}
-	[viewController.partsLabel setStringValue:completeString];
+	[self.viewController.partsLabel setStringValue:completeString];
 	
 	[super taskProgressWasUpdated:updatedTask];
 }

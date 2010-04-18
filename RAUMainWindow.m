@@ -13,14 +13,10 @@
 #import "RAUMainWindow.h"
 
 
+
+
 @implementation RAUMainWindow
 @synthesize introLabel;
-
-/* Automatically called when the user clicks the close-button of the window */
-- (BOOL)windowShouldClose:(id)sender {
-	[NSApp terminate:nil];
-	return YES;
-}
 
 #pragma mark -
 #pragma mark Dragging

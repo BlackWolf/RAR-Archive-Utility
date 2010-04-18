@@ -1,7 +1,8 @@
 /* Main UI */
 "Preparing…" = "Vorbereiten…";
 "Extracting \"%@.%@\"" = "Entpacke \"%1$@.%2$@\"";
-"Archiving %d files" = "Archiviere %1$d files";
+"Archiving %d files" = "Archiviere %1$d Dateien";
+"Archiving 1 file" = "Archiviere eine Datei";
 "Part %d of %d" = "Teil %1$d von %2$d";
 "File %d of %d" = "Datei %1$d von %2$d";
 "Cancelling…" = "Abbrechen…";
@@ -17,9 +18,8 @@
 "About %d days" = "Ungefähr %1$d Tage";
 
 /* Error messages */
-"\"%@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer." 
-= 
-"\"%1$@\" scheint kein RAR-Archiv zu sein, oder ist ein unbekanntes Format.\nWenn die Datei gültig sein sollte, versuchen Sie es erneut.\n\nWenn dieser Fehler wiederholt auftritt und Sie sicher sind, dass die Datei gültig ist, wenden Sie sich bitte an den Entwickler.";
+"\"%@\" can't be extracted because it seems to be no RAR file." = "\"%1$@\" kann nicht entpackt werden, da es keine RAR-Datei zu sein scheint.";
+"Can't add files to \"%@\" because it seems to be no RAR file." = "Kann keine Dateien zu \"%1$@\" hinzufügen, da es keine RAR-Datei zu sein scheint.";
 
 /* Passwort sheet */
 "\"%@.%@\" needs a password" = "\"%1$@.%2$@\" benötigt ein Passwort";

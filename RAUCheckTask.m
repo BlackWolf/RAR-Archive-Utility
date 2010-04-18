@@ -14,20 +14,35 @@
 #import "RAUPath.h"
 #import "RAUAuxiliary.h"
 
+
+
+
+@interface RAUCheckTask ()
+@property (readwrite, retain)	RAURarfile		*rarfile;
+@property (readwrite)			CheckTaskResult	detailedResult;
+@end
+#pragma mark -
+
+
+
+
 @implementation RAUCheckTask
+
+#pragma mark -
 @synthesize rarfile, detailedResult;
 
--(id)initWithFile:(RAURarfile *)sourceFile {
+-(id)initWithFile:(RAURarfile *)_rarfile {
 	if (self = [super init]) {
-		rarfile			= [sourceFile retain];
-		detailedResult	= CheckTaskResultNone;
+		self.rarfile			= _rarfile;
+		self.detailedResult		= CheckTaskResultNone;
+		self.passwordArgument	= nil;
 	}
 	return self;
 }
 
 -(void)dealloc {
-	[rarfile			release]; 
-	[passwordArgument	release];
+	self.rarfile			= nil;
+	self.passwordArgument	= nil;
 	
 	[super dealloc];
 }
@@ -42,16 +57,16 @@
 	NSArray *arguments;
 	
 	NSString *passwordArgumentString = @"-p-"; //"-p-" means: no password
-	if (passwordArgument != nil) passwordArgumentString = [NSString stringWithFormat:@"-p%@", passwordArgument];
+	if (self.passwordArgument != nil) passwordArgumentString = [NSString stringWithFormat:@"-p%@", self.passwordArgument];
 	
-	arguments = [NSArray arrayWithObjects:@"t", passwordArgumentString, rarfile.path.complete, nil]; //"t" is test
+	arguments = [NSArray arrayWithObjects:@"t", passwordArgumentString, self.rarfile.path.completePath, nil]; //"t" is test
 	
-	[task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"unrar" ofType:@""]]; //Path to unrar executable
-	[task setArguments:arguments]; 
+	[self.task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"unrar" ofType:@""]]; //Path to unrar executable
+	[self.task setArguments:arguments]; 
 	
 	//We have all the info we can gather after a second - terminate to save time. 
 	//If the infos are gathered earlier, the task terminates by itself
-	[self performSelector:@selector(terminateTask) withObject:nil afterDelay:1.0];
+	[self performSelector:@selector(terminateTask) withObject:nil afterDelay:0.75];
 }
 
 #pragma mark -
@@ -62,11 +77,15 @@
 	
 	if ([output rangeOfString:@"is not RAR archive"].location != NSNotFound
 		|| [output rangeOfString:@"No such file or directory"].location != NSNotFound) {
-		detailedResult = CheckTaskResultArchiveInvalid;
+		self.detailedResult = CheckTaskResultArchiveInvalid;
+	}
+	
+	if ([output rangeOfString:@"Enter password (will not be echoed) "].location != NSNotFound) {
+		self.detailedResult = CheckTaskResultPasswordInvalid;
 	}
 	
 	if ([output rangeOfString:@"password incorrect ?"].location != NSNotFound) {
-		detailedResult = CheckTaskResultPasswordInvalid;
+		self.detailedResult = CheckTaskResultPasswordInvalid;
 	}
 }
 

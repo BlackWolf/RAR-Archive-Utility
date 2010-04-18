@@ -260,27 +260,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">nextPageButtonClicked:</string>
+						<string key="label">nextPageButtonPressed:</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="669835662"/>
 					</object>
-					<int key="connectionID">69</int>
+					<int key="connectionID">72</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">previousPageButtonClicked:</string>
+						<string key="label">previousPageButtonPressed:</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="355863621"/>
 					</object>
-					<int key="connectionID">70</int>
+					<int key="connectionID">73</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">quitButtonClicked:</string>
+						<string key="label">quitButtonPressed:</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="655303770"/>
 					</object>
-					<int key="connectionID">71</int>
+					<int key="connectionID">74</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -469,7 +469,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">71</int>
+			<int key="maxID">74</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -481,9 +481,9 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>nextPageButtonClicked:</string>
-							<string>previousPageButtonClicked:</string>
-							<string>quitButtonClicked:</string>
+							<string>nextPageButtonPressed:</string>
+							<string>previousPageButtonPressed:</string>
+							<string>quitButtonPressed:</string>
 							<string>userChoseCompressionLevel:</string>
 							<string>userChoseMode:</string>
 							<string>userToggledPassword:</string>

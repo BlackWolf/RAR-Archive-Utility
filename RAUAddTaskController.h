@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTaskController.h"
+#import "RAUTaskControllerPrivates.h"
+
+
 
 
 @class RAUAddTask;
@@ -21,6 +24,6 @@
 @property (readwrite)			int				compressionLevelArgument;
 @property (readonly)			RAUAddTask		*addTask;
 
--(id)initWithFilesToArchive:(NSArray *)files inRarfile:(RAUPath *)aRarfile;
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive inRarfile:(RAUPath *)_rarfilePath;
 
 @end

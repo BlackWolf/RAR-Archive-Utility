@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTask.h" 
+#import "RAUTaskPrivates.h"
+
+
 
 
 @class RAURarfile, RAUPath;
@@ -19,12 +22,12 @@
 	NSString		*passwordArgument;
 }
 
-@property (readonly, retain)	RAURarfile		*rarfile;
-@property (readonly, retain)	RAUPath			*tmpPath;
-@property (readonly)			int				currentPart;
-@property (readonly)			int				numberOfParts;
-@property (readwrite, copy)		NSString		*passwordArgument;
+@property (readonly, retain)	RAURarfile	*rarfile;
+@property (readonly, copy)		RAUPath		*tmpPath;
+@property (readonly)			int			currentPart;
+@property (readonly)			int			numberOfParts;
+@property (readwrite, copy)		NSString	*passwordArgument;
 
--(id)initWithFile:(RAURarfile *)sourceFile;
+-(id)initWithFile:(RAURarfile *)_rarfile;
 
 @end

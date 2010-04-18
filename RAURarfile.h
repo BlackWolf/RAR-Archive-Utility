@@ -7,14 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "RAUTask.h" //Importing RAUTaskDelegate
+#import "RAUTask.h" 
 
 
 #define RarfileWasCheckedNotification			@"RarfileWasCheckedNotification"
 #define RarfilePasswordWasCheckedNotification	@"RarfilePasswordWasCheckedNotification"
 
 
-@class RAUPath, RAUCheckTask;
+
+
+@class RAUPath;
 @interface RAURarfile : NSObject <RAUTaskDelegate> {
 	RAUPath		*path;
 	BOOL		isValid;
@@ -31,10 +33,7 @@
 @property (readonly)		BOOL		passwordFound;
 @property (readonly, copy)	NSString	*correctPassword;
 
--(id)initWithFilePath:(RAUPath *)filePath;
--(void)rarfileWasChecked:(RAUCheckTask *)checkTask;
+-(id)initWithFilePath:(RAUPath *)_path;
 -(void)checkPassword:(NSString *)passwordToCheck;
--(void)passwordWasChecked:(RAUCheckTask *)finishedTask;
--(void)taskDidFinish:(RAUTask *)finishedTask;
 
 @end

@@ -9,31 +9,31 @@
 #import <Cocoa/Cocoa.h>
 
 
+
+
 @interface RAUPath : NSObject {
-	NSString	*complete;
+	NSString	*completePath;
 	NSString	*withoutFilename;
 	NSString	*filename;
 	NSString	*multipartExtension;
 	NSString	*extension;
-	
 	NSString	*completeExtension;
 	NSString	*withoutExtensions;
 	NSString	*filenameWithExtensions;
 	BOOL		isDirectory;
 }
 
-@property (readonly, copy)	NSString	*complete;
+@property (readonly, copy)	NSString	*completePath;
 @property (readonly, copy)	NSString	*withoutFilename;
 @property (readonly, copy)	NSString	*filename;
 @property (readonly, copy)	NSString	*multipartExtension;
 @property (readonly, copy)	NSString	*extension;
-
 @property (readonly, copy)	NSString	*completeExtension;
 @property (readonly, copy)	NSString	*withoutExtensions;
 @property (readonly, copy)	NSString	*filenameWithExtensions;
 @property (readonly)		BOOL		isDirectory;
 
--(id)initWithString:(NSString *)path isDirectory:(BOOL)shouldBeDirectory;
+-(id)initWithString:(NSString *)_completePath isDirectory:(BOOL)_isDirectory;
 -(id)initWithFile:(NSString *)pathToFile;
 -(id)initWithDirectory:(NSString *)pathToDirectory;
 +(id)pathWithString:(NSString *)path isDirectory:(BOOL)shouldBeDirectory;

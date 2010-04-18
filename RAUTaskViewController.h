@@ -9,24 +9,47 @@
 #import <Cocoa/Cocoa.h>
 
 
-#define TaskViewStopButtonClickedNotification	@"TaskViewStopButtonClickedNotification"
+#define TaskViewStopButtonPressedNotification		@"TaskViewStopButtonPressedNotification"
+#define TaskViewErrorOKButtonPressedNotification	@"TaskViewErrorOKButtonPressedNotification"
 
 
+
+
+@class RAUStopButton;
 @interface RAUTaskViewController : NSViewController {
 	NSImageView			*fileIcon;
 	NSImageView			*fileIconArchivingIndicator;
+	NSImageView			*fileIconErrorIndicator;
+	
+	NSView				*normalView;
 	NSTextField			*statusLabel;
 	NSProgressIndicator	*progress;
+	RAUStopButton		*stopButton;
 	NSTextField			*partsLabel;
+
+	NSView				*errorView;
+	NSTextField			*errorMessage;
+	NSButton			*errorOKButton;
 }
 
-@property (assign)	IBOutlet	NSImageView			*fileIcon;
-@property (assign)	IBOutlet	NSImageView			*fileIconArchivingIndicator;
-@property (assign)	IBOutlet	NSTextField			*statusLabel;
-@property (assign)	IBOutlet	NSProgressIndicator	*progress;
-@property (assign)	IBOutlet	NSTextField			*partsLabel;
+@property (readwrite, assign)	IBOutlet	NSImageView			*fileIcon;
+@property (readwrite, assign)	IBOutlet	NSImageView			*fileIconArchivingIndicator;
+@property (readwrite, assign)	IBOutlet	NSImageView			*fileIconErrorIndicator;
 
--(IBAction)stopButtonClicked:(id)sender;
+@property (readwrite, assign)	IBOutlet	NSView				*normalView;
+@property (readwrite, assign)	IBOutlet	NSTextField			*statusLabel;
+@property (readwrite, assign)	IBOutlet	NSProgressIndicator	*progress;
+@property (readwrite, assign)	IBOutlet	RAUStopButton		*stopButton;
+@property (readwrite, assign)	IBOutlet	NSTextField			*partsLabel;
+
+@property (readwrite, assign)	IBOutlet	NSView				*errorView;
+@property (readwrite, assign)	IBOutlet	NSTextField			*errorMessage;
+@property (readwrite, assign)	IBOutlet	NSButton			*errorOKButton;
+
+-(IBAction)stopButtonPressed:(id)sender;
 -(void)lockView;
+-(void)showNormalView;
+-(void)showErrorMessage:(NSString *)message;
+-(IBAction)errorViewOKButtonPressed:(id)sender;
 
 @end

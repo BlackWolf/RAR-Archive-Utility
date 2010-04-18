@@ -13,25 +13,42 @@
 #import "RAUPath.h"
 #import "RAUAuxiliary.h"
 
+
+
+
+@interface RAUCreateTask ()
+@property (readwrite, copy)		NSArray		*filesToArchive;
+@property (readwrite, copy)		RAUPath		*tmpPath;
+@property (readwrite)			int			currentFile;
+@property (readwrite)			int			numberOfFiles;
+@end
+
+
+
+
 @implementation RAUCreateTask
 
 #pragma mark -
 @synthesize filesToArchive, tmpPath, currentFile, numberOfFiles;
 
--(id)initWithFilesToArchive:(NSArray *)files {
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive {
 	if (self = [super init]) {
-		filesToArchive				= [files copy];
-		currentFile					= 0; 
+		self.filesToArchive				= _filesToArchive;
+		self.tmpPath					= nil;
+		self.currentFile				= 0; 
+		self.numberOfFiles				= 0;
+		self.passwordArgument			= nil;
+		self.compressionLevelArgument	= 3;
+		self.pieceSizeArgument			= 0;
 		
 		//Count the files we are archiving (including subfolders). Since this can take a while, do it in a seperate thread
-		numberOfFiles = 0;
 		dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
 		dispatch_async(queue,^{
 			NSAutoreleasePool *autoreleasePool = [[NSAutoreleasePool alloc] init];
 			
-			for (NSString *fileToArchive in filesToArchive) {
-				numberOfFiles += [RAUAuxiliary filesInStringPath:fileToArchive];
-				[delegate performSelectorOnMainThread:@selector(taskProgressWasUpdated:) withObject:self waitUntilDone:NO];
+			for (NSString *fileToArchive in self.filesToArchive) {
+				self.numberOfFiles += [RAUAuxiliary filesInStringPath:fileToArchive];
+				[self.delegate performSelectorOnMainThread:@selector(taskProgressWasUpdated:) withObject:self waitUntilDone:NO];
 			}
 			
 			[autoreleasePool release];
@@ -41,9 +58,9 @@
 }
 
 -(void)dealloc {
-	[filesToArchive		release];
-	[tmpPath			release];
-	[passwordArgument	release];
+	self.filesToArchive		= nil;
+	self.tmpPath			= nil;
+	self.passwordArgument	= nil;
 	
 	[super dealloc];
 }
@@ -61,25 +78,24 @@
 	//a:add ; u:update files; ep1:use relative paths; m:compressionLevel; v:split; hp:password; 
 	arguments = [NSMutableArray arrayWithObjects:@"a", @"-u", @"-ep1", nil]; 
 	
-	NSString *compressionLevelArgumentString = [NSString stringWithFormat:@"-m%d", compressionLevelArgument];
+	NSString *compressionLevelArgumentString = [NSString stringWithFormat:@"-m%d", self.compressionLevelArgument];
 	[arguments addObject:compressionLevelArgumentString];
 	
-	if (pieceSizeArgument > 0) {
-		NSString *pieceSizeArgumentString = [NSString stringWithFormat:@"-v%d", pieceSizeArgument];
+	if (self.pieceSizeArgument > 0) {
+		NSString *pieceSizeArgumentString = [NSString stringWithFormat:@"-v%d", self.pieceSizeArgument];
 		[arguments addObject:pieceSizeArgumentString];
 	}
 	
-	if (passwordArgument != nil) [arguments addObject:[NSString stringWithFormat:@"-hp%@", passwordArgument]];
+	if (self.passwordArgument != nil) [arguments addObject:[NSString stringWithFormat:@"-hp%@", self.passwordArgument]];
 	
-	[tmpPath release];
-	tmpPath = [[RAUAuxiliary uniqueTemporaryPath] retain];
-	[fileManager createDirectoryAtPath:tmpPath.complete withIntermediateDirectories:NO attributes:nil error:nil];
-	[arguments addObject:[tmpPath.complete stringByAppendingPathComponent:@"Archive.rar"]];
+	self.tmpPath = [RAUAuxiliary uniqueTemporaryPath];
+	[fileManager createDirectoryAtPath:self.tmpPath.completePath withIntermediateDirectories:NO attributes:nil error:nil];
+	[arguments addObject:[self.tmpPath.completePath stringByAppendingPathComponent:@"Archive.rar"]];
 	
-	[arguments addObjectsFromArray:filesToArchive];
+	[arguments addObjectsFromArray:self.filesToArchive];
 	
-	[task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"rar" ofType:@""]]; //Path to rar executable
-	[task setArguments:arguments]; 
+	[self.task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"rar" ofType:@""]]; //Path to rar executable
+	[self.task setArguments:arguments]; 
 }
 
 #pragma mark -
@@ -95,8 +111,8 @@
 	if ([output rangeOfString:@"Updating "].location != NSNotFound) 
 		seperatedOutput = [output componentsSeparatedByString:@"Updating "];
 	if (seperatedOutput != nil) {
-		currentFile += [seperatedOutput count]-1;
-		[delegate taskProgressWasUpdated:self];
+		self.currentFile += [seperatedOutput count]-1;
+		[self.delegate taskProgressWasUpdated:self];
 	}
 	
 }

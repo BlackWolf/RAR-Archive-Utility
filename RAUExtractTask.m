@@ -15,22 +15,39 @@
 #import "RAUAuxiliary.h"
 
 
+
+
+@interface RAUExtractTask ()
+@property (readwrite, retain)	RAURarfile	*rarfile;
+@property (readwrite, copy)		RAUPath		*tmpPath;
+@property (readwrite)			int			currentPart;
+@property (readwrite)			int			numberOfParts;
+@end
+#pragma mark -
+
+
+
+
 @implementation RAUExtractTask
+
+#pragma mark -
 @synthesize rarfile, tmpPath, currentPart, numberOfParts;
 
--(id)initWithFile:(RAURarfile *)sourceFile {
+-(id)initWithFile:(RAURarfile *)_rarfile {
 	if (self = [super init]) {
-		rarfile			= [sourceFile retain];
-		currentPart		= 0;
-		numberOfParts	= rarfile.numberOfParts;
+		self.rarfile			= _rarfile;
+		self.tmpPath			= nil;
+		self.currentPart		= 0;
+		self.numberOfParts		= self.rarfile.numberOfParts;
+		self.passwordArgument	= nil;
 	}
 	return self;
 }
 
 -(void)dealloc {
-	[rarfile			release];
-	[tmpPath			release];
-	[passwordArgument	release];
+	self.rarfile			= nil;
+	self.tmpPath			= nil;
+	self.passwordArgument	= nil;
 	
 	[super dealloc];
 }
@@ -46,17 +63,16 @@
 	NSArray			*arguments;
 	
 	NSString *passwordArgumentString = @"-p-"; //"-p-" means: no password
-	if (passwordArgument != nil) passwordArgumentString = [NSString stringWithFormat:@"-p%@", passwordArgument];
+	if (self.passwordArgument != nil) passwordArgumentString = [NSString stringWithFormat:@"-p%@", self.passwordArgument];
 	
-	arguments = [NSArray arrayWithObjects:@"x", passwordArgumentString, rarfile.path.complete, nil]; //"x" is extract
+	arguments = [NSArray arrayWithObjects:@"x", passwordArgumentString, self.rarfile.path.completePath, nil]; //"x" is extract
 		
-	[tmpPath release];
-	tmpPath = [[RAUAuxiliary uniqueTemporaryPath] retain];
-	[fileManager createDirectoryAtPath:tmpPath.complete withIntermediateDirectories:NO attributes:nil error:nil];
-	[task setCurrentDirectoryPath:tmpPath.complete]; 
+	self.tmpPath = [RAUAuxiliary uniqueTemporaryPath];
+	[fileManager createDirectoryAtPath:self.tmpPath.completePath withIntermediateDirectories:NO attributes:nil error:nil];
+	[self.task setCurrentDirectoryPath:self.tmpPath.completePath]; 
 	
-	[task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"unrar" ofType:@""]]; //Path to unrar executable
-	[task setArguments:arguments]; 
+	[self.task setLaunchPath:[[NSBundle mainBundle] pathForResource:@"unrar" ofType:@""]]; //Path to unrar executable
+	[self.task setArguments:arguments]; 
 }
 
 #pragma mark -
@@ -68,16 +84,16 @@
 	
 	if ([output rangeOfString:@"Extracting from "].location != NSNotFound) {
 		//Allow max of 1 for currentPart before we have progress (unrar sometimes sends "Extracting from" too often at the beginning)
-		if (progress == 0 && currentPart == 0) {
-			currentPart++;
-			[delegate taskProgressWasUpdated:self];
+		if (self.progress == 0 && self.currentPart == 0) {
+			self.currentPart++;
+			[self.delegate taskProgressWasUpdated:self];
 		}
 		
-		if (progress > 0) {
+		if (self.progress > 0) {
 			//Count how often "Extracting from" is occuring in the current output
 			NSArray *seperatedOutput = [output componentsSeparatedByString:@"Extracting from "];
-			currentPart += [seperatedOutput count]-1;
-			[delegate taskProgressWasUpdated:self];
+			self.currentPart += [seperatedOutput count]-1;
+			[self.delegate taskProgressWasUpdated:self];
 		}
 	}
 }

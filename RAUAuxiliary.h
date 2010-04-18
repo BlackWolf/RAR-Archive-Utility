@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+
+
 @class RAUPath;
 @interface RAUAuxiliary : NSObject {
 }
@@ -20,5 +22,7 @@
 +(int)filesInStringPath:(NSString *)path;
 +(int)filesInPath:(RAUPath *)path;
 +(void)revealInFinder:(RAUPath *)path;
++(NSFont *)fontFittingToSize:(NSSize)targetSize withText:(NSString *)text fontName:(NSString *)fontName minPtSize:(float)minSize maxPtSize:(float)maxSize;
++(BOOL)isStringPathDirectory:(NSString *)path;
 
 @end

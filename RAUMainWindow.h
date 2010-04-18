@@ -13,7 +13,7 @@
 	NSTextField	*introLabel;
 }
 
-@property (assign)	IBOutlet	NSTextField	*introLabel;
+@property (readwrite, assign)	IBOutlet	NSTextField	*introLabel;
 
 -(void)expandBy:(int)expandBy animate:(BOOL)animate;
 -(void)expandBy:(int)expandBy;

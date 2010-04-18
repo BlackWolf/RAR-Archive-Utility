@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTaskController.h"
+#import "RAUTaskControllerPrivates.h"
+
+
 
 
 @class RAUExtractTask;
@@ -17,7 +20,7 @@
 
 @property (readonly)	RAUExtractTask	*extractTask;
 
--(id)initWithFilePath:(RAUPath *)pathToExtract;
+-(id)initWithFilePath:(RAUPath *)_rarfilePath;
 -(id)initWithStringPath:(NSString *)pathToExtract;
 
 @end

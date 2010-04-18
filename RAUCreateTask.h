@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RAUTask.h"
+#import "RAUTaskPrivates.h"
 
 @class RAUPath;
 @interface RAUCreateTask : RAUTask {
@@ -20,12 +21,14 @@
 	int			pieceSizeArgument;
 }
 
-@property (readonly, copy)		NSArray			*filesToArchive;
-@property (readonly, retain)	RAUPath			*tmpPath;
-@property (readonly)			int				currentFile;
-@property (readonly)			int				numberOfFiles;
-@property (readwrite, copy)		NSString		*passwordArgument;
-@property (readwrite)			int				compressionLevelArgument;
-@property (readwrite)			int				pieceSizeArgument;
+@property (readonly, copy)		NSArray		*filesToArchive;
+@property (readonly, copy)		RAUPath		*tmpPath;
+@property (readonly)			int			currentFile;
+@property (readonly)			int			numberOfFiles;
+@property (readwrite, copy)		NSString	*passwordArgument;
+@property (readwrite)			int			compressionLevelArgument;
+@property (readwrite)			int			pieceSizeArgument;
+
+-(id)initWithFilesToArchive:(NSArray *)_filesToArchive;
 
 @end

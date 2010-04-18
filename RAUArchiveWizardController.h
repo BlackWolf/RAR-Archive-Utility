@@ -9,16 +9,30 @@
 #import <Cocoa/Cocoa.h>
 
 
+@class RAUArchiveWizardController, RAUTaskController;
+@protocol RAUArchiveWizardControllerDelegate
+-(void)archiveWizardDidClose:(RAUArchiveWizardController *)wizardController finishedSuccessfully:(BOOL)finishedSuccessfully;
+-(void)archiveWizard:(RAUArchiveWizardController *)wizardController createdTaskController:(RAUTaskController *)createdController;
+@end
+
 typedef enum {
 	WizardModeCreate		=	0,
 	WizardModeAdd			=	1
 } WizardMode;
 
+typedef enum {
+	FileUnitKB	= 0,
+	FileUnitMB	= 1,
+	FileUnitGB	= 2
+} FileUnit;
 
 #define LASTPAGE 4
 
+
+
+
 @interface RAUArchiveWizardController : NSWindowController <NSWindowDelegate> {
-	//Global
+	id<RAUArchiveWizardControllerDelegate>	delegate;
 	BOOL			isShown;
 	int				firstPage;
 	int				currentPage;
@@ -40,10 +54,10 @@ typedef enum {
 	NSString		*passwordRepetition;
 	BOOL			shouldBeSplitted;
 	float			pieceSize;
-	int				pieceSizeUnit;
+	FileUnit		pieceSizeUnit;
 	NSMutableArray	*filesToArchive;
 	
-	//Page-specific
+	//Page-specific variables
 	BOOL			passwordNeverEntered;
 	BOOL			passwordRepetitionNeverEntered;
 	BOOL			pieceSizeNeverEntered;
@@ -59,56 +73,46 @@ typedef enum {
 	NSTextField		*filesToArchiveLabel;
 }
 
-@property (readonly)			BOOL			isShown;
+@property (readwrite, assign)				id<RAUArchiveWizardControllerDelegate>	delegate;
+@property (readonly)						BOOL			isShown;
 
-@property (assign)	IBOutlet	NSTextField		*pageTitleLabel;
-@property (assign)	IBOutlet	NSView			*contentViewWrapper;
-@property (assign)	IBOutlet	NSView			*contentView;
-@property (assign)	IBOutlet	NSButton		*previousPageButton;
-@property (assign)	IBOutlet	NSButton		*nextPageButton;
+@property (readwrite, assign)	IBOutlet	NSTextField		*pageTitleLabel;
+@property (readwrite, assign)	IBOutlet	NSView			*contentViewWrapper;
+@property (readwrite, assign)	IBOutlet	NSView			*contentView;
+@property (readwrite, assign)	IBOutlet	NSButton		*previousPageButton;
+@property (readwrite, assign)	IBOutlet	NSButton		*nextPageButton;
 
-//Unfortunatly, bindings must be readwrite, because a change is only recognized if set through a setter
-@property (readwrite)			WizardMode		mode;
-@property (readwrite, copy)		NSString		*file;
-@property (readwrite)			int				compressionLevel;
-@property (readwrite)			BOOL			shouldBeProtected;
-@property (readwrite, copy)		NSString		*password;
-@property (readwrite, copy)		NSString		*passwordRepetition;
-@property (readwrite)			BOOL			shouldBeSplitted;
-@property (readwrite)			float			pieceSize;
-@property (readwrite)			int				pieceSizeUnit;
-@property (readwrite, retain)	NSMutableArray	*filesToArchive;
+@property (readonly)						WizardMode		mode;
+@property (readonly, copy)					NSString		*file;
+@property (readonly)						int				compressionLevel;
+@property (readonly)						BOOL			shouldBeProtected;
+@property (readonly, copy)					NSString		*password;
+@property (readonly, copy)					NSString		*passwordRepetition;
+@property (readonly)						BOOL			shouldBeSplitted;
+@property (readonly)						float			pieceSize;
+@property (readonly)						FileUnit		pieceSizeUnit;
+@property (readonly, retain)				NSMutableArray	*filesToArchive;
 
-@property (assign)	IBOutlet	NSImageView		*compressionLevelWarningImage;
-@property (assign)	IBOutlet	NSTextField		*compressionLevelWarningLabel;
-@property (assign)	IBOutlet	NSImageView		*passwordRepetitionWarningImage;
-@property (assign)	IBOutlet	NSTextField		*passwordRepetitionWarningLabel;
-@property (assign)	IBOutlet	NSImageView		*passwordWarningImage;
-@property (assign)	IBOutlet	NSTextField		*passwordWarningLabel;
-@property (assign)	IBOutlet	NSButton		*splitCheckbox;
-@property (assign)	IBOutlet	NSTextField		*filesToArchiveLabel;
+@property (readwrite, assign)	IBOutlet	NSImageView		*compressionLevelWarningImage;
+@property (readwrite, assign)	IBOutlet	NSTextField		*compressionLevelWarningLabel;
+@property (readwrite, assign)	IBOutlet	NSImageView		*passwordRepetitionWarningImage;
+@property (readwrite, assign)	IBOutlet	NSTextField		*passwordRepetitionWarningLabel;
+@property (readwrite, assign)	IBOutlet	NSImageView		*passwordWarningImage;
+@property (readwrite, assign)	IBOutlet	NSTextField		*passwordWarningLabel;
+@property (readwrite, assign)	IBOutlet	NSButton		*splitCheckbox;
+@property (readwrite, assign)	IBOutlet	NSTextField		*filesToArchiveLabel;
 
+-(void)showWindowWithPage:(int)_firstPage mode:(WizardMode)_mode;
 -(void)showCompleteWizard;
 -(void)showCreateWizard;
 -(void)showAddWizard;
--(void)showWindowWithPage:(int)startingPage;
--(IBAction)previousPageButtonClicked:(id)sender;
--(IBAction)nextPageButtonClicked:(id)sender;
--(IBAction)quitButtonClicked:(id)sender;
--(void)updateNavigationButtons;
--(void)loadPage:(int)pageNumber;
--(void)unloadCurrentPage;
--(BOOL)currentPageReady;
+-(IBAction)previousPageButtonPressed:(id)sender;
+-(IBAction)nextPageButtonPressed:(id)sender;
+-(IBAction)quitButtonPressed:(id)sender;
 -(IBAction)userChoseMode:(id)sender;
 -(IBAction)userWantsToChoseFile:(id)sender;
 -(IBAction)userChoseCompressionLevel:(id)sender;
--(void)displayOrHideCompressionWarning;
 -(IBAction)userToggledPassword:(id)sender;
--(BOOL)isPasswordCorrect;
--(BOOL)IsPasswordRepetitionCorrect;
--(void)displayOrHidePasswordWarnings;
 -(IBAction)userToggledSplitting:(id)sender;
--(BOOL)pieceSizeCorrect;
--(void)userAddedFilesToArchive:(NSNotification *)notification;
 
 @end

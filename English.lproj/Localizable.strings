@@ -2,6 +2,7 @@
 "Preparing…" = "Preparing…";
 "Extracting \"%@.%@\"" = "Extracting \"%1$@.%2$@\"";
 "Archiving %d files" = "Archiving %1$d files";
+"Archiving 1 file" = "Archiving 1 file";
 "Part %d of %d" = "Part %1$d of %2$d";
 "File %d of %d" = "File %1$d of %2$d";
 "Cancelling…" = "Cancelling…";
@@ -17,9 +18,8 @@
 "About %d days" = "About %1$d days";
 
 /* Error messages */
-"\"%@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer." 
-= 
-"\"%1$@\" seems to be no RAR-File or of an unknown format.\nIf the file is supposed to be valid, try again.\n\nIf this error occurs again and you are sure your file is valid, please contact the developer.";
+"\"%@\" can't be extracted because it seems to be no RAR file." = "\"%1$@\" can't be extracted because it seems to be no RAR file.";
+"Can't add files to \"%@\" because it seems to be no RAR file." = "Can't add files to \"%1$@\" because it seems to be no RAR file.";
 
 
 /* Passwort sheet */
