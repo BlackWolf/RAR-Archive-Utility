@@ -53,22 +53,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAR_Archive_UtilityAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* RAR_Archive_UtilityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAR_Archive_UtilityAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* RAR_Archive_Utility_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAR_Archive_Utility_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		33106A96110FB51F00E996C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RarfileView.xib; sourceTree = "<group>"; };
 		3310E1141178D21B0045F4E6 /* RAUTaskPrivates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTaskPrivates.h; sourceTree = "<group>"; };
 		3310EDCD1118FC1A009D7DBE /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appicon.icns; sourceTree = "<group>"; };
-		3310EE021118FF4B009D7DBE /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/RarfileView.xib; sourceTree = "<group>"; };
-		3310EE4D111904B5009D7DBE /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3310EE51111904CA009D7DBE /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		331F034A1161638B00F04F16 /* RAUAuxiliary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUAuxiliary.m; sourceTree = "<group>"; };
 		332907651163F3010015B23C /* RAUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTask.h; sourceTree = "<group>"; };
 		332907661163F3010015B23C /* RAUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTask.m; sourceTree = "<group>"; };
@@ -87,23 +81,12 @@
 		3329095311641FEC0015B23C /* RAUTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTaskController.m; sourceTree = "<group>"; };
 		333C33D811443DA400D18AC3 /* RAUArchiveWizardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUArchiveWizardController.h; sourceTree = "<group>"; };
 		333C33D911443DA400D18AC3 /* RAUArchiveWizardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUArchiveWizardController.m; sourceTree = "<group>"; };
-		333EAD0B114D8CD700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		333EAD1D114D8F4C00D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/ArchiveWizardWindow.xib; sourceTree = "<group>"; };
-		333EAD21114D8FAE00D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page1.xib; sourceTree = "<group>"; };
-		333EAD25114D90D700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page2.xib; sourceTree = "<group>"; };
-		333EAD29114D910100D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page3.xib; sourceTree = "<group>"; };
-		333EAD2D114D923700D867E3 /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = German.lproj/Page4.xib; sourceTree = "<group>"; };
 		335B120A111F860D00112BD1 /* rar */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = rar; sourceTree = "<group>"; };
-		3377807B113F0C14006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page2.xib; sourceTree = "<group>"; };
-		337781FF113F2AF5006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page3.xib; sourceTree = "<group>"; };
 		33778203113F3120006DE566 /* caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caution.png; sourceTree = "<group>"; };
-		33778384113F4CAE006DE566 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page4.xib; sourceTree = "<group>"; };
 		3379FFA41165743300515909 /* RAURarfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAURarfile.h; sourceTree = "<group>"; };
 		3379FFA51165743300515909 /* RAURarfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAURarfile.m; sourceTree = "<group>"; };
 		3389D66D116A024C00F779F9 /* RAUPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUPath.h; sourceTree = "<group>"; };
 		3389D66E116A024C00F779F9 /* RAUPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUPath.m; sourceTree = "<group>"; };
-		339AB352113B3E9600E985ED /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ArchiveWizardWindow.xib; sourceTree = "<group>"; };
-		339AB378113B53ED00E985ED /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Page1.xib; sourceTree = "<group>"; };
 		339D262E11121938001B81A4 /* RAUTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAUTaskViewController.h; sourceTree = "<group>"; };
 		339D262F11121938001B81A4 /* RAUTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAUTaskViewController.m; sourceTree = "<group>"; };
 		33A46CB11113CDF3008D523F /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
@@ -131,6 +114,23 @@
 		33FD45D51114864200D2AEC8 /* raricon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = raricon.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RAR_Archive_Utility-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RAR_Archive_Utility-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* RAR-Archive Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RAR-Archive Utility.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A71671241521CA00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9A71672241521CB00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C9A71673241521CC00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/RarfileView.xib; sourceTree = "<group>"; };
+		C9A71674241521CC00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ArchiveWizardWindow.xib; sourceTree = "<group>"; };
+		C9A71675241521CD00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/Page1.xib; sourceTree = "<group>"; };
+		C9A71676241521CD00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/Page2.xib; sourceTree = "<group>"; };
+		C9A71677241521CD00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/Page3.xib; sourceTree = "<group>"; };
+		C9A71678241521CD00EC3909 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/Page4.xib; sourceTree = "<group>"; };
+		C9A71679241521CE00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A7167A241521CE00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9A7167B241521CE00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C9A7167C241521CE00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RarfileView.xib; sourceTree = "<group>"; };
+		C9A7167D241521CE00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ArchiveWizardWindow.xib; sourceTree = "<group>"; };
+		C9A7167E241521CF00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Page1.xib; sourceTree = "<group>"; };
+		C9A7167F241521CF00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Page2.xib; sourceTree = "<group>"; };
+		C9A71680241521CF00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Page3.xib; sourceTree = "<group>"; };
+		C9A71681241521CF00EC3909 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Page4.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,11 +345,18 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mario Schreiner";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RAR-Archive Utility" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* RAR-Archive Utility */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,7 +432,7 @@
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
+				C9A71679241521CE00EC3909 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -433,8 +440,8 @@
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
-				333EAD0B114D8CD700D867E3 /* German */,
+				C9A71672241521CB00EC3909 /* de */,
+				C9A7167B241521CE00EC3909 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -442,8 +449,8 @@
 		3310EE001118FF43009D7DBE /* RarfileView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33106A96110FB51F00E996C8 /* English */,
-				3310EE021118FF4B009D7DBE /* German */,
+				C9A71673241521CC00EC3909 /* de */,
+				C9A7167C241521CE00EC3909 /* en */,
 			);
 			name = RarfileView.xib;
 			sourceTree = "<group>";
@@ -451,8 +458,8 @@
 		3310EE4F111904C2009D7DBE /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3310EE4D111904B5009D7DBE /* English */,
-				3310EE51111904CA009D7DBE /* German */,
+				C9A71671241521CA00EC3909 /* de */,
+				C9A7167A241521CE00EC3909 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -460,8 +467,8 @@
 		333EAD1B114D8F4400D867E3 /* ArchiveWizardWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				339AB352113B3E9600E985ED /* English */,
-				333EAD1D114D8F4C00D867E3 /* German */,
+				C9A71674241521CC00EC3909 /* de */,
+				C9A7167D241521CE00EC3909 /* en */,
 			);
 			name = ArchiveWizardWindow.xib;
 			sourceTree = "<group>";
@@ -469,8 +476,8 @@
 		333EAD1F114D8FA900D867E3 /* Page1.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				339AB378113B53ED00E985ED /* English */,
-				333EAD21114D8FAE00D867E3 /* German */,
+				C9A71675241521CD00EC3909 /* de */,
+				C9A7167E241521CF00EC3909 /* en */,
 			);
 			name = Page1.xib;
 			sourceTree = "<group>";
@@ -478,8 +485,8 @@
 		333EAD23114D90D300D867E3 /* Page2.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3377807B113F0C14006DE566 /* English */,
-				333EAD25114D90D700D867E3 /* German */,
+				C9A71676241521CD00EC3909 /* de */,
+				C9A7167F241521CF00EC3909 /* en */,
 			);
 			name = Page2.xib;
 			sourceTree = "<group>";
@@ -487,8 +494,8 @@
 		333EAD27114D90FD00D867E3 /* Page3.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				337781FF113F2AF5006DE566 /* English */,
-				333EAD29114D910100D867E3 /* German */,
+				C9A71677241521CD00EC3909 /* de */,
+				C9A71680241521CF00EC3909 /* en */,
 			);
 			name = Page3.xib;
 			sourceTree = "<group>";
@@ -496,8 +503,8 @@
 		333EAD2B114D923300D867E3 /* Page4.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33778384113F4CAE006DE566 /* English */,
-				333EAD2D114D923700D867E3 /* German */,
+				C9A71678241521CD00EC3909 /* de */,
+				C9A71681241521CF00EC3909 /* en */,
 			);
 			name = Page4.xib;
 			sourceTree = "<group>";
@@ -509,15 +516,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RAR_Archive_Utility_Prefix.pch;
 				INFOPLIST_FILE = "RAR_Archive_Utility-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blackwolf.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "RAR-Archive Utility";
 			};
 			name = Debug;
@@ -526,12 +535,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RAR_Archive_Utility_Prefix.pch;
 				INFOPLIST_FILE = "RAR_Archive_Utility-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blackwolf.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "RAR-Archive Utility";
 			};
 			name = Release;
@@ -539,27 +551,73 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
